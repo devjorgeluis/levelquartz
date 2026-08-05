@@ -1,0 +1,2860 @@
+/* :root {
+  --spritePositionX: -24px;
+}
+:root[data-theme="dark"] {
+  --spritePositionX: 0px;
+}
+[class^="digi_tournament_"],
+[class*=" digi_tournament_"] {
+  background-position-x: var(--spritePositionX) !important;
+} */
+[class^="digi_tournament_"],
+[class*=" digi_tournament_"] {
+    content: "";
+    display: block;
+    background-image: url(./tournament.png);
+    background-size: 96px;
+    background-position-x: 0;
+    background-position-y: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.digi_tournament_0 {
+    background-position-y: 0;
+}
+
+.digi_tournament_1166 {
+    background-position-y: -24px;
+}
+
+.digi_tournament_1379 {
+    background-position-y: -48px;
+}
+
+.digi_tournament_1443 {
+    background-position-y: -72px;
+}
+
+.digi_tournament_19879 {
+    background-position-y: -96px;
+}
+
+.digi_tournament_24311 {
+    background-position-y: -120px;
+}
+
+.digi_tournament_2439 {
+    background-position-y: -144px;
+}
+
+.digi_tournament_25305 {
+    background-position-y: -168px;
+}
+
+.digi_tournament_27008 {
+    background-position-y: -192px;
+}
+
+.digi_tournament_2903,
+.digi_tournament_16457 {
+    background-position-y: -216px;
+}
+
+.digi_tournament_4247 {
+    background-position-y: -240px;
+}
+
+.digi_tournament_4261 {
+    background-position-y: -264px;
+}
+
+.digi_tournament_4275 {
+    background-position-y: -288px;
+}
+
+.digi_tournament_4484 {
+    background-position-y: -312px;
+}
+
+.digi_tournament_4486,
+.digi_tournament_4567 {
+    background-position-y: -336px;
+}
+
+.digi_tournament_4520 {
+    background-position-y: -360px;
+}
+
+.digi_tournament_4535 {
+    background-position-y: -384px;
+}
+
+.digi_tournament_4550 {
+    background-position-y: -408px;
+}
+
+.digi_tournament_4592 {
+    background-position-y: -432px;
+}
+
+/*Sky bet*/
+.digi_tournament_4604,
+.digi_tournament_24059 {
+    background-position-y: -456px;
+}
+
+.digi_tournament_4604 {
+    background-position: 0px -8280px;
+}
+
+.digi_tournament_4605 {
+    background-position-y: -480px;
+}
+
+.digi_tournament_4610 {
+    background-position-y: -504px;
+}
+
+.digi_tournament_4634 {
+    background-position-y: -528px;
+}
+
+.digi_tournament_4794 {
+    background-position-y: -552px;
+}
+
+.digi_tournament_4957 {
+    background-position-y: -576px;
+}
+
+.digi_tournament_5016,
+.digi_tournament_17364,
+.digi_tournament_32279 {
+    background-position-y: -600px;
+}
+
+.digi_tournament_5121 {
+    background-position-y: -624px;
+}
+
+.digi_tournament_5423 {
+    background-position-y: -648px;
+}
+
+.digi_tournament_8448 {
+    background-position-y: -672px;
+}
+
+.digi_tournament_998,
+.digi_tournament_17088 {
+    background-position-y: -696px;
+}
+
+.digi_tournament_ATP1000 {
+    background-position-y: -744px;
+}
+
+.digi_tournament_ATP250 {
+    background-position-y: -768px;
+}
+
+.digi_tournament_38177 {
+    background-position-y: -768px;
+}
+
+.digi_tournament_37766 {
+    background-position-y: -768px;
+}
+
+.digi_tournament_ATP500 {
+    background-position-y: -792px;
+}
+
+.digi_tournament_37862 {
+    background-position-y: -792px;
+}
+
+.digi_tournament_CSGO {
+    background-position-y: -816px;
+}
+
+.digi_tournament_DOTA2 {
+    background-position-y: -840px;
+}
+
+.digi_tournament_LOL {
+    background-position-y: -864px;
+}
+
+.digi_tournament_SETKACUP {
+    background-position-y: -912px;
+}
+
+.digi_tournament_TFF {
+    background-position-y: -936px;
+}
+
+.digi_tournament_TTCUP {
+    background-position-y: -960px;
+}
+
+.digi_tournament_UFC {
+    background-position-y: -1032px;
+}
+
+.digi_tournament_WTA {
+    background-position-y: -1056px;
+}
+
+.digi_tournament_38170 {
+    background-position-y: -1056px;
+}
+
+.digi_tournament_37863 {
+    background-position-y: -1056px;
+}
+
+.digi_tournament_29922 {
+    background-position-y: -1056px;
+}
+
+.digi_tournament_ao {
+    background-position-y: -720px;
+}
+
+.digi_tournament_premier {
+    background-position-y: -888px;
+}
+
+.digi_tournament_uefaChL {
+    background-position-y: -984px;
+}
+
+.digi_tournament_uefaEuL {
+    background-position-y: -1008px;
+}
+
+/*UEFA Europe League*/
+.digi_tournament_4230,
+.digi_tournament_14491,
+.digi_tournament_26186,
+.digi_tournament_26187,
+.digi_tournament_26188,
+.digi_tournament_26189,
+.digi_tournament_26190,
+.digi_tournament_26191,
+.digi_tournament_26192,
+.digi_tournament_26193,
+.digi_tournament_26194,
+.digi_tournament_26195,
+.digi_tournament_26196,
+.digi_tournament_26197,
+.digi_tournament_5055,
+.digi_tournament_20172,
+.digi_tournament_17753,
+.digi_tournament_29364 {
+    background-position-y: -1008px;
+}
+
+/*tff*/
+.digi_tournament_4626,
+.digi_tournament_7929,
+.digi_tournament_4531 {
+    background-position-y: -936px;
+}
+
+/*ao*/
+.digi_tournament_1546,
+.digi_tournament_1547,
+.digi_tournament_13847 {
+    background-position-y: -720px;
+}
+
+/*ufc*/
+.digi_tournament_24712,
+.digi_tournament_5948 {
+    background-position-y: -1032px;
+}
+
+/*Premiere League*/
+.digi_tournament_4485,
+.digi_tournament_14844 {
+    background-position-y: -888px;
+}
+
+/*Champions League*/
+.digi_tournament_4584,
+.digi_tournament_6470,
+.digi_tournament_6471,
+.digi_tournament_6472,
+.digi_tournament_6473,
+.digi_tournament_6474,
+.digi_tournament_6475,
+.digi_tournament_6476,
+.digi_tournament_6477,
+.digi_tournament_5054,
+.digi_tournament_11508,
+.digi_tournament_15998,
+.digi_tournament_15007,
+.digi_tournament_22627,
+.digi_tournament_13147,
+.digi_tournament_29324 {
+    background-position-y: -984px;
+}
+
+/*WTA*/
+.digi_tournament_1053,
+.digi_tournament_1054,
+.digi_tournament_1090,
+.digi_tournament_1112,
+.digi_tournament_1136,
+.digi_tournament_1160,
+.digi_tournament_1271,
+.digi_tournament_1275,
+.digi_tournament_1300,
+.digi_tournament_1301,
+.digi_tournament_1302,
+.digi_tournament_1307,
+.digi_tournament_1308,
+.digi_tournament_1323,
+.digi_tournament_1331,
+.digi_tournament_1332,
+.digi_tournament_1333,
+.digi_tournament_1334,
+.digi_tournament_1378,
+.digi_tournament_1384,
+.digi_tournament_1411,
+.digi_tournament_1516,
+.digi_tournament_1517,
+.digi_tournament_1522,
+.digi_tournament_1533,
+.digi_tournament_1536,
+.digi_tournament_1599,
+.digi_tournament_1606,
+.digi_tournament_1607,
+.digi_tournament_1614,
+.digi_tournament_1622,
+.digi_tournament_1633,
+.digi_tournament_1635,
+.digi_tournament_1640,
+.digi_tournament_1654,
+.digi_tournament_1655,
+.digi_tournament_1658,
+.digi_tournament_1671,
+.digi_tournament_1701,
+.digi_tournament_1702,
+.digi_tournament_1734,
+.digi_tournament_1788,
+.digi_tournament_1789,
+.digi_tournament_1797,
+.digi_tournament_1813,
+.digi_tournament_1814,
+.digi_tournament_1816,
+.digi_tournament_1817,
+.digi_tournament_1858,
+.digi_tournament_1942,
+.digi_tournament_1956,
+.digi_tournament_2021,
+.digi_tournament_2188,
+.digi_tournament_2194,
+.digi_tournament_2396,
+.digi_tournament_2397,
+.digi_tournament_2588,
+.digi_tournament_2589,
+.digi_tournament_2640,
+.digi_tournament_2651,
+.digi_tournament_2692,
+.digi_tournament_2695,
+.digi_tournament_2760,
+.digi_tournament_2761,
+.digi_tournament_2862,
+.digi_tournament_3485,
+.digi_tournament_3486,
+.digi_tournament_3525,
+.digi_tournament_3526,
+.digi_tournament_7238,
+.digi_tournament_7250,
+.digi_tournament_7747,
+.digi_tournament_7748,
+.digi_tournament_8509,
+.digi_tournament_8532,
+.digi_tournament_8639,
+.digi_tournament_8670,
+.digi_tournament_8699,
+.digi_tournament_9979,
+.digi_tournament_10199,
+.digi_tournament_10202,
+.digi_tournament_10649,
+.digi_tournament_11162,
+.digi_tournament_11395,
+.digi_tournament_11447,
+.digi_tournament_11473,
+.digi_tournament_11475,
+.digi_tournament_11495,
+.digi_tournament_11559,
+.digi_tournament_11618,
+.digi_tournament_11631,
+.digi_tournament_11684,
+.digi_tournament_11750,
+.digi_tournament_11842,
+.digi_tournament_11885,
+.digi_tournament_11950,
+.digi_tournament_11993,
+.digi_tournament_12016,
+.digi_tournament_12182,
+.digi_tournament_12253,
+.digi_tournament_12426,
+.digi_tournament_12459,
+.digi_tournament_12509,
+.digi_tournament_12534,
+.digi_tournament_12539,
+.digi_tournament_12913,
+.digi_tournament_12923,
+.digi_tournament_13114,
+.digi_tournament_13115,
+.digi_tournament_13248,
+.digi_tournament_13249,
+.digi_tournament_13300,
+.digi_tournament_13301,
+.digi_tournament_13302,
+.digi_tournament_13392,
+.digi_tournament_13393,
+.digi_tournament_13419,
+.digi_tournament_13456,
+.digi_tournament_13457,
+.digi_tournament_13768,
+.digi_tournament_13773,
+.digi_tournament_13779,
+.digi_tournament_14033,
+.digi_tournament_14949,
+.digi_tournament_14950,
+.digi_tournament_15737,
+.digi_tournament_15738,
+.digi_tournament_15832,
+.digi_tournament_16127,
+.digi_tournament_16128,
+.digi_tournament_16296,
+.digi_tournament_16297,
+.digi_tournament_16897,
+.digi_tournament_16898,
+.digi_tournament_16968,
+.digi_tournament_16969,
+.digi_tournament_17081,
+.digi_tournament_17082,
+.digi_tournament_17662,
+.digi_tournament_17663,
+.digi_tournament_17664,
+.digi_tournament_17665,
+.digi_tournament_17871,
+.digi_tournament_17872,
+.digi_tournament_18092,
+.digi_tournament_18093,
+.digi_tournament_18373,
+.digi_tournament_18374,
+.digi_tournament_18469,
+.digi_tournament_18470,
+.digi_tournament_18713,
+.digi_tournament_18714,
+.digi_tournament_19476,
+.digi_tournament_19674,
+.digi_tournament_19683,
+.digi_tournament_19684,
+.digi_tournament_19998,
+.digi_tournament_19999,
+.digi_tournament_20000,
+.digi_tournament_20134,
+.digi_tournament_20135,
+.digi_tournament_20173,
+.digi_tournament_20174,
+.digi_tournament_20210,
+.digi_tournament_20292,
+.digi_tournament_20417,
+.digi_tournament_20418,
+.digi_tournament_20453,
+.digi_tournament_20454,
+.digi_tournament_21268,
+.digi_tournament_21269,
+.digi_tournament_21869,
+.digi_tournament_21870,
+.digi_tournament_21923,
+.digi_tournament_21924,
+.digi_tournament_22019,
+.digi_tournament_22040,
+.digi_tournament_22041,
+.digi_tournament_22097,
+.digi_tournament_22098,
+.digi_tournament_22130,
+.digi_tournament_22131,
+.digi_tournament_22407,
+.digi_tournament_22408,
+.digi_tournament_22478,
+.digi_tournament_22479,
+.digi_tournament_22534,
+.digi_tournament_22567,
+.digi_tournament_22725,
+.digi_tournament_22726,
+.digi_tournament_22798,
+.digi_tournament_22799,
+.digi_tournament_23375,
+.digi_tournament_23376,
+.digi_tournament_23377,
+.digi_tournament_23378,
+.digi_tournament_23617,
+.digi_tournament_23618,
+.digi_tournament_23669,
+.digi_tournament_23670,
+.digi_tournament_23671,
+.digi_tournament_23672,
+.digi_tournament_23875,
+.digi_tournament_23876,
+.digi_tournament_24317,
+.digi_tournament_24318,
+.digi_tournament_24331,
+.digi_tournament_24341,
+.digi_tournament_24352,
+.digi_tournament_24434,
+.digi_tournament_24435,
+.digi_tournament_24465,
+.digi_tournament_24678,
+.digi_tournament_24679,
+.digi_tournament_24840,
+.digi_tournament_24841,
+.digi_tournament_25109,
+.digi_tournament_25182,
+.digi_tournament_25435,
+.digi_tournament_25494,
+.digi_tournament_25570,
+.digi_tournament_25728,
+.digi_tournament_25729,
+.digi_tournament_25764,
+.digi_tournament_25765,
+.digi_tournament_25791,
+.digi_tournament_25792,
+.digi_tournament_25794,
+.digi_tournament_25795,
+.digi_tournament_25823,
+.digi_tournament_25837,
+.digi_tournament_25838,
+.digi_tournament_25889,
+.digi_tournament_25890,
+.digi_tournament_25956,
+.digi_tournament_25987,
+.digi_tournament_26026,
+.digi_tournament_26027,
+.digi_tournament_26170,
+.digi_tournament_26171,
+.digi_tournament_26224,
+.digi_tournament_26225,
+.digi_tournament_26270,
+.digi_tournament_26311,
+.digi_tournament_26312,
+.digi_tournament_26355,
+.digi_tournament_26413,
+.digi_tournament_26481,
+.digi_tournament_26611,
+.digi_tournament_26707,
+.digi_tournament_26708,
+.digi_tournament_26709,
+.digi_tournament_26738,
+.digi_tournament_26743,
+.digi_tournament_26744,
+.digi_tournament_27220,
+.digi_tournament_31252,
+.digi_tournament_31271,
+.digi_tournament_31477,
+.digi_tournament_31513,
+.digi_tournament_31771,
+.digi_tournament_31774,
+.digi_tournament_31847,
+.digi_tournament_32032,
+.digi_tournament_32174,
+.digi_tournament_32176,
+.digi_tournament_32301,
+.digi_tournament_32497,
+.digi_tournament_32767,
+.digi_tournament_32769,
+.digi_tournament_32910,
+.digi_tournament_32901,
+.digi_tournament_32899,
+.digi_tournament_32897,
+.digi_tournament_32895,
+.digi_tournament_30917,
+.digi_tournament_36924,
+.digi_tournament_37326,
+.digi_tournament_37618 {
+    background-position-y: -1056px;
+}
+
+/*ATP, ATP250*/
+.digi_tournament_1046,
+.digi_tournament_1065,
+.digi_tournament_1092,
+.digi_tournament_1094,
+.digi_tournament_1096,
+.digi_tournament_1164,
+.digi_tournament_1182,
+.digi_tournament_1213,
+.digi_tournament_1246,
+.digi_tournament_1248,
+.digi_tournament_1326,
+.digi_tournament_1329,
+.digi_tournament_1361,
+.digi_tournament_1382,
+.digi_tournament_1415,
+.digi_tournament_1510,
+.digi_tournament_1531,
+.digi_tournament_1534,
+.digi_tournament_1535,
+.digi_tournament_1587,
+.digi_tournament_1588,
+.digi_tournament_1630,
+.digi_tournament_1636,
+.digi_tournament_1637,
+.digi_tournament_1738,
+.digi_tournament_1742,
+.digi_tournament_1766,
+.digi_tournament_1767,
+.digi_tournament_1769,
+.digi_tournament_1770,
+.digi_tournament_1873,
+.digi_tournament_1874,
+.digi_tournament_1928,
+.digi_tournament_1929,
+.digi_tournament_1930,
+.digi_tournament_1954,
+.digi_tournament_1986,
+.digi_tournament_2131,
+.digi_tournament_2538,
+.digi_tournament_2540,
+.digi_tournament_2666,
+.digi_tournament_2753,
+.digi_tournament_2926,
+.digi_tournament_2927,
+.digi_tournament_2994,
+.digi_tournament_2995,
+.digi_tournament_3064,
+.digi_tournament_3667,
+.digi_tournament_3668,
+.digi_tournament_4808,
+.digi_tournament_6487,
+.digi_tournament_6527,
+.digi_tournament_8708,
+.digi_tournament_9528,
+.digi_tournament_11197,
+.digi_tournament_11206,
+.digi_tournament_11207,
+.digi_tournament_11208,
+.digi_tournament_11442,
+.digi_tournament_11444,
+.digi_tournament_11476,
+.digi_tournament_11701,
+.digi_tournament_11703,
+.digi_tournament_11779,
+.digi_tournament_11818,
+.digi_tournament_11836,
+.digi_tournament_12014,
+.digi_tournament_12252,
+.digi_tournament_12254,
+.digi_tournament_13297,
+.digi_tournament_13298,
+.digi_tournament_13374,
+.digi_tournament_13375,
+.digi_tournament_13772,
+.digi_tournament_13780,
+.digi_tournament_13781,
+.digi_tournament_13960,
+.digi_tournament_13987,
+.digi_tournament_13988,
+.digi_tournament_14501,
+.digi_tournament_14502,
+.digi_tournament_14726,
+.digi_tournament_14731,
+.digi_tournament_16439,
+.digi_tournament_16440,
+.digi_tournament_17480,
+.digi_tournament_17481,
+.digi_tournament_17976,
+.digi_tournament_17977,
+.digi_tournament_18977,
+.digi_tournament_18978,
+.digi_tournament_19322,
+.digi_tournament_19323,
+.digi_tournament_19453,
+.digi_tournament_19452,
+.digi_tournament_19882,
+.digi_tournament_19883,
+.digi_tournament_20089,
+.digi_tournament_20090,
+.digi_tournament_20128,
+.digi_tournament_20127,
+.digi_tournament_20501,
+.digi_tournament_20500,
+.digi_tournament_20666,
+.digi_tournament_20667,
+.digi_tournament_21038,
+.digi_tournament_21073,
+.digi_tournament_21220,
+.digi_tournament_21219,
+.digi_tournament_21244,
+.digi_tournament_21243,
+.digi_tournament_21921,
+.digi_tournament_21922,
+.digi_tournament_22346,
+.digi_tournament_22347,
+.digi_tournament_22476,
+.digi_tournament_22477,
+.digi_tournament_24316,
+.digi_tournament_24321,
+.digi_tournament_24322,
+.digi_tournament_24353,
+.digi_tournament_24354,
+.digi_tournament_24473,
+.digi_tournament_24474,
+.digi_tournament_24491,
+.digi_tournament_24503,
+.digi_tournament_24504,
+.digi_tournament_25434,
+.digi_tournament_25436,
+.digi_tournament_25569,
+.digi_tournament_25763,
+.digi_tournament_25766,
+.digi_tournament_25767,
+.digi_tournament_26037,
+.digi_tournament_26357,
+.digi_tournament_26382,
+.digi_tournament_26383,
+.digi_tournament_26438,
+.digi_tournament_26610,
+.digi_tournament_26612,
+.digi_tournament_27218,
+.digi_tournament_27505,
+.digi_tournament_29984,
+.digi_tournament_31321,
+.digi_tournament_31833 {
+    background-position-y: -768px;
+}
+
+/*ATP500*/
+.digi_tournament_1045,
+.digi_tournament_1113,
+.digi_tournament_1234,
+.digi_tournament_1249,
+.digi_tournament_1325,
+.digi_tournament_1328,
+.digi_tournament_1349,
+.digi_tournament_1350,
+.digi_tournament_1353,
+.digi_tournament_1381,
+.digi_tournament_1628,
+.digi_tournament_1641,
+.digi_tournament_1650,
+.digi_tournament_1652,
+.digi_tournament_1660,
+.digi_tournament_1760,
+.digi_tournament_1796,
+.digi_tournament_1799,
+.digi_tournament_1971,
+.digi_tournament_6587,
+.digi_tournament_11443,
+.digi_tournament_11477,
+.digi_tournament_12173,
+.digi_tournament_12179,
+.digi_tournament_12180,
+.digi_tournament_13376,
+.digi_tournament_22535,
+.digi_tournament_22568,
+.digi_tournament_24541,
+.digi_tournament_25491,
+.digi_tournament_25492,
+.digi_tournament_25822,
+.digi_tournament_25891,
+.digi_tournament_26482,
+.digi_tournament_26488,
+.digi_tournament_26688,
+.digi_tournament_26690 {
+    background-position-y: -792px;
+}
+
+/*ATP1000*/
+.digi_tournament_1121,
+.digi_tournament_1135,
+.digi_tournament_1150,
+.digi_tournament_1668,
+.digi_tournament_1698,
+.digi_tournament_1700,
+.digi_tournament_1748,
+.digi_tournament_1749,
+.digi_tournament_1988,
+.digi_tournament_2628,
+.digi_tournament_2650,
+.digi_tournament_2759,
+.digi_tournament_11564,
+.digi_tournament_11886,
+.digi_tournament_11947,
+.digi_tournament_12637,
+.digi_tournament_13228,
+.digi_tournament_15736,
+.digi_tournament_20212,
+.digi_tournament_20298,
+.digi_tournament_22008,
+.digi_tournament_22009,
+.digi_tournament_24936,
+.digi_tournament_25088,
+.digi_tournament_25181,
+.digi_tournament_25955,
+.digi_tournament_25986,
+.digi_tournament_26544,
+.digi_tournament_26730,
+.digi_tournament_26770,
+.digi_tournament_26771,
+.digi_tournament_29566,
+.digi_tournament_27615,
+.digi_tournament_30057 {
+    background-position-y: -744px;
+}
+
+/*ttcup*/
+.digi_tournament_18204,
+.digi_tournament_18205 {
+    background-position-y: -960px;
+}
+
+/*csgo*/
+.digi_tournament_21102,
+.digi_tournament_21500 {
+    background-position-y: -816px;
+}
+
+/*setka cup*/
+.digi_tournament_26176,
+.digi_tournament_26177 {
+    background-position-y: -912px;
+}
+
+/*dota2*/
+.digi_tournament_24516,
+.digi_tournament_25755,
+.digi_tournament_26356,
+.digi_tournament_27408,
+.digi_tournament_27546,
+.digi_tournament_27596 {
+    background-position-y: -840px;
+}
+
+/*lol*/
+.digi_tournament_21021,
+.digi_tournament_21022,
+.digi_tournament_21028 {
+    background-position-y: -864px;
+}
+
+/*portugal*/
+.digi_tournament_4565 {
+    background-position-y: -1080px;
+}
+
+/*MLS*/
+.digi_tournament_4998 {
+    background-position-y: -1104px;
+}
+
+/*France League 1*/
+.digi_tournament_4610 {
+    background-position-y: -1128px;
+}
+
+/*basketball*/
+.digi_tournament_1047 {
+    background-position-y: -1152px;
+}
+
+.digi_tournament_1497,
+.digi_tournament_30063 {
+    background-position-y: -1176px;
+}
+
+.digi_tournament_2762 {
+    background-position-y: -1200px;
+}
+
+.digi_tournament_7682 {
+    background-position-y: -1224px;
+}
+
+.digi_tournament_16586 {
+    background-position-y: -1248px;
+}
+
+/*football*/
+.digi_tournament_4252 {
+    background-position-y: -1272px;
+}
+
+.digi_tournament_4504 {
+    background-position-y: -1296px;
+}
+
+.digi_tournament_4514 {
+    background-position-y: -1320px;
+}
+
+.digi_tournament_4523 {
+    background-position-y: -1344px;
+}
+
+.digi_tournament_4524 {
+    background-position-y: -1368px;
+}
+
+.digi_tournament_4543 {
+    background-position-y: -1392px;
+}
+
+.digi_tournament_4544 {
+    background-position-y: -1416px;
+}
+
+.digi_tournament_4529,
+.digi_tournament_4549 {
+    background-position-y: -1440px;
+}
+
+.digi_tournament_4556 {
+    background-position-y: -1464px;
+}
+
+.digi_tournament_4569 {
+    background-position-y: -1488px;
+}
+
+.digi_tournament_4599 {
+    background-position-y: -1512px;
+}
+
+.digi_tournament_4691 {
+    background-position-y: -1536px;
+}
+
+.digi_tournament_4979 {
+    background-position-y: -1560px;
+}
+
+.digi_tournament_4995 {
+    background-position-y: -1584px;
+}
+
+.digi_tournament_5024 {
+    background-position-y: -1608px;
+}
+
+.digi_tournament_5072 {
+    background-position-y: -1632px;
+}
+
+.digi_tournament_5259 {
+    background-position-y: -1656px;
+}
+
+.digi_tournament_5566 {
+    background-position-y: -1680px;
+}
+
+.digi_tournament_5872 {
+    background-position-y: -1704px;
+}
+
+.digi_tournament_5904 {
+    background-position-y: -1728px;
+}
+
+.digi_tournament_5926 {
+    background-position-y: -1752px;
+}
+
+.digi_tournament_5967 {
+    background-position-y: -1776px;
+}
+
+.digi_tournament_5968 {
+    background-position-y: -1800px;
+}
+
+.digi_tournament_6068 {
+    background-position-y: -1824px;
+}
+
+.digi_tournament_6072 {
+    background-position-y: -1848px;
+}
+
+.digi_tournament_6095 {
+    background-position-y: -1872px;
+}
+
+.digi_tournament_7534 {
+    background-position-y: -1896px;
+}
+
+.digi_tournament_8787 {
+    background-position-y: -1920px;
+}
+
+.digi_tournament_12554 {
+    background-position-y: -1944px;
+}
+
+.digi_tournament_17802 {
+    background-position-y: -1968px;
+}
+
+.digi_tournament_22433 {
+    background-position-y: -1992px;
+}
+
+.digi_tournament_27418 {
+    background-position-y: -2016px;
+}
+
+/*hockey*/
+.digi_tournament_1572 {
+    background-position-y: -2040px;
+}
+
+.digi_tournament_2731 {
+    background-position-y: -2064px;
+}
+
+.digi_tournament_3097 {
+    background-position-y: -2088px;
+}
+
+.digi_tournament_17814 {
+    background-position-y: -2112px;
+}
+
+/*tennis*/
+.digi_tournament_1879,
+.digi_tournament_20912,
+.digi_tournament_20914,
+.digi_tournament_12360,
+.digi_tournament_20916,
+.digi_tournament_1881,
+.digi_tournament_20913,
+.digi_tournament_1879,
+.digi_tournament_20912,
+.digi_tournament_20915,
+.digi_tournament_20914 {
+    background-position-y: -2136px;
+}
+
+.digi_tournament_19964,
+.digi_tournament_1546,
+.digi_tournament_17561,
+.digi_tournament_1547,
+.digi_tournament_1551,
+.digi_tournament_1550,
+.digi_tournament_13887,
+.digi_tournament_13847,
+.digi_tournament_17562,
+.digi_tournament_1877 {
+    background-position-y: -2160px;
+}
+
+/* Roland Garos */
+.digi_tournament_1818,
+.digi_tournament_1819,
+.digi_tournament_28660,
+.digi_tournament_36195,
+.digi_tournament_12066,
+.digi_tournament_1822,
+.digi_tournament_1823 {
+    background-position-y: -2208px;
+}
+
+/* US Open */
+.digi_tournament_21387,
+.digi_tournament_21388,
+.digi_tournament_12863,
+.digi_tournament_21386,
+.digi_tournament_21384,
+.digi_tournament_21383,
+.digi_tournament_21382 {
+    background-position-y: -2184px;
+}
+
+/* Next Gen */
+.digi_tournament_22063 {
+    background-position-y: -2232px;
+}
+
+/* AFC-Champions-League */
+.digi_tournament_4773 {
+    background-position-y: -2256px;
+}
+
+/* Copa-Libertadores */
+.digi_tournament_4651 {
+    background-position-y: -2280px;
+}
+
+/* MLB Baseball */
+.digi_tournament_1001,
+.digi_tournament_22825,
+.digi_tournament_2475 {
+    background-position-y: -2304px;
+}
+
+/* Azerbaijan. Premier League */
+.digi_tournament_19735,
+.digi_tournament_19736 {
+    background-position-y: -2328px;
+}
+
+/* Kazakhstan. Premier League */
+.digi_tournament_5504 {
+    background-position-y: -2352px;
+}
+
+/* World Cup 2022 */
+.digi_tournament_8519,
+.digi_tournament_5734,
+.digi_tournament_5691,
+.digi_tournament_5692,
+.digi_tournament_5693,
+.digi_tournament_19592 {
+    background-position-y: -2376px;
+}
+
+/* Euro 2020 */
+.digi_tournament_27008 {
+    background-position-y: -2400px;
+}
+
+/* Ice Hockey World Junior Championship 2021 */
+.digi_tournament_27075 {
+    background-position-y: -2424px;
+}
+
+/* Friendly International */
+.digi_tournament_4533 {
+    background-position: 24px 0;
+}
+
+/* blast premier */
+.digi_tournament_27472 {
+    background-position-y: -2448px;
+}
+
+/* African Nations Cup */
+.digi_tournament_20825,
+.digi_tournament_4614 {
+    background-position-y: -2472px;
+}
+
+/* UEFA European Under-21 */
+.digi_tournament_4895 {
+    background-position-y: -2496px;
+}
+
+/* FIFA World Cup European qualifiers*/
+.digi_tournament_4931 {
+    background-position-y: -2520px;
+}
+
+/* Hockey IIHF*/
+.digi_tournament_5285 {
+    background-position-y: -2544px;
+}
+
+/*Valley ball europe man*/
+.digi_tournament_19276 {
+    background-position-y: -2568px;
+}
+
+/*Valley ball europe woman*/
+.digi_tournament_22002 {
+    background-position-y: -2592px;
+}
+
+/*Nations league*/
+.digi_tournament_22963,
+.digi_tournament_22920 {
+    background-position-y: -2616px;
+}
+
+/*football olympic games*/
+.digi_tournament_18755,
+.digi_tournament_18736 {
+    background-position-y: -2640px;
+}
+
+/*volley ball olympic games*/
+.digi_tournament_2154,
+.digi_tournament_17447 {
+    background-position-y: -2664px;
+}
+
+/*basketball olympic games*/
+.digi_tournament_18757,
+.digi_tournament_18756 {
+    background-position-y: -2688px;
+}
+
+/*uefa conference league*/
+.digi_tournament_32050,
+.digi_tournament_36530 {
+    background-position-y: -2712px;
+}
+
+:root[data-theme="dark"] .digi_tournament_32050,
+:root[data-theme="dark"] .digi_tournament_36530 {
+    background-position-x: 48px !important;
+}
+
+/*water polo olympic games*/
+.digi_tournament_17926,
+.digi_tournament_31730 {
+    background-position-y: -2736px;
+}
+
+/*tennis olympic games*/
+.digi_tournament_32368,
+.digi_tournament_32369 {
+    background-position-y: -2760px;
+}
+
+/*handball olympic games*/
+.digi_tournament_16790,
+.digi_tournament_31739 {
+    background-position-y: -2784px;
+}
+
+/*beach valley ball olympic games*/
+.digi_tournament_18747,
+.digi_tournament_18748 {
+    background-position-y: -2808px;
+}
+
+/*south america*/
+.digi_tournament_6078 {
+    background-position-y: -2880px;
+}
+
+/*brazil cup*/
+.digi_tournament_5567 {
+    background-position-y: -2856px;
+}
+
+/*olympic games*/
+.digi_tournament_18274,
+.digi_tournament_32260,
+.digi_tournament_32345 {
+    background-position-y: -2832px;
+}
+
+/*NHL Kraken*/
+.digi_tournament_387671 {
+    background-position-y: -2904px;
+}
+
+/*AFL*/
+.digi_tournament_5169,
+.digi_tournament_16742 {
+    background-position-y: -2928px;
+}
+
+/*Bellator*/
+.digi_tournament_6030 {
+    background-position-y: -2952px;
+}
+
+/*NCAA*/
+.digi_tournament_17070,
+.digi_tournament_1690,
+.digi_tournament_16777,
+.digi_tournament_27182,
+.digi_tournament_10230,
+.digi_tournament_20933,
+.digi_tournament_20935,
+.digi_tournament_13969 {
+    background-position-y: -2976px;
+}
+
+/*WNBA*/
+.digi_tournament_999 {
+    background-position-y: -3024px;
+}
+
+/*Slovak Fortuna Liga (Football)*/
+.digi_tournament_4840 {
+    background-position-y: -3048px;
+}
+
+/*Slovak Tipos Liga (IceHockey) */
+.digi_tournament_1254 {
+    background-position-y: -3072px;
+}
+
+/*Georgia */
+.digi_tournament_4976 {
+    background-position-y: -3096px;
+}
+
+/*Indian Premier League*/
+.digi_tournament_20251 {
+    background-position-y: -3120px;
+}
+
+/*Inter-Provincial T20*/
+.digi_tournament_26024 {
+    background-position-y: -3144px;
+}
+
+/*World Twenty20 International*/
+.digi_tournament_9630 {
+    background-position-y: -3168px;
+}
+
+/*World Caribbean Premier League*/
+.digi_tournament_23595 {
+    background-position-y: -3192px;
+}
+
+/*KCA pod egidoi*/
+.digi_tournament_30914 {
+    background-position-y: -3216px;
+}
+
+/*The International (Dota 2)*/
+.digi_tournament_21014 {
+    background-position-y: -3240px;
+}
+
+/*WTA s*/
+.digi_tournament_15 {
+    background-position-y: -3264px;
+}
+
+.digi_tournament_21 {
+    background-position-y: -3288px;
+}
+
+.digi_tournament_242 {
+    background-position-y: -3312px;
+}
+
+.digi_tournament_261 {
+    background-position-y: -3336px;
+}
+
+.digi_tournament_271 {
+    background-position-y: -3360px;
+}
+
+.digi_tournament_309 {
+    background-position-y: -3384px;
+}
+
+.digi_tournament_312 {
+    background-position-y: -3408px;
+}
+
+.digi_tournament_317 {
+    background-position-y: -3432px;
+}
+
+.digi_tournament_318 {
+    background-position-y: -3456px;
+}
+
+.digi_tournament_693 {
+    background-position-y: -3480px;
+}
+
+.digi_tournament_1533 {
+    background-position-y: -3504px;
+}
+
+.digi_tournament_4726 {
+    background-position-y: -3528px;
+}
+
+.digi_tournament_8379 {
+    background-position-y: -3576px;
+}
+
+.digi_tournament_9321 {
+    background-position-y: -3600px;
+}
+
+.digi_tournament_11395 {
+    background-position-y: -3624px;
+}
+
+.digi_tournament_13773 {
+    background-position-y: -3648px;
+}
+
+.digi_tournament_20068 {
+    background-position-y: -3696px;
+}
+
+.digi_tournament_21880 {
+    background-position-y: -3720px;
+}
+
+.digi_tournament_24025 {
+    background-position-y: -3744px;
+}
+
+.digi_tournament_27220 {
+    background-position-y: -3768px;
+}
+
+.digi_tournament_29392 {
+    background-position-y: -3816px;
+}
+
+.digi_tournament_30648 {
+    background-position-y: -3840px;
+}
+
+.digi_tournament_32769 {
+    background-position-y: -3912px;
+}
+
+/*WTA finals*/
+.digi_tournament_33598 {
+    background-position-y: -4200px;
+}
+
+.digi_tournament_37790 {
+    background-position-y: -1056px;
+}
+
+.digi_tournament_5354,
+.digi_tournament_9990 {
+    background-position-y: -4368px;
+}
+
+.digi_tournament_21014 {
+    background-position-y: -4272px;
+}
+
+.digi_tournament_5168 {
+    background-position-y: -4296px;
+}
+
+.digi_tournament_6552 {
+    background-position-y: -4320px;
+}
+
+.digi_tournament_4729 {
+    background-position-y: -4392px;
+}
+
+.digi_tournament_32608 {
+    background-position-y: -4416px;
+}
+
+.digi_tournament_7325 {
+    background-position-y: -4440px;
+}
+
+.digi_tournament_10885,
+.digi_tournament_34430 {
+    background-position-y: -4464px;
+}
+
+.digi_tournament_1476 {
+    background-position-y: -4488px;
+}
+
+.digi_tournament_33743 {
+    background-position-y: -4512px;
+}
+
+.digi_tournament_27179 {
+    background-position-y: -4536px;
+}
+
+.digi_tournament_34351,
+.digi_tournament_34352 {
+    background-position-y: -4560px;
+}
+
+.digi_tournament_19751,
+.digi_tournament_19752 {
+    background-position-y: -4584px;
+}
+
+.digi_tournament_13322 {
+    background-position-y: -4608px;
+}
+
+.digi_tournament_4525 {
+    background-position-y: -4632px;
+}
+
+.digi_tournament_19186 {
+    background-position-y: -4656px;
+}
+
+.digi_tournament_22774 {
+    background-position-y: -4680px;
+}
+
+.digi_tournament_5676 {
+    background-position-y: -4704px;
+}
+
+.digi_tournament_6409,
+.digi_tournament_11575 {
+    background-position-y: -4728px;
+}
+
+.digi_tournament_25535 {
+    background-position-y: -4752px;
+}
+
+.digi_tournament_8434 {
+    background-position-y: -4776px;
+}
+
+.digi_tournament_34396 {
+    background-position-y: -4800px;
+}
+
+.digi_tournament_7816 {
+    background-position-y: -4824px;
+}
+
+.digi_tournament_5863 {
+    background-position-y: -4848px;
+}
+
+.digi_tournament_5790 {
+    background-position-y: -4872px;
+}
+
+.digi_tournament_14142 {
+    background-position-y: -4896px;
+}
+
+.digi_tournament_1422 {
+    background-position-y: -4920px;
+}
+
+.digi_tournament_19358 {
+    background-position-y: -4944px;
+}
+
+.digi_tournament_2484 {
+    background-position-y: -4968px;
+}
+
+.digi_tournament_2762,
+.digi_tournament_38254 {
+    background-position-y: -4992px;
+}
+
+.digi_tournament_34565 {
+    background-position-y: -5016px;
+}
+
+.digi_tournament_25519 {
+    background-position-y: -5040px;
+}
+
+.digi_tournament_30020 {
+    background-position-y: -5064px;
+}
+
+.digi_tournament_3179 {
+    background-position-y: -5088px;
+}
+
+.digi_tournament_1376 {
+    background-position-y: -5112px;
+}
+
+.digi_tournament_1754,
+.digi_tournament_2766 {
+    background-position-y: -5136px;
+}
+
+.digi_tournament_17042,
+.digi_tournament_23768,
+.digi_tournament_3156 {
+    background-position-y: -5160px;
+}
+
+.digi_tournament_12860 {
+    background-position-y: -5184px;
+}
+
+.digi_tournament_39977 {
+    background-position-y: -5208px;
+}
+
+.digi_tournament_25774 {
+    background-position-y: -5232px;
+}
+
+.digi_tournament_1530,
+.digi_tournament_1532 {
+    background-position-y: -5256px;
+}
+
+.digi_tournament_22600 {
+    background-position-y: -5280px;
+}
+
+.digi_tournament_20251 {
+    background-position-y: -5304px;
+}
+
+.digi_tournament_10931,
+.digi_tournament_24725,
+.digi_tournament_25694,
+.digi_tournament_24634,
+.digi_tournament_24635 {
+    background-position-y: -5328px;
+}
+
+.digi_tournament_25776 {
+    background-position-y: -5352px;
+}
+
+.digi_tournament_26838 {
+    background-position-y: -5376px;
+}
+
+.digi_tournament_32331 {
+    background-position-y: -5400px;
+}
+
+.digi_tournament_32344 {
+    background-position-y: -5424px;
+}
+
+.digi_tournament_32694,
+.digi_tournament_24675,
+.digi_tournament_9630,
+.digi_tournament_33300 {
+    background-position-y: -5448px;
+}
+
+.digi_tournament_26687 {
+    background-position-y: -5472px;
+}
+
+.digi_tournament_32658 {
+    background-position-y: -5496px;
+}
+
+.digi_tournament_34272 {
+    background-position-y: -5520px;
+}
+
+.digi_tournament_20066 {
+    background-position-y: -5544px;
+}
+
+.digi_tournament_20401 {
+    background-position-y: -5568px;
+}
+
+.digi_tournament_22070 {
+    background-position-y: -5592px;
+}
+
+.digi_tournament_22467 {
+    background-position-y: -5616px;
+}
+
+.digi_tournament_22468 {
+    background-position-y: -5640px;
+}
+
+.digi_tournament_22562 {
+    background-position-y: -5664px;
+}
+
+.digi_tournament_24820 {
+    background-position-y: -5688px;
+}
+
+.digi_tournament_24883 {
+    background-position-y: -5712px;
+}
+
+.digi_tournament_25132 {
+    background-position-y: -5736px;
+}
+
+.digi_tournament_308789 {
+    background-position-y: -5760px;
+}
+
+.digi_tournament_435221 {
+    background-position-y: -5784px;
+}
+
+.digi_tournament_500041 {
+    background-position-y: -5808px;
+}
+
+.digi_tournament_13595 {
+    background-position-y: -5832px;
+}
+
+.digi_tournament_13601 {
+    background-position-y: -5856px;
+}
+
+.digi_tournament_13603 {
+    background-position-y: -5880px;
+}
+
+.digi_tournament_13604 {
+    background-position-y: -5904px;
+}
+
+.digi_tournament_14314 {
+    background-position-y: -5928px;
+}
+
+.digi_tournament_14315 {
+    background-position-y: -5952px;
+}
+
+.digi_tournament_14317 {
+    background-position-y: -5976px;
+}
+
+.digi_tournament_14318 {
+    background-position-y: -6000px;
+}
+
+.digi_tournament_14320 {
+    background-position-y: -6024px;
+}
+
+.digi_tournament_14935 {
+    background-position-y: -6048px;
+}
+
+.digi_tournament_14937 {
+    background-position-y: -6072px;
+}
+
+.digi_tournament_14938 {
+    background-position-y: -6096px;
+}
+
+.digi_tournament_14940 {
+    background-position-y: -6120px;
+}
+
+.digi_tournament_15518 {
+    background-position-y: -6144px;
+}
+
+.digi_tournament_15519 {
+    background-position-y: -6168px;
+}
+
+.digi_tournament_15523 {
+    background-position-y: -6192px;
+}
+
+.digi_tournament_15953 {
+    background-position-y: -6216px;
+}
+
+.digi_tournament_15954 {
+    background-position-y: -6240px;
+}
+
+.digi_tournament_15957 {
+    background-position-y: -6264px;
+}
+
+.digi_tournament_16184 {
+    background-position-y: -6288px;
+}
+
+.digi_tournament_16186 {
+    background-position-y: -6312px;
+}
+
+.digi_tournament_16188 {
+    background-position-y: -6336px;
+}
+
+.digi_tournament_16199 {
+    background-position-y: -6360px;
+}
+
+.digi_tournament_16203 {
+    background-position-y: -6384px;
+}
+
+.digi_tournament_16205 {
+    background-position-y: -6408px;
+}
+
+.digi_tournament_96645 {
+    background-position-y: -6432px;
+}
+
+.digi_tournament_96646 {
+    background-position-y: -6456px;
+}
+
+.digi_tournament_96648 {
+    background-position-y: -6480px;
+}
+
+.digi_tournament_96649 {
+    background-position-y: -6504px;
+}
+
+.digi_tournament_499770 {
+    background-position-y: -6528px;
+}
+
+.digi_tournament_13598 {
+    background-position-y: -6552px;
+}
+
+.digi_tournament_14316 {
+    background-position-y: -6576px;
+}
+
+.digi_tournament_14936 {
+    background-position-y: -6600px;
+}
+
+.digi_tournament_14942 {
+    background-position-y: -6624px;
+}
+
+.digi_tournament_15524 {
+    background-position-y: -6648px;
+}
+
+.digi_tournament_15952 {
+    background-position-y: -6672px;
+}
+
+.digi_tournament_15955 {
+    background-position-y: -6696px;
+}
+
+.digi_tournament_16009 {
+    background-position-y: -6720px;
+}
+
+.digi_tournament_16185 {
+    background-position-y: -6744px;
+}
+
+.digi_tournament_16204 {
+    background-position-y: -6768px;
+}
+
+.digi_tournament_96650 {
+    background-position-y: -6792px;
+}
+
+.digi_tournament_96651 {
+    background-position-y: -6816px;
+}
+
+.digi_tournament_35093,
+.digi_tournament_35094,
+.digi_tournament_36046,
+.digi_tournament_36082 {
+    background-position-y: -6840px;
+}
+
+.digi_tournament_5896 {
+    background-position-y: -6864px;
+}
+
+.digi_tournament_6446 {
+    background-position-y: -6888px;
+}
+
+.digi_tournament_4924 {
+    background-position-y: -6912px;
+}
+
+.digi_tournament_6089 {
+    background-position-y: -6936px;
+}
+
+.digi_tournament_7154 {
+    background-position-y: -6960px;
+}
+
+.digi_tournament_7179 {
+    background-position-y: -6984px;
+}
+
+.digi_tournament_8227 {
+    background-position-y: -7008px;
+}
+
+.digi_tournament_8229 {
+    background-position-y: -7032px;
+}
+
+.digi_tournament_115251,
+.digi_tournament_4547 {
+    background-position-y: -7056px;
+}
+
+.digi_tournament_482180 {
+    background-position-y: -7080px;
+}
+
+.digi_tournament_35847 {
+    background-position-y: -7104px;
+}
+
+.digi_tournament_22383 {
+    background-position-y: -7128px;
+}
+
+.digi_tournament_36859 {
+    background-position-y: -7128px;
+}
+
+.digi_tournament_17814 {
+    background-position-y: -7152px;
+}
+
+.digi_tournament_22935 {
+    background-position-y: -7176px;
+}
+
+.digi_tournament_22952 {
+    background-position-y: -7200px;
+}
+
+.digi_tournament_25536,
+.digi_tournament_36418 {
+    background-position-y: -7224px;
+}
+
+.digi_tournament_6623 {
+    background-position-y: -7248px;
+}
+
+.digi_tournament_5649 {
+    background-position-y: -7272px;
+}
+
+.digi_tournament_91520 {
+    background-position-y: -7296px;
+}
+
+.digi_tournament_5002 {
+    background-position-y: -7320px;
+}
+
+.digi_tournament_5106 {
+    background-position-y: -7344px;
+}
+
+.digi_tournament_5258 {
+    background-position-y: -7368px;
+}
+
+.digi_tournament_25536 {
+    background-position-y: -7392px;
+}
+
+.digi_tournament_4702 {
+    background-position-y: -7416px;
+}
+
+.digi_tournament_4969 {
+    background-position-y: -7440px;
+}
+
+.digi_tournament_1045 {
+    background-position-y: -7464px;
+}
+
+.digi_tournament_1971,
+.digi_tournament_32501 {
+    background-position-y: -7488px;
+}
+
+.digi_tournament_1121,
+.digi_tournament_12637,
+.digi_tournament_32638 {
+    background-position-y: -7512px;
+}
+
+.digi_tournament_1135,
+.digi_tournament_1150,
+.digi_tournament_32680 {
+    background-position-y: -7536px;
+}
+
+.digi_tournament_1799,
+.digi_tournament_25822 {
+    background-position-y: -7560px;
+}
+
+.digi_tournament_12173,
+.digi_tournament_12179,
+.digi_tournament_25492 {
+    background-position-y: -7584px;
+}
+
+.digi_tournament_21014 {
+    background-position-y: -7608px;
+}
+
+.digi_tournament_21500 {
+    background-position-y: -7632px;
+}
+
+.digi_tournament_22009,
+.digi_tournament_30057,
+.digi_tournament_30070,
+.digi_tournament_30071 {
+    background-position-y: -7656px;
+}
+
+.digi_tournament_22383 {
+    background-position-y: -7680px;
+}
+
+.digi_tournament_26570 {
+    background-position-y: -7704px;
+}
+
+.digi_tournament_27472 {
+    background-position-y: -7728px;
+}
+
+.digi_tournament_31897 {
+    background-position-y: -7752px;
+}
+
+.digi_tournament_4564 {
+    background-position-y: -7776px;
+}
+
+.digi_tournament_5052 {
+    background-position-y: -7800px;
+}
+
+.digi_tournament_5179 {
+    background-position-y: -7824px;
+}
+
+.digi_tournament_5180 {
+    background-position-y: -7848px;
+}
+
+.digi_tournament_12337 {
+    background-position-y: -7872px;
+}
+
+.digi_tournament_22086 {
+    background-position-y: -7896px;
+}
+
+/*=========== 02 09 2022 ============*/
+/*ID:22159*/
+.digi_tournament_22159 {
+    background-position: 0px -7920px;
+}
+
+/*=========== 02 09 2022 ============*/
+/*=========== 17 09 2022 ============*/
+/*ID:2849, ID:7841*/
+.digi_tournament_16776 {
+    background-position: 0px -7944px;
+}
+
+.digi_tournament_6097 {
+    background-position: 0px -7968px;
+}
+
+/*=========== 17 09 2022 ============*/
+/*=========== 26 09 2022 ============*/
+/*ID:19760, ID:32937*/
+.digi_tournament_19760 {
+    background-position: 0px -7992px;
+}
+
+.digi_tournament_32937 {
+    background-position: 0px -8016px;
+}
+
+/*=========== 26 09 2022 ============*/
+/*ID:19760, ID:32937*/
+.digi_tournament_16654 {
+    background-position: 0px -8040px;
+}
+
+.digi_tournament_998 {
+    background-position: 0px -8040px;
+}
+
+/*=========== 23 10 2022 ============*/
+/*ID:35532*/
+.digi_tournament_35532 {
+    background-position: 0px -8064px;
+}
+
+/*=========== 23 10 2022 ============*/
+/*=========== 01 11 2022 ============*/
+/*ID:998*/
+.digi_tournament_998 {
+    background-position: 0px -8112px;
+}
+
+/*=========== 01 11 2022 ============*/
+/*=========== 17 11 2022 ============*/
+/*ID:27498, ID:33669, ID:4533*/
+.digi_tournament_27498 {
+    background-position: 0px -8136px;
+}
+
+.digi_tournament_33669 {
+    background-position: 0px -8160px;
+}
+
+.digi_tournament_4533 {
+    background-position: 0px -8184px;
+}
+
+/*=========== 17 11 2022 ============*/
+/*=========== 19 12 2022 ============*/
+/*ID:29236, ID:39309, ID:7726*/
+.digi_tournament_29236 {
+    background-position: 0px -8208px;
+}
+
+.digi_tournament_39309 {
+    background-position: 0px -8232px;
+}
+
+.digi_tournament_7726 {
+    background-position: 0px -8256px;
+}
+
+/*=========== 19 12 2022 ============*/
+/*=========== 03 03 2023 ============*/
+/*ID:1825, ID:37905*/
+.digi_tournament_1825 {
+    background-position: 0px -8304px;
+}
+
+.digi_tournament_37905 {
+    background-position: 0px -8328px;
+}
+
+/*=========== 03 03 2023 ============*/
+/*=========== 21 03 2023 ============*/
+/*ID:24636, ID:26244, ID:38971, ID:40564, ID:4085*/
+.digi_tournament_24636 {
+    background-position: 0px -8352px;
+}
+
+.digi_tournament_26244 {
+    background-position: 0px -8376px;
+}
+
+.digi_tournament_38971 {
+    background-position: 0px -8400px;
+}
+
+.digi_tournament_40564 {
+    background-position: 0px -8424px;
+}
+
+.digi_tournament_4085 {
+    background-position: 0px -8448px;
+}
+
+/*=========== 21 03 2023 ============*/
+/*=========== 22 03 2023 ============*/
+/*ID:23856, ID:35343*/
+.digi_tournament_23856 {
+    background-position: 0px -8352px;
+}
+
+.digi_tournament_35343 {
+    background-position: 0px -8376px;
+}
+
+/*=========== 22 03 2023 ============*/
+/*=========== 23 03 2023 ============*/
+/*ID:5284, ID:6344*/
+.digi_tournament_5284 {
+    background-position: 0px -8400px;
+}
+
+.digi_tournament_6344 {
+    background-position: 0px -8424px;
+}
+
+/*=========== 23 03 2023 ============*/
+/*=========== 24 03 2023 ============*/
+/*ID:20251, ID:24636, ID:26244, ID:38971, ID:40564, ID:4085*/
+.digi_tournament_20251 {
+    background-position: 0px -8448px;
+}
+
+.digi_tournament_24636 {
+    background-position: 0px -8472px;
+}
+
+.digi_tournament_26244 {
+    background-position: 0px -8496px;
+}
+
+.digi_tournament_38971 {
+    background-position: 0px -8520px;
+}
+
+.digi_tournament_40564 {
+    background-position: 0px -8544px;
+}
+
+.digi_tournament_4085 {
+    background-position: 0px -8568px;
+}
+
+/*=========== 24 03 2023 ============*/
+/*=========== 18 04 2023 custom tournament icons ============*/
+#dgm_m_slider_wrapper .digi_tournament_custom: {
+    content: "" !important;
+    display: block;
+    background-image: url(./tournament.png) !important;
+    background-size: 96px;
+    width: 24px;
+    height: 24px;
+    background-position: 0px -8592px;
+}
+
+#dgm_m_slider_wrapper .digi_tournament_1546: {
+    content: "" !important;
+    display: block;
+    background-image: url(./tournament.png) !important;
+    background-size: 96px;
+    width: 24px;
+    height: 24px;
+    background-position-y: -2160px;
+}
+
+/*=========== 18 04 2023 custom tournament icons ============*/
+/*=========== 08 06 2023 ============*/
+/*ID:ChampionsLeague, ID:ConferenceLeague, ID:EuroLeague, ID:PremierLeague*/
+.digi_tournament_ChampionsLeague {
+    background-position: 0px -8616px;
+}
+
+.digi_tournament_ConferenceLeague {
+    background-position: 0px -8640px;
+}
+
+.digi_tournament_EuroLeague {
+    background-position: 0px -8664px;
+}
+
+.digi_tournament_PremierLeague {
+    background-position: 0px -8688px;
+}
+
+/*=========== 08 06 2023 ============*/
+/*=========== 12 06 2023 ============*/
+/*ID:4486*/
+.digi_tournament_4486 {
+    background-position: 0px -8712px;
+}
+
+/*=========== 12 06 2023 ============*/
+/*=========== 15 06 2023 ============*/
+/*ID:22433*/
+.digi_tournament_22433 {
+    background-position: 0px -8736px;
+}
+
+/*=========== 15 06 2023 ============*/
+/*=========== 04 07 2023 ============*/
+/*ID:20351*/
+.digi_tournament_20351 {
+    background-position: 0 -8760px;
+}
+
+/*=========== 04 07 2023 ============*/
+/*=========== 17 07 2023 ============*/
+/*ID:4979, ID:5024*/
+.digi_tournament_4979 {
+    background-position: 0px -8784px;
+}
+
+.digi_tournament_5024 {
+    background-position: 0px -8808px;
+}
+
+/*=========== 17 07 2023 ============*/
+/*ID:4979, ID:5024*/
+.digi_tournament_8519 {
+    background-position: 0px -8832px;
+}
+
+.digi_tournament_36825 {
+    background-position: 0px -8856px;
+}
+
+/*=========== 07 08 2023 ============*/
+/*ID:10172, ID:20662, ID:25831, ID:3578, ID:4618, ID:4724, ID:5210, ID:5659, ID:6002, ID:6313*/
+.digi_tournament_10172 {
+    background-position: 0px -8880px;
+}
+
+.digi_tournament_20662 {
+    background-position: 0px -8904px;
+}
+
+.digi_tournament_25831 {
+    background-position: 0px -8928px;
+}
+
+.digi_tournament_3578 {
+    background-position: 0px -8952px;
+}
+
+.digi_tournament_4618 {
+    background-position: 0px -8976px;
+}
+
+.digi_tournament_4724 {
+    background-position: 0px -9000px;
+}
+
+.digi_tournament_5210 {
+    background-position: 0px -9024px;
+}
+
+.digi_tournament_5659 {
+    background-position: 0px -9048px;
+}
+
+.digi_tournament_6002 {
+    background-position: 0px -9072px;
+}
+
+.digi_tournament_6313 {
+    background-position: 0px -9096px;
+}
+
+/*=========== 07 08 2023 ============*/
+/*=========== 10 08 2023 ============*/
+/*ID:1121, ID:25831, ID:35378*/
+.digi_tournament_1121 {
+    background-position: 0px -9120px;
+}
+
+.digi_tournament_25831 {
+    background-position: 0px -9144px;
+}
+
+.digi_tournament_35378 {
+    background-position: 0px -9168px;
+}
+
+/*=========== 10 08 2023 ============*/
+/*=========== 14 08 2023 ============*/
+/*ID:19879, ID:29324, ID:32050, ID:400939, ID:4230, ID:4275, ID:4484, ID:4584, ID:4610, ID:4979, ID:5002, ID:5016*/
+.digi_tournament_19879 {
+    background-position: 0px -9192px;
+}
+
+.digi_tournament_29324 {
+    background-position: 0px -9216px;
+}
+
+.digi_tournament_32050 {
+    background-position: 0px -9240px;
+}
+
+.digi_tournament_400939 {
+    background-position: 0px -9288px;
+}
+
+.digi_tournament_4230 {
+    background-position: 0px -9312px;
+}
+
+.digi_tournament_4275 {
+    background-position: 0px -9336px;
+}
+
+.digi_tournament_4484 {
+    background-position: 0px -9360px;
+}
+
+.digi_tournament_4584 {
+    background-position: 0px -9408px;
+}
+
+.digi_tournament_4610 {
+    background-position: 0px -9432px;
+}
+
+.digi_tournament_4979 {
+    background-position: 0px -9456px;
+}
+
+.digi_tournament_5002 {
+    background-position: 0px -9480px;
+}
+
+.digi_tournament_5016 {
+    background-position: 0px -9504px;
+}
+
+/*=========== 14 08 2023 ============*/
+/*=========== 18 08 2023 ============*/
+/* ID:36530 removed last added duplicate */
+/* ID:4485 removed last added duplicate */
+/*=========== 18 08 2023 ============*/
+
+
+/*============ 17 08 2023 ============*/
+/*ID:29375*/
+/*ID:37485*/
+/*ID:37486*/
+/*ID:37487*/
+/*ID:37488*/
+/*ID:37489*/
+/*ID:37490*/
+/*ID:42659*/
+.digi_tournament_29375 {
+    background-position: 0px -9528px;
+}
+
+.digi_tournament_37485 {
+    background-position: 0px -9552px;
+}
+
+.digi_tournament_37486 {
+    background-position: 0px -9576px;
+}
+
+.digi_tournament_37487 {
+    background-position: 0px -9600px;
+}
+
+.digi_tournament_37488 {
+    background-position: 0px -9624px;
+}
+
+.digi_tournament_37489 {
+    background-position: 0px -9648px;
+}
+
+.digi_tournament_37490 {
+    background-position: 0px -9672px;
+}
+
+.digi_tournament_42659 {
+    background-position: 0px -9696px;
+}
+
+/*============ 17 08 2023 ============*/
+/*ID:29375*/
+/*ID:37485*/
+/*ID:37486*/
+/*ID:37487*/
+/*ID:37488*/
+/*ID:37489*/
+/*ID:37490*/
+/*ID:42659*/
+
+/*============ 14 09 2023 ============*/
+/*ID:18518*/
+/*ID:23721*/
+/*ID:25183*/
+.digi_tournament_18518 {
+    background-position: 0px -9720px;
+}
+
+.digi_tournament_23721 {
+    background-position: 0px -9744px;
+}
+
+.digi_tournament_25183 {
+    background-position: 0px -9768px;
+}
+
+/*============ 14 09 2023 ============*/
+/*ID:18518*/
+/*ID:23721*/
+/*ID:25183*/
+
+
+
+/*============ 18 09 2023 ============*/
+/*ID:13282*/
+/*ID:4486*/
+/*ID:4535*/
+/*ID:4550*/
+/*ID:4557*/
+/*ID:4565*/
+/*ID:5106*/
+/*ID:9884*/
+.digi_tournament_13282 {
+    background-position: 0px -9792px;
+}
+
+.digi_tournament_4486 {
+    background-position: 0px -9816px;
+}
+
+.digi_tournament_4535 {
+    background-position: 0px -9840px;
+}
+
+.digi_tournament_4550 {
+    background-position: 0px -9864px;
+}
+
+.digi_tournament_4557 {
+    background-position: 0px -9888px;
+}
+
+.digi_tournament_4565 {
+    background-position: 0px -9912px;
+}
+
+.digi_tournament_5106 {
+    background-position: 0px -9936px;
+}
+
+.digi_tournament_9884 {
+    background-position: 0px -9960px;
+}
+
+/*============ 18 09 2023 ============*/
+/*ID:13282*/
+/*ID:4486*/
+/*ID:4535*/
+/*ID:4550*/
+/*ID:4557*/
+/*ID:4565*/
+/*ID:5106*/
+/*ID:9884*/
+
+
+.digi_tournament_28905 {
+    background-position: 0px -9984px;
+}
+
+.digi_tournament_42575 {
+    background-position: 0px -10032px;
+}
+
+.digi_tournament_13082,
+.digi_tournament_44110 {
+    background-position: 0px -10008px;
+}
+
+
+/*============ 13 10 2023 ============*/
+/*ID:21014*/
+.digi_tournament_21014 {
+    background-position: 0px -10056px;
+}
+
+/*============ 13 10 2023 ============*/
+/*ID:21014*/
+
+
+/*============ 27 10 2023 ============*/
+/*ID:1254*/
+/*ID:4840*/
+/*ID:5132*/
+.digi_tournament_1254 {
+    background-position: 0px -10080px;
+}
+
+.digi_tournament_4840 {
+    background-position: 0px -10104px;
+}
+
+.digi_tournament_5132 {
+    background-position: 0px -10128px;
+}
+
+/*============ 27 10 2023 ============*/
+/*ID:1254*/
+/*ID:4840*/
+/*ID:5132*/
+
+/*============ 30 10 2023 ============*/
+/*ID:211525*/
+/*ID:211528*/
+/*ID:211529*/
+/*ID:211531*/
+/*ID:330687*/
+/*ID:330691*/
+/*ID:380627*/
+/*ID:522980*/
+.digi_tournament_211525 {
+    background-position: 0px -10152px;
+}
+
+.digi_tournament_211528 {
+    background-position: 0px -10176px;
+}
+
+.digi_tournament_211529 {
+    background-position: 0px -10200px;
+}
+
+.digi_tournament_211531 {
+    background-position: 0px -10224px;
+}
+
+.digi_tournament_330687 {
+    background-position: 0px -10248px;
+}
+
+.digi_tournament_330691 {
+    background-position: 0px -10272px;
+}
+
+.digi_tournament_380627 {
+    background-position: 0px -10296px;
+}
+
+.digi_tournament_522980 {
+    background-position: 0px -10320px;
+}
+
+/*============ 30 10 2023 ============*/
+/*ID:211525*/
+/*ID:211528*/
+/*ID:211529*/
+/*ID:211531*/
+/*ID:330687*/
+/*ID:330691*/
+/*ID:380627*/
+/*ID:522980*/
+
+/*============ 11 12 2023 ============*/
+/*ID:43469*/
+.digi_tournament_43469 {
+    background-position: 0px -10344px;
+}
+
+/*============ 11 12 2023 ============*/
+/*ID:43469*/
+
+
+/*============ 18 01 2024 ============*/
+/*ID:10560*/
+/*ID:11903*/
+/*ID:141734*/
+/*ID:16952*/
+/*ID:17889*/
+/*ID:187503*/
+/*ID:1925*/
+/*ID:192707*/
+/*ID:196050*/
+/*ID:243217*/
+/*ID:298*/
+/*ID:3085*/
+/*ID:3161*/
+/*ID:4529*/
+/*ID:59619*/
+/*ID:8933*/
+/*ID:8960*/
+/*ID:90668*/
+/*ID:92217*/
+/*ID:9768*/
+.digi_tournament_10560 {
+    background-position: 0px -10368px;
+}
+
+.digi_tournament_11903 {
+    background-position: 0px -10392px;
+}
+
+.digi_tournament_141734 {
+    background-position: 0px -10416px;
+}
+
+.digi_tournament_16952 {
+    background-position: 0px -10440px;
+}
+
+.digi_tournament_17889 {
+    background-position: 0px -10464px;
+}
+
+.digi_tournament_187503 {
+    background-position: 0px -10488px;
+}
+
+.digi_tournament_1925 {
+    background-position: 0px -10512px;
+}
+
+.digi_tournament_192707 {
+    background-position: 0px -10536px;
+}
+
+.digi_tournament_196050 {
+    background-position: 0px -10560px;
+}
+
+.digi_tournament_243217 {
+    background-position: 0px -10584px;
+}
+
+.digi_tournament_298 {
+    background-position: 0px -10608px;
+}
+
+.digi_tournament_3085 {
+    background-position: 0px -10632px;
+}
+
+.digi_tournament_3161 {
+    background-position: 0px -10656px;
+}
+
+.digi_tournament_59619 {
+    background-position: 0px -10704px;
+}
+
+.digi_tournament_8933 {
+    background-position: 0px -10728px;
+}
+
+.digi_tournament_8960 {
+    background-position: 0px -10752px;
+}
+
+.digi_tournament_90668 {
+    background-position: 0px -10776px;
+}
+
+.digi_tournament_92217 {
+    background-position: 0px -10800px;
+}
+
+.digi_tournament_9768 {
+    background-position: 0px -10824px;
+}
+
+.digi_tournament_33446 {
+    background-position: 0px -10848px;
+}
+
+
+/*============ 29 01 2024 ============*/
+/*ID:44516*/
+/*ID:45790*/
+/*ID:45792*/
+/*ID:45793*/
+/*ID:45794*/
+/*ID:8349*/
+/*ID:8494*/
+.digi_tournament_44516 {
+    background-position: 0px -10872px;
+}
+
+.digi_tournament_45790 {
+    background-position: 0px -10896px;
+}
+
+.digi_tournament_45792 {
+    background-position: 0px -10920px;
+}
+
+.digi_tournament_45793 {
+    background-position: 0px -10944px;
+}
+
+.digi_tournament_45794 {
+    background-position: 0px -10968px;
+}
+
+.digi_tournament_8349 {
+    background-position: 0px -10992px;
+}
+
+.digi_tournament_8494 {
+    background-position: 0px -11016px;
+}
+
+/*============ 29 01 2024 ============*/
+/*ID:44516*/
+/*ID:45790*/
+/*ID:45792*/
+/*ID:45793*/
+/*ID:45794*/
+/*ID:8349*/
+/*ID:8494*/
+
+/*============ 05 02 2024 ============*/
+/*ID:27276*/
+/*ID:45875*/
+/*ID:8031*/
+.digi_tournament_27276 {
+    background-position: 0px -11040px;
+}
+
+.digi_tournament_45875 {
+    background-position: 0px -11064px;
+}
+
+.digi_tournament_8031 {
+    background-position: 0px -11088px;
+}
+
+/*============ 05 02 2024 ============*/
+/*ID:27276*/
+/*ID:45875*/
+/*ID:8031*/
+
+
+/*============ 05 02 2024 ============*/
+/*ID:43348*/
+.digi_tournament_43348 {
+    background-position: 0px -11112px;
+}
+
+/*============ 05 02 2024 ============*/
+/*ID:43348*/
+
+/*============ 22 07 2024 ============*/
+/*ID:31627*/
+/*ID:32339*/
+.digi_tournament_31627 {
+    background-position: 0px -11136px;
+    }
+    .digi_tournament_32339 {
+    background-position: 0px -11160px;
+    }
+    /*============ 22 07 2024 ============*/
+    /*ID:31627*/
+    /*ID:32339*/
