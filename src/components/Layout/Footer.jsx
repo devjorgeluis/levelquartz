@@ -1,10 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import certImage from '../../assets/images/20495.jpg'
 import providerImage from '../../assets/images/providers_sprite.png'
-import '../../css/Providers.css'
 
 // Provider data extracted from the HTML (icons are sprites – adjust as needed)
 const providers = [

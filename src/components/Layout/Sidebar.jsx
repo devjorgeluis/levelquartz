@@ -43,44 +43,31 @@ const Sidebar = ({ isSlotsOnly, isMobile }) => {
         { code: "cs", name: "Czech" }
     ];
 
-    const isMenuExpanded = (menuName) => {
-        return expandedMenus.includes(menuName);
-    };
+    const isMenuExpanded = (menuName) => expandedMenus.includes(menuName);
 
-    const toggleLanguageDropdown = () => {
-        setShowLanguageDropdown(!showLanguageDropdown);
-    };
-
-    const closeLanguageDropdown = () => {
-        setShowLanguageDropdown(false);
-    };
-
+    const toggleLanguageDropdown = () => setShowLanguageDropdown(!showLanguageDropdown);
+    const closeLanguageDropdown = () => setShowLanguageDropdown(false);
     const handleLanguageSelect = (languageCode) => {
-        var language = languages.find(lang => lang.code === languageCode) || currentLanguage;
+        const language = languages.find(lang => lang.code === languageCode) || currentLanguage;
         setCurrentLanguage(language);
         closeLanguageDropdown();
     };
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCountdown(prevCountdown => {
-                let { days, hours, minutes, seconds } = prevCountdown;
-
-                if (seconds > 0) {
-                    seconds--;
-                } else {
+            setCountdown(prev => {
+                let { days, hours, minutes, seconds } = prev;
+                if (seconds > 0) seconds--;
+                else {
                     seconds = 59;
-                    if (minutes > 0) {
-                        minutes--;
-                    } else {
+                    if (minutes > 0) minutes--;
+                    else {
                         minutes = 59;
-                        if (hours > 0) {
-                            hours--;
-                        } else {
+                        if (hours > 0) hours--;
+                        else {
                             hours = 23;
-                            if (days > 0) {
-                                days--;
-                            } else {
+                            if (days > 0) days--;
+                            else {
                                 days = 1;
                                 hours = 5;
                                 minutes = 8;
@@ -89,31 +76,25 @@ const Sidebar = ({ isSlotsOnly, isMobile }) => {
                         }
                     }
                 }
-
                 return { days, hours, minutes, seconds };
             });
         }, 1000);
-
         return () => clearInterval(timer);
     }, []);
 
     useEffect(() => {
-        if (!hasFetchedLiveCasino) {
-            getPage("livecasino");
-        }
+        if (!hasFetchedLiveCasino) getPage("livecasino");
 
         const hash = location.hash;
         if (hash && hash.startsWith('#')) {
             const categoryCode = hash.substring(1);
             setActiveSubmenuItem(categoryCode);
-
             if (location.pathname === '/live-casino' && !expandedMenus.includes('live-casino')) {
                 setExpandedMenus(prev => [...prev, 'live-casino']);
             }
         } else {
             setActiveSubmenuItem("");
         }
-
         window.scrollTo(0, 0);
     }, [location.pathname, location.hash, hasFetchedLiveCasino]);
 
@@ -122,170 +103,158 @@ const Sidebar = ({ isSlotsOnly, isMobile }) => {
     };
 
     const callbackGetPage = (result) => {
-        if (result.status === 500 || result.status === 422) {
-
-        } else {
-            let menus = [{
-                name: "Home",
-                code: "home",
-                id: null,
-                table_name: null,
-                href: "/live-casino#home"
-            }];
-            result.data.categories.forEach(element => {
-                menus.push({
-                    name: element.name,
-                    icon: element.image_local != null && element.image_local !== "" && contextData.cdnUrl + element.image_local,
-                    href: "/live-casino#" + element.code
-                })
+        if (result.status === 500 || result.status === 422) return;
+        let menus = [{
+            name: "Home",
+            code: "home",
+            id: null,
+            table_name: null,
+            href: "/live-casino#home"
+        }];
+        result.data.categories.forEach(element => {
+            menus.push({
+                name: element.name,
+                icon: element.image_local != null && element.image_local !== "" ? contextData.cdnUrl + element.image_local : null,
+                href: "/live-casino#" + element.code
             });
-            setLiveCasinoMenus(menus);
-            setHasFetchedLiveCasino(true);
-        }
+        });
+        setLiveCasinoMenus(menus);
+        setHasFetchedLiveCasino(true);
     };
 
     const isSlotsOnlyMode = isSlotsOnly === "true" || isSlotsOnly === true;
 
-    const menuItems = [
-        {
-            id: 'home',
-            name: 'HOME',
-            icon: 'custom-icon-bp-home',
-            href: '/'
-        },
-        {
-            id: 'casino',
-            name: 'CASINO',
-            icon: 'custom-icon-bp-casino',
-            href: '/casino',
-        },
-        {
-            id: 'live-casino',
-            name: 'CASINO EN VIVO',
-            icon: 'custom-icon-bp-live-casino',
-            href: '/live-casino'
-        },
-        {
-            id: 'sports',
-            name: 'Deportes',
-            icon: 'custom-icon-bp-sports',
-            href: '/sports'
-        },
-        {
-            id: 'sports',
-            name: 'PARTIDOS EN VIVO',
-            icon: 'custom-icon-bp-sport-overview',
-            href: '/live-sports'
-        },
-    ]
+    // Menú principal: exactamente los mismos elementos que en el target
+    const mainMenuItems = [
+        { id: 'home', name: 'Home', icon: 'category_icon-home', href: '/' },
+        { id: 'casino', name: 'Casino', icon: 'category_icon-casino_1', href: '/casino' },
+        { id: 'live-casino', name: 'Casino en vivo', icon: 'category_icon-tv_games', href: '/live-casino' },
+        // { id: 'fastgames', name: 'Juegos rápidos', icon: 'category_icon-crash_1', href: '/fastgames-lobby', badge: 'Popular' },
+        // { id: 'virtualsport', name: 'VirtualSport', icon: 'category_icon-fast_games_1', href: '/virtualsport-lobby' },
+        { id: 'sports', name: 'Deportes', icon: 'category_icon-penalty', href: '/sports' },
+        { id: 'live-sports', name: 'Partidos en Vivo', icon: 'category_icon-live_sport_1', href: '/live-sports' },
+        // { id: 'esport', name: 'Esport', icon: 'category_icon-penalty_3', href: '/esport' },
+    ];
+
+    // Determinar si un item está activo
+    const isActive = (item) => {
+        if (item.href.startsWith('#')) {
+            return location.hash === item.href;
+        }
+        if (item.href === '/') return location.pathname === '/';
+        return location.pathname === item.href || location.pathname.startsWith(item.href + '/');
+    };
 
     const handleClickMenu = (menu) => {
         navigate(menu.href);
-        toggleSidebar(false);
-    }
+        // Si es móvil, cerrar el sidebar después de la navegación (opcional)
+        if (isMobile) {
+            toggleSidebar(false);
+        }
+    };
 
     return (
         <>
             <div className={`menu-layout-sidebar ${isSidebarExpanded ? 'expanded' : 'collapsed'}`}>
-                <div className={`sidemenu-container sidemenu-container-collapsed ${!isSidebarExpanded ? 'active' : ''}`}>
-                    <div className="menu-items menu-items-collapsed">
-                        {menuItems.map((item, index) => (
-                            <Link
-                                key={index}
-                                className={`nav-link fixed-nav-link ${item.name} ${item.name === 'sports' ? 'active-collapsed' : ''}`}
-                                to={item.href}
-                                aria-current={item.name === 'sports' ? 'page' : undefined}
-                            >
-                                <span className="nav-link-icon-block">
-                                    <i className={item.icon}></i>
-                                </span>
-                            </Link>
-                        ))}
+                {/* Estructura exacta del target: un único contenedor con scroll y menú */}
+                <div className={`tb--sidebar-wrapper ${isSidebarExpanded ? 'tb--sidebar-wr-open' : ''}`}>
+                    <div className="tb--scrollbar-wrapper tb--hide">
+                        <div className="tb--scrollbar" style={{ height: '366px' }}></div>
                     </div>
-                    <div className="menu-divider"></div>
-                    <div className="footer-items footer-items-collapsed"></div>
+                    <div className={`tb--sidebar-menu_wrapper ${isSidebarExpanded ? 'tb--sidebar-open' : ''}`}>
+                        <nav className="tb--sidebar-menu">
+                            <div className="tb--sidebar-main tb--text_upercase">
+                                {mainMenuItems.map((item) => (
+                                    <div 
+                                        key={item.id} 
+                                        className={`tb--sidebar-main_item show-icon tb--sidebar-main_style ${isActive(item) ? 'active' : ''}`}
+                                    >
+                                        <div className="tb--sidebar-main_item">
+                                            <div>
+                                                <a
+                                                    target="_self"
+                                                    className={`tb--flex tb--align-center tb--cp tb--sidebar-main_link menu-block-medium tb--bold ${item.badge ? 'show-badge' : ''}`}
+                                                    href={item.href}
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        handleClickMenu(item);
+                                                    }}
+                                                >
+                                                    <span className="tb--sidebar-icon_block">
+                                                        <i className={item.icon}></i>
+                                                    </span>
+                                                    <span className="tb--item-text burger-no-collapse">
+                                                        {item.name}
+                                                    </span>
+                                                    {item.badge && (
+                                                        <span className="tb--badge tb--badge-side tb--hot">
+                                                            {item.badge}
+                                                        </span>
+                                                    )}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </nav>
+                    </div>
                 </div>
 
-                <div className={`sidemenu-container sidemenu-container-expanded ${isSidebarExpanded ? 'active' : ''}`}>
-                    <div className="menu-items-container">
-                        <div className="menu-items menu-items-fixed">
-                            {menuItems.map((menu) => (
-                                <div key={menu.id} className="side-submenu-container">
-                                    <div className={`submenu-container`}>
-                                        <button
-                                            className={`nav-link submenu-link expandable CUSTOM ${menu.id}`}
-                                            onClick={() => handleClickMenu(menu)}
-                                            style={{ cursor: 'pointer' }}
-                                        >
-                                            <div className="nav-link-logo">
-                                                <i className={menu.icon}></i>
-                                                {menu.name}
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="menu-divider"></div>
-                    <div className="footer-items footer-items-fixed"></div>
-                    <div className="language-wrapper-container d-none">
-                        <div className="dropdown-btn small dropdown">
-                            <button
-                                aria-haspopup="true"
-                                aria-expanded={showLanguageDropdown}
-                                id="dropdown-btn"
-                                type="button"
-                                className="dropdown-toggle btn btn-secondary"
-                                onClick={toggleLanguageDropdown}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <i className="material-icons">language</i>
-                                {currentLanguage.name} ({currentLanguage.code})
-                            </button>
-                            {showLanguageDropdown && (
-                                <div
-                                    aria-labelledby="dropdown-btn"
-                                    className="dropdown-menu show"
-                                >
-                                    {languages.map((language) => (
-                                        <a
-                                            key={language.code}
-                                            href="#"
-                                            className={`dropdown-item ${language.code === currentLanguage.code ? 'active' : ''}`}
-                                            role="button"
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                handleLanguageSelect(language.code);
-                                            }}
-                                        >
-                                            {language.name} ({language.code})
-                                        </a>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                    <div className="footer-content footer-content-fixed d-none">
-                        <div className="app-install-container">
-                            <div className="app-buttons-container">
-                                <div className="download-text-area">Download App</div>
-                                <button name="windows app download button" aria-label="windows app download button" className="app-button windows">
-                                    <i className="device-icon">
-                                        <img src={IconDownload} alt="Windows app" />
-                                    </i>
-                                    <div className="hoverBubble bubblePosition windows">
-                                        <p></p>
-                                        <p></p>
-                                        <p>Haz clic para instalar la aplicación</p>
-                                    </div>
-                                </button>
+                {/* Elementos adicionales que estaban en la versión expandida (idioma, footer) - los dejamos pero con d-none si no se usan */}
+                <div className="language-wrapper-container d-none">
+                    <div className="dropdown-btn small dropdown">
+                        <button
+                            aria-haspopup="true"
+                            aria-expanded={showLanguageDropdown}
+                            id="dropdown-btn"
+                            type="button"
+                            className="dropdown-toggle btn btn-secondary"
+                            onClick={toggleLanguageDropdown}
+                        >
+                            <i className="material-icons">language</i>
+                            {currentLanguage.name} ({currentLanguage.code})
+                        </button>
+                        {showLanguageDropdown && (
+                            <div aria-labelledby="dropdown-btn" className="dropdown-menu show">
+                                {languages.map((language) => (
+                                    <a
+                                        key={language.code}
+                                        href="#"
+                                        className={`dropdown-item ${language.code === currentLanguage.code ? 'active' : ''}`}
+                                        role="button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleLanguageSelect(language.code);
+                                        }}
+                                    >
+                                        {language.name} ({language.code})
+                                    </a>
+                                ))}
                             </div>
+                        )}
+                    </div>
+                </div>
+                <div className="footer-content footer-content-fixed d-none">
+                    <div className="app-install-container">
+                        <div className="app-buttons-container">
+                            <div className="download-text-area">Download App</div>
+                            <button name="windows app download button" aria-label="windows app download button" className="app-button windows">
+                                <i className="device-icon">
+                                    <img src={IconDownload} alt="Windows app" />
+                                </i>
+                                <div className="hoverBubble bubblePosition windows">
+                                    <p></p>
+                                    <p></p>
+                                    <p>Haz clic para instalar la aplicación</p>
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {/* Menú móvil inferior (se mantiene igual) */}
             {
                 !isSportsPage && <nav className="bottom-menu">
                     <button className="mobile-menu-item" onClick={() => navigate("/casino")}>

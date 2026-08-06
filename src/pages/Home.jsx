@@ -15,7 +15,6 @@ import About from "../components/Home/About";
 import Footer from "../components/Layout/Footer";
 import GameModal from "../components/Modal/GameModal";
 import LoginModal from "../components/Modal/LoginModal";
-import "animate.css";
 
 import IconLive from "/src/assets/svg/live.svg";
 import IconHot from "/src/assets/svg/hot.svg";

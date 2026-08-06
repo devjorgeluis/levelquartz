@@ -4,9 +4,6 @@ import icon2 from '../../assets/images/diamond_red.webp';
 import icon3 from '../../assets/images/diamond_white.webp';
 import icon4 from '../../assets/images/diamond_gold.webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '../../css/Sports/EuropeanView.min.css'
-import '../../css/Country.css';
-import '../../css/Tournament.css'
 
 const jackpotData = [
     {

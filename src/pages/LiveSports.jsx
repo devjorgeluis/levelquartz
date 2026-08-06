@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import { callApi } from "../utils/Utils";
 import LoadApi from "../components/Loading/LoadApi";
-import "animate.css";
 
 const LiveSports = () => {
     const pageTitle = "Live Sports";

@@ -4,7 +4,6 @@ import { AppContext } from "../AppContext";
 import { NavigationContext } from "../components/Layout/NavigationContext";
 import { callApi } from "../utils/Utils";
 import LoadApi from "../components/Loading/LoadApi";
-import "animate.css";
 
 const Sports = () => {
     const pageTitle = "Sports";

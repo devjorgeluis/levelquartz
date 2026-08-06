@@ -4,8 +4,6 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../../css/home/sport-prematch.css';
-import '../../css/home/sport-prematch-2.css';
 
 // If you have custom icons, you can import them as in your example:
 // import IconNext from "/src/assets/svg/next.svg";

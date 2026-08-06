@@ -11,7 +11,6 @@ import Footer from "../components/Layout/Footer";
 import LoadGames from "../components/Loading/LoadGames";
 import SearchInput from "../components/SearchInput";
 import LoginModal from "../components/Modal/LoginModal";
-import "animate.css";
 
 let selectedGameId = null;
 let selectedGameType = null;

@@ -12,10 +12,7 @@ import Footer from "../components/Layout/Footer";
 import LoadGames from "../components/Loading/LoadGames";
 import SearchInput from "../components/SearchInput";
 import LoginModal from "../components/Modal/LoginModal";
-import "animate.css";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 let selectedGameId = null;
 let selectedGameType = null;
@@ -23,6 +20,32 @@ let selectedGameLauncher = null;
 let selectedGameName = null;
 let selectedGameImg = null;
 let pageCurrent = 0;
+
+const casinoThemes = [
+  "TODAS",
+  "Fruits / Vegetables",
+  "Animals",
+  "Egyptian",
+  "Classic",
+  "Underwater / Sea",
+  "Jungles",
+  "History and Books",
+  "Branded",
+  "Christmas",
+  "Halloween",
+  "Santa Claus",
+  "Fairytale",
+  "Jewels and Gems",
+  "Sport",
+  "Asian",
+  "Luxury",
+  "Joker",
+  "Magic",
+  "Fantasy",
+  "Food",
+  "Fishing / Hunting",
+  "No theme",
+];
 
 const Casino = () => {
   const { contextData } = useContext(AppContext);
@@ -50,6 +73,9 @@ const Casino = () => {
   const [isSingleCategoryView, setIsSingleCategoryView] = useState(false);
   const [isExplicitSingleCategoryView, setIsExplicitSingleCategoryView] = useState(false);
   const [hasMoreGames, setHasMoreGames] = useState(true);
+  const [winnersPeriod, setWinnersPeriod] = useState("daily");
+  const [isThemeFilterOpen, setIsThemeFilterOpen] = useState(false);
+  const [selectedTheme, setSelectedTheme] = useState("TODAS");
   const refGameModal = useRef();
   const location = useLocation();
   const searchRef = useRef(null);
@@ -57,26 +83,32 @@ const Casino = () => {
 
   const pendingCategoryFetchesRef = useRef(0);
 
-  // Winners dummy data – se puede reemplazar con API real
-  const topWinners = [
-    { user: "32****550", amount: 400, currency: "ARS", game: "Joker's Jewels™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Pragmatic/14852_JokersJewels.jpg", date: "2/8/2026, 21:54:36" },
-    { user: "32****550", amount: 239, currency: "ARS", game: "Gates of Olympus", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/partners/10290/Games/Gates-of-Olympus-PragmaticPlay/GatesofOlympus_20250310131312986.webp", date: "2/8/2026, 22:04:08" },
-    { user: "32****550", amount: 160, currency: "ARS", game: "Joker's Jewels™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Pragmatic/14852_JokersJewels.jpg", date: "2/8/2026, 22:21:26" },
-    { user: "32****550", amount: 160, currency: "ARS", game: "Joker's Jewels™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Pragmatic/14852_JokersJewels.jpg", date: "2/8/2026, 22:18:59" },
-    { user: "32****550", amount: 83, currency: "ARS", game: "Sweet Bonanza™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/partners/10290/Games/Sweet-Bonanza-PragmaticPlay/SweetBonanza_20250312173428199.webp", date: "2/8/2026, 22:14:44" },
-  ];
+  const toggleThemeFilter = () => setIsThemeFilterOpen((isOpen) => !isOpen);
+  const resetThemeFilter = () => setSelectedTheme("TODAS");
 
-  // Slider settings para ganadores (vertical)
+  const winners = {
+    daily: [
+      { user: "32****527", amount: "17 672", currency: "ARS", game: "5 Lions Megaways™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/5-Lions-Megaways-Pragmatic/5LionsMegaways_20250415163146997.webp", date: "5/8/2026, 19:26:43" },
+      { user: "32****527", amount: "8 826", currency: "ARS", game: "Starlight Christmas", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Pragmatic/StarlightChristmas.webp", date: "5/8/2026, 18:11:00" },
+      { user: "32****700", amount: "1 135", currency: "ARS", game: "Ultra Disco", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Platipus/UltraDisco.webp", date: "5/8/2026, 19:34:18" },
+      { user: "32****700", amount: "750", currency: "ARS", game: "Ultra Disco", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Platipus/UltraDisco.webp", date: "5/8/2026, 19:31:59" },
+      { user: "32****404", amount: "680", currency: "ARS", game: "Joker's Jewels Hot", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Jokers-Jewels-Hot-Pragmatic/JokersJewelsHot.webp", date: "5/8/2026, 21:02:33" },
+      { user: "32****404", amount: "650", currency: "ARS", game: "Joker's Jewels Hot", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Jokers-Jewels-Hot-Pragmatic/JokersJewelsHot.webp", date: "5/8/2026, 21:03:59" },
+    ],
+    monthly: [
+      { user: "32****118", amount: "285 400", currency: "ARS", game: "Sweet Bonanza™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/partners/10290/Games/Sweet-Bonanza-PragmaticPlay/SweetBonanza_20250312173428199.webp", date: "1/8/2026, 22:14:44" },
+      { user: "32****527", amount: "176 720", currency: "ARS", game: "5 Lions Megaways™", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/5-Lions-Megaways-Pragmatic/5LionsMegaways_20250415163146997.webp", date: "3/8/2026, 19:26:43" },
+      { user: "32****700", amount: "91 135", currency: "ARS", game: "Ultra Disco", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Platipus/UltraDisco.webp", date: "4/8/2026, 19:34:18" },
+      { user: "32****404", amount: "68 000", currency: "ARS", game: "Joker's Jewels Hot", img: "https://a8krw6.d7vnb8.xyz/plat/prd/Img/Games/Jokers-Jewels-Hot-Pragmatic/JokersJewelsHot.webp", date: "5/8/2026, 21:02:33" },
+    ],
+  };
+
   const winnersSettings = {
     dots: false,
-    infinite: true,
-    speed: 500,
+    infinite: false,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
   };
 
   // Slider settings para "Más votados"
@@ -526,7 +558,7 @@ const Casino = () => {
                     <div className="l5--main">
                       {/* Banner superior */}
                       <div className="main--slider-top main--slider-right casino-slider-container livecasino-slider-container fade-appear-done fade-enter-done">
-                        <div className="container slider_casino tb--rel top-banner-section">
+                        <div className="slider_casino tb--rel top-banner-section">
                           <Slideshow />
                         </div>
                       </div>
@@ -535,23 +567,23 @@ const Casino = () => {
                       <div className="top--winners-slider top--winners-slider--absolute">
                         <div className="top--winners-section tb--flex tb--align-center top--widget-name_scroll">
                           <div className="top--winners-page tb--cp">
-                            <div className="top--widget-name top--widget-name_active tb--text_upercase" data-for="dailyTopWinners">
+                            <div className={`top--widget-name tb--text_upercase ${winnersPeriod === "daily" ? "top--widget-name_active" : ""}`} data-for="dailyTopWinners" onClick={() => setWinnersPeriod("daily")}>
                               <span className="top--widget-name_text tb--ellipsis">Principales ganadores del día</span>
                             </div>
                           </div>
                           <div className="top--winners-page tb--cp">
-                            <div className="top--widget-name tb--text_upercase" data-for="monthlyTopWinners">
+                            <div className={`top--widget-name tb--text_upercase ${winnersPeriod === "monthly" ? "top--widget-name_active" : ""}`} data-for="monthlyTopWinners" onClick={() => setWinnersPeriod("monthly")}>
                               <span className="top--widget-name_text tb--ellipsis">Principales ganadores del mes</span>
                             </div>
                           </div>
                         </div>
                         <Slider {...winnersSettings}>
-                          {topWinners.map((winner, idx) => (
-                            <div key={idx}>
-                              <div className="top--winners-game_wrapper">
-                                <h4 className="top--winners-game_title">Top de Ganadores</h4>
-                                <div className="top--winners-game_container">
-                                  <div className="top--winners-game tb--flex tb--align-center">
+                          <div key={winnersPeriod}>
+                            <div className="top--winners-game_wrapper">
+                              <h4 className="top--winners-game_title">Top de Ganadores</h4>
+                              <div className="top--winners-game_container">
+                                {winners[winnersPeriod].map((winner, idx) => (
+                                  <div className="top--winners-game tb--flex tb--align-center" key={`${winner.user}-${winner.amount}-${idx}`}>
                                     <div className="tb--cp top--winners-img">
                                       <p className="top--winners-img_link">
                                         <img loading="lazy" src={winner.img} alt={winner.game} />
@@ -566,10 +598,10 @@ const Casino = () => {
                                       <div className="top--winners-bet tb--ellipsis">{winner.date}</div>
                                     </div>
                                   </div>
-                                </div>
+                                ))}
                               </div>
                             </div>
-                          ))}
+                          </div>
                         </Slider>
                       </div>
 
@@ -605,7 +637,7 @@ const Casino = () => {
                             {/* Filter / Navbar */}
                             <div className="tb--live-casino_navbar_wrapper casino--container tb--w_100 casino-filter">
                               <div className="tb--filter-desktop">
-                                <div className="tb--live-casino_navbar tb--flex live-casino_group">
+                                <div className={`${isThemeFilterOpen ? 'tb-br-none' : ''} tb--live-casino_navbar tb--flex live-casino_group`}>
                                   <ul className="tb--navbar_left tb--flex tb--align-center" style={{ height: '36px', overflow: 'hidden' }}>
                                     {tags.map((tag, index) => (
                                       <li
@@ -648,13 +680,27 @@ const Casino = () => {
                                         isMobile={isMobile}
                                       />
                                     </div>
-                                    <button type="button" className="tb--text_upercase tb--live-casino_filter tb--flex tb--align-center tb--justify-center tb--flex-wrap">
+                                    <button
+                                      type="button"
+                                      className={`tb--text_upercase tb--live-casino_filter tb--flex tb--align-center tb--justify-center tb--flex-wrap ${isThemeFilterOpen ? 'active' : ''}`}
+                                      onClick={toggleThemeFilter}
+                                      aria-expanded={isThemeFilterOpen}
+                                      aria-controls="casino-theme-filter"
+                                      aria-label="Filtrar por tema"
+                                    >
                                       <span className="filter-icon"></span>
                                       <span className="filter-icon filter-icon-middle"></span>
                                       <span className="filter-icon"></span>
                                     </button>
                                     <div className="tb--sorting-wrapper tb--flex tb--justify-between tb--gap-12">
-                                      <button type="button" className="tb--filter-button_mobile tb--flex tb--justify-center">
+                                      <button
+                                        type="button"
+                                        className={`tb--filter-button_mobile tb--flex tb--justify-center ${isThemeFilterOpen ? 'active' : ''}`}
+                                        onClick={toggleThemeFilter}
+                                        aria-expanded={isThemeFilterOpen}
+                                        aria-controls="casino-theme-filter"
+                                        aria-label="Filtrar por tema"
+                                      >
                                         <span className="filter-icon"></span>
                                         <span className="filter-icon filter-icon-middle"></span>
                                         <span className="filter-icon"></span>
@@ -662,6 +708,32 @@ const Casino = () => {
                                     </div>
                                   </div>
                                 </div>
+                                {isThemeFilterOpen && (
+                                  <div className="tb--filter-block_wrapper" id="casino-theme-filter">
+                                    <div className="tb--filter-block tb--flex">
+                                      <div className="tb--filter-item tb--filter-block_thems tb--filter-block_thems-large">
+                                        <p className="tb--text_upercase tb--mb-20">Theme</p>
+                                        <ul className="tb--filter-item_list tb--text_upercase tb--flex">
+                                          {casinoThemes.map((theme) => (
+                                            <li
+                                              key={theme}
+                                              className={selectedTheme === theme ? 'active' : ''}
+                                              onClick={() => setSelectedTheme(theme)}
+                                            >
+                                              {theme}
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                      <div className="rs-filter">
+                                        <button type="button" onClick={resetThemeFilter}>
+                                          <i className="digi_icon-close tb--cp"></i>
+                                          Reiniciar
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
                               </div>
                             </div>
 

@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LayoutContext } from "./LayoutContext";
 import LoadApi from "../Loading/LoadApi";
 import ImgLogo from "/src/assets/images/Logo.png";
@@ -16,6 +16,14 @@ const Header = ({
 }) => {
     const { isSidebarExpanded, toggleSidebar } = useContext(LayoutContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    const popupPath = (name) => {
+        const currentPath = location.pathname.split("/popup/")[0];
+        const basePath = currentPath === "/" || /^\/profile(?:\/.*)?$/.test(currentPath)
+            ? ""
+            : currentPath.replace(/\/$/, "");
+        return `${basePath}/popup/${name}`;
+    };
     const [showUserMenu, setShowUserMenu] = useState(false);
     const [showMoreMenu, setShowMoreMenu] = useState(false);
     const [isLogoutLoading, setIsLogoutLoading] = useState(false);
@@ -73,9 +81,9 @@ const Header = ({
 
     // Menú de usuario (cuenta, transacciones, bonos, etc.)
     const userMenuItems = [
-        { icon: "category_icon-user", label: "Cuenta", link: "/profile" },
-        { icon: "category_icon-transactions", label: "Historial de Transacciones", link: "/profile/history" },
-        { icon: "category_icon-bonus", label: "Bonos", link: "/profile/bonus" },
+        { icon: "category_icon-user", label: "Cuenta", link: popupPath("myprofile") },
+        { icon: "category_icon-transactions", label: "Historial de Transacciones", link: popupPath("history") },
+        { icon: "category_icon-bonus", label: "Bonos", link: popupPath("bonuses") },
         { icon: "category_icon-game_history", label: "Historia del juego", link: "/profile/game-history" },
         { icon: "category_icon-sport_bet_history", label: "Historial apuestas deportivas", link: "/profile/sport-bets" },
     ];
@@ -93,7 +101,7 @@ const Header = ({
     // Elementos del menú "Más" (ocultos inicialmente, visibles en el desplegable)
     const moreMenuItems = [
         // { icon: "category_icon-penalty", label: "Deportes", link: "/sports" },
-        // { icon: "category_icon-live_sport_1", label: "Partidos en Vivo", link: "/sport/Overview" },
+        { icon: "category_icon-live_sport_1", label: "Partidos en Vivo", link: "/live-sport" },
         // { icon: "category_icon-penalty_3", label: "Esport", link: "/esport" },
     ];
 
@@ -109,7 +117,8 @@ const Header = ({
                 <div className="header-block_left-side f-row tb--align-center">
                     <div className="nav--arrow-btn">
                         <button className="nav--arrow-wrapper tb--flex tb--align-center tb--justify-center" onClick={toggleSidebar}>
-                            <div className={`nav--arrow-icon ${isSidebarExpanded ? 'nav--arrow-icon_active' : 'nav--burger-arrow'}`}></div>
+                            {isSidebarExpanded && (<span className="nav--arrow-lines"></span>)}
+                            <div className={`nav--arrow-icon nav--burger-arrow ${isSidebarExpanded ? 'nav--arrow-icon_active' : ''}`}></div>
                         </button>
                     </div>
                     <a className="logoBlock" onClick={() => navigate("/")} style={{ cursor: 'pointer' }}>
@@ -253,7 +262,7 @@ const Header = ({
                                                 <div>
                                                     <span
                                                         className="account-block_sub-menu_item tb--flex tb--justify-between tb--text_upercase tb--fs-small"
-                                                        onClick={() => { navigate("/profile"); closeUserMenu(); }}
+                                                        onClick={() => { navigate(popupPath("myprofile")); closeUserMenu(); }}
                                                         style={{ cursor: 'pointer' }}
                                                     >
                                                         <span className="tb--flex tb--align-center">
