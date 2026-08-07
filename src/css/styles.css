@@ -1022,408 +1022,6 @@ a.btn.disabled {
     pointer-events: none
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
-}
-
-.btn-primary.focus,
-.btn-primary:focus,
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc
-}
-
-.btn-primary.focus,
-.btn-primary:focus {
-    box-shadow: 0 0 0 .2rem #268fff80
-}
-
-.btn-primary.disabled,
-.btn-primary:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
-}
-
-.btn-primary:not(:disabled):not(.disabled).active,
-.btn-primary:not(:disabled):not(.disabled):active,
-.show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf
-}
-
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #268fff80
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
-}
-
-.btn-secondary.focus,
-.btn-secondary:focus,
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #5a6268;
-    border-color: #545b62
-}
-
-.btn-secondary.focus,
-.btn-secondary:focus {
-    box-shadow: 0 0 0 .2rem #828a9180
-}
-
-.btn-secondary.disabled,
-.btn-secondary:disabled {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show>.btn-secondary.dropdown-toggle {
-    color: #fff;
-    background-color: #545b62;
-    border-color: #4e555b
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active:focus,
-.btn-secondary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #828a9180
-}
-
-.btn-success:focus,
-.btn-success:hover {
-    color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34
-}
-
-.btn-success:focus {
-    box-shadow: 0 0 0 .2rem #48b46180
-}
-
-.btn-success:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #1e7e34;
-    border-color: #1c7430
-}
-
-.btn-success:not(:disabled):not(.disabled).active:focus,
-.btn-success:not(:disabled):not(.disabled):active:focus,
-.show>.btn-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #48b46180
-}
-
-.btn-info:focus,
-.btn-info:hover {
-    color: #fff;
-    background-color: #138496;
-    border-color: #117a8b
-}
-
-.btn-info:focus {
-    box-shadow: 0 0 0 .2rem #3ab0c380
-}
-
-.btn-info:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #117a8b;
-    border-color: #10707f
-}
-
-.btn-info:not(:disabled):not(.disabled).active:focus,
-.btn-info:not(:disabled):not(.disabled):active:focus,
-.show>.btn-info.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #3ab0c380
-}
-
-.btn-warning:focus,
-.btn-warning:hover {
-    color: #212529;
-    background-color: #e0a800;
-    border-color: #d39e00
-}
-
-.btn-warning:focus {
-    box-shadow: 0 0 0 .2rem #deaa0c80
-}
-
-.btn-warning:not(:disabled):not(.disabled):active {
-    color: #212529;
-    background-color: #d39e00;
-    border-color: #c69500
-}
-
-.btn-warning:not(:disabled):not(.disabled).active:focus,
-.btn-warning:not(:disabled):not(.disabled):active:focus,
-.show>.btn-warning.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #deaa0c80
-}
-
-.btn-danger:focus,
-.btn-danger:hover {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130
-}
-
-.btn-danger:focus {
-    box-shadow: 0 0 0 .2rem #e1536180
-}
-
-.btn-danger:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #bd2130;
-    border-color: #b21f2d
-}
-
-.btn-danger:not(:disabled):not(.disabled).active:focus,
-.btn-danger:not(:disabled):not(.disabled):active:focus,
-.show>.btn-danger.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #e1536180
-}
-
-.btn-light:focus,
-.btn-light:hover {
-    color: #212529;
-    background-color: #e2e6ea;
-    border-color: #dae0e5
-}
-
-.btn-light:focus {
-    box-shadow: 0 0 0 .2rem #d8d9db80
-}
-
-.btn-light:not(:disabled):not(.disabled):active {
-    color: #212529;
-    background-color: #dae0e5;
-    border-color: #d3d9df
-}
-
-.btn-light:not(:disabled):not(.disabled).active:focus,
-.btn-light:not(:disabled):not(.disabled):active:focus,
-.show>.btn-light.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #d8d9db80
-}
-
-.btn-dark:focus,
-.btn-dark:hover {
-    color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124
-}
-
-.btn-dark:focus {
-    box-shadow: 0 0 0 .2rem #52585d80
-}
-
-.btn-dark:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #1d2124;
-    border-color: #171a1d
-}
-
-.btn-dark:not(:disabled):not(.disabled).active:focus,
-.btn-dark:not(:disabled):not(.disabled):active:focus,
-.show>.btn-dark.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #52585d80
-}
-
-.btn-outline-primary:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
-}
-
-.btn-outline-primary:focus {
-    box-shadow: 0 0 0 .2rem #007bff80
-}
-
-.btn-outline-primary:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
-}
-
-.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #007bff80
-}
-
-.btn-outline-secondary:hover {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
-}
-
-.btn-outline-secondary:focus {
-    box-shadow: 0 0 0 .2rem #6c757d80
-}
-
-.btn-outline-secondary:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
-}
-
-.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
-.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #6c757d80
-}
-
-.btn-outline-success:hover {
-    color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
-}
-
-.btn-outline-success:focus {
-    box-shadow: 0 0 0 .2rem #28a74580
-}
-
-.btn-outline-success:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
-}
-
-.btn-outline-success:not(:disabled):not(.disabled).active:focus,
-.btn-outline-success:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #28a74580
-}
-
-.btn-outline-info:hover {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8
-}
-
-.btn-outline-info:focus {
-    box-shadow: 0 0 0 .2rem #17a2b880
-}
-
-.btn-outline-info:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8
-}
-
-.btn-outline-info:not(:disabled):not(.disabled).active:focus,
-.btn-outline-info:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-info.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #17a2b880
-}
-
-.btn-outline-warning:hover {
-    color: #212529;
-    background-color: #ffc107;
-    border-color: #ffc107
-}
-
-.btn-outline-warning:focus {
-    box-shadow: 0 0 0 .2rem #ffc10780
-}
-
-.btn-outline-warning:not(:disabled):not(.disabled):active {
-    color: #212529;
-    background-color: #ffc107;
-    border-color: #ffc107
-}
-
-.btn-outline-warning:not(:disabled):not(.disabled).active:focus,
-.btn-outline-warning:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-warning.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #ffc10780
-}
-
-.btn-outline-danger:hover {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545
-}
-
-.btn-outline-danger:focus {
-    box-shadow: 0 0 0 .2rem #dc354580
-}
-
-.btn-outline-danger:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545
-}
-
-.btn-outline-danger:not(:disabled):not(.disabled).active:focus,
-.btn-outline-danger:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-danger.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #dc354580
-}
-
-.btn-outline-light:hover {
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa
-}
-
-.btn-outline-light:focus {
-    box-shadow: 0 0 0 .2rem #f8f9fa80
-}
-
-.btn-outline-light:not(:disabled):not(.disabled):active {
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa
-}
-
-.btn-outline-light:not(:disabled):not(.disabled).active:focus,
-.btn-outline-light:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-light.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #f8f9fa80
-}
-
-.btn-outline-dark:hover {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
-}
-
-.btn-outline-dark:focus {
-    box-shadow: 0 0 0 .2rem #343a4080
-}
-
-.btn-outline-dark:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40
-}
-
-.btn-outline-dark:not(:disabled):not(.disabled).active:focus,
-.btn-outline-dark:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-dark.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #343a4080
-}
-
-.btn-link:hover {
-    color: #0056b3
-}
-
-.btn-link:focus,
-.btn-link:hover {
-    text-decoration: underline
-}
 
 .fade {
     transition: opacity .15s linear
@@ -3252,22 +2850,6 @@ body {
     font-family: inherit
 }
 
-.btn,
-a.btn:not([href]):not([tabindex]),
-button.btn {
-    border-radius: var(--button-border-radius);
-    font-family: var(--button-font);
-    letter-spacing: var(--button-letter-spacing);
-    box-shadow: none;
-    border: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 12px 15px;
-    min-width: 100px;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap
-}
 
 .btn:focus,
 a.btn:not([href]):not([tabindex]):focus,
@@ -3322,98 +2904,6 @@ button.btn.btn-cta:disabled {
     background-color: var(--cta-disabled);
     border: var(--cta-border);
     color: var(--disabled-text-color)
-}
-
-.btn.btn-secondary,
-a.btn:not([href]):not([tabindex]).btn-secondary,
-button.btn.btn-secondary {
-    border: var(--secondary-border) !important;
-    height: 54px;
-    padding: 13px 37px
-}
-
-.btn.btn-secondary.small,
-a.btn:not([href]):not([tabindex]).btn-secondary.small,
-button.btn.btn-secondary.small {
-    height: 40px;
-    padding: 8px 25px
-}
-
-.btn.btn-secondary:hover:not([disabled]),
-a.btn:not([href]):not([tabindex]).btn-secondary:hover:not([disabled]),
-button.btn.btn-secondary:hover:not([disabled]) {
-    background-color: var(--secondary-hover)
-}
-
-.btn.btn-secondary-popup:hover:not([disabled]),
-a.btn:not([href]):not([tabindex]).btn-secondary-popup:hover:not([disabled]),
-button.btn.btn-secondary-popup:hover:not([disabled]) {
-    color: var(--secondary-hover-text-popup);
-    background-color: var(--secondary-hover-popup)
-}
-
-.btn.btn-secondary-popup .sk-fading-circle .sk-circle:before,
-a.btn:not([href]):not([tabindex]).btn-secondary-popup .sk-fading-circle .sk-circle:before,
-button.btn.btn-secondary-popup .sk-fading-circle .sk-circle:before {
-    background-color: var(--secondary-text-popup)
-}
-
-.btn.btn-primary,
-a.btn:not([href]):not([tabindex]).btn-primary,
-button.btn.btn-primary {
-    background-color: var(--primary);
-    color: var(--primary-text);
-    border: var(--primary-border);
-    box-shadow: none
-}
-
-.btn.btn-primary.active,
-.btn.btn-primary:active,
-.btn.btn-primary:focus,
-.btn.btn-primary:not(:disabled):not(.disabled):active,
-a.btn:not([href]):not([tabindex]).btn-primary.active,
-a.btn:not([href]):not([tabindex]).btn-primary:active,
-a.btn:not([href]):not([tabindex]).btn-primary:focus,
-a.btn:not([href]):not([tabindex]).btn-primary:not(:disabled):not(.disabled):active,
-button.btn.btn-primary.active,
-button.btn.btn-primary:active,
-button.btn.btn-primary:focus,
-button.btn.btn-primary:not(:disabled):not(.disabled):active {
-    background-color: var(--primary-active);
-    border: var(--primary-border);
-    box-shadow: none
-}
-
-.btn.btn-primary:hover:not([disabled]),
-a.btn:not([href]):not([tabindex]).btn-primary:hover:not([disabled]),
-button.btn.btn-primary:hover:not([disabled]) {
-    background-color: var(--primary-hover);
-    border: var(--primary-border)
-}
-
-.btn.btn-primary.disabled,
-.btn.btn-primary:disabled,
-a.btn:not([href]):not([tabindex]).btn-primary.disabled,
-a.btn:not([href]):not([tabindex]).btn-primary:disabled,
-button.btn.btn-primary.disabled,
-button.btn.btn-primary:disabled {
-    background-color: var(--primary-disabled);
-    border: var(--primary-border);
-    color: var(--disabled-text-color)
-}
-
-.btn.small,
-a.btn:not([href]):not([tabindex]).small,
-button.btn.small {
-    min-width: 126px;
-    height: 40px;
-    padding: 8px
-}
-
-.btn.full-width,
-a.btn:not([href]):not([tabindex]).full-width,
-button.btn.full-width {
-    width: 100%
 }
 
 .material-icons {
@@ -11956,7 +11446,12 @@ body:has(.session-timer-wrapper_footer) .scroll--top-container {
     text-overflow: ellipsis;
     white-space: nowrap
 }
-
+.tb--flex-grow {
+    flex-grow: 1;
+}
+.tb--pr-12 {
+    padding-right: 12px;
+}
 .tb--block {
     display: block
 }
@@ -14116,7 +13611,7 @@ body #modal-root .react-select__control--is-focused i {
 }
 
 .show-balance-icon:before {
-    font-size: 24px
+    font-size: 24px !important;
 }
 
 @keyframes lds-spinner {
@@ -18328,12 +17823,6 @@ body {
     color: #fff
 }
 
-.btn,
-a.btn:not([href]):not([tabindex]),
-button.btn {
-    text-transform: capitalize
-}
-
 .btn.btn-secondary:hover:not([disabled]),
 a.btn:not([href]):not([tabindex]).btn-secondary:hover:not([disabled]) {
     background-color: transparent;
@@ -18375,87 +17864,6 @@ a.btn:not([href]):not([tabindex]).btn-secondary:hover:not([disabled]) {
 
 .btn {
     color: var(--main-background)
-}
-
-.btn,
-a.btn:not([href]):not([tabindex]),
-button.btn {
-    font-weight: 400
-}
-
-.btn.btn-cta,
-.btn.btn-primary,
-a.btn:not([href]):not([tabindex]).btn-cta,
-a.btn:not([href]):not([tabindex]).btn-primary,
-button.btn.btn-cta,
-button.btn.btn-primary {
-    background-color: transparent;
-    color: #1fe88a;
-    border: .05em solid #1fe88a;
-    box-shadow: inset 0 0 1px #1fe88a, 0 0 1px #1fe88a;
-    text-transform: none
-}
-
-.btn.btn-cta:hover:not([disabled]),
-.btn.btn-primary:hover:not([disabled]),
-a.btn:not([href]):not([tabindex]).btn-cta:hover:not([disabled]),
-a.btn:not([href]):not([tabindex]).btn-primary:hover:not([disabled]),
-button.btn.btn-cta:hover:not([disabled]),
-button.btn.btn-primary:hover:not([disabled]) {
-    background-color: transparent;
-    border: .05em solid #1fe88a;
-    box-shadow: inset 0 0 7px #1fe88a, 0 0 7px #1fe88a
-}
-
-.btn.btn-cta.active,
-.btn.btn-cta:active,
-.btn.btn-cta:active:hover,
-.btn.btn-cta:focus,
-.btn.btn-cta:focus:hover,
-.btn.btn-primary.active,
-.btn.btn-primary:active,
-.btn.btn-primary:active:hover,
-.btn.btn-primary:focus,
-.btn.btn-primary:focus:hover,
-a.btn:not([href]):not([tabindex]).btn-cta.active,
-a.btn:not([href]):not([tabindex]).btn-cta:active,
-a.btn:not([href]):not([tabindex]).btn-cta:active:hover,
-a.btn:not([href]):not([tabindex]).btn-cta:focus,
-a.btn:not([href]):not([tabindex]).btn-cta:focus:hover,
-a.btn:not([href]):not([tabindex]).btn-primary.active,
-a.btn:not([href]):not([tabindex]).btn-primary:active,
-a.btn:not([href]):not([tabindex]).btn-primary:active:hover,
-a.btn:not([href]):not([tabindex]).btn-primary:focus,
-a.btn:not([href]):not([tabindex]).btn-primary:focus:hover,
-button.btn.btn-cta.active,
-button.btn.btn-cta:active,
-button.btn.btn-cta:active:hover,
-button.btn.btn-cta:focus,
-button.btn.btn-cta:focus:hover,
-button.btn.btn-primary.active,
-button.btn.btn-primary:active,
-button.btn.btn-primary:active:hover,
-button.btn.btn-primary:focus,
-button.btn.btn-primary:focus:hover {
-    background-color: transparent;
-    border: .05em solid #1fe88a
-}
-
-.btn.btn-cta.disabled,
-.btn.btn-cta:disabled,
-.btn.btn-primary.disabled,
-.btn.btn-primary:disabled,
-a.btn:not([href]):not([tabindex]).btn-cta.disabled,
-a.btn:not([href]):not([tabindex]).btn-cta:disabled,
-a.btn:not([href]):not([tabindex]).btn-primary.disabled,
-a.btn:not([href]):not([tabindex]).btn-primary:disabled,
-button.btn.btn-cta.disabled,
-button.btn.btn-cta:disabled,
-button.btn.btn-primary.disabled,
-button.btn.btn-primary:disabled {
-    background-color: transparent;
-    border: .05em solid #1fe88a;
-    border-color: var(--disabled-text-color)
 }
 
 .btn.btn-filled:hover:not([disabled]),
@@ -18736,36 +18144,6 @@ button.btn.btn-secondary:disabled {
     height: auto;
     padding: 12px 15px;
     color: #fff
-}
-
-.login-modal .form input:-webkit-autofill,
-.login-modal .form input:-webkit-autofill:focus,
-.login-modal .form input:-webkit-autofill:hover,
-.login-modal .form select:-webkit-autofill:focus,
-.login-modal .form select:-webkit-autofill:hover,
-.login-modal .form textarea:-webkit-autofill:focus,
-.login-modal .form textarea:-webkit-autofill:hover,
-.recover-modal .form input:-webkit-autofill:focus,
-.recover-modal .form input:-webkit-autofill:hover,
-.recover-modal .form select:-webkit-autofill:focus,
-.recover-modal .form select:-webkit-autofill:hover,
-.recover-modal .form textarea:-webkit-autofill:focus,
-.recover-modal .form textarea:-webkit-autofill:hover,
-.registration-modal .form input:-webkit-autofill:focus,
-.registration-modal .form input:-webkit-autofill:hover,
-.registration-modal .form select:-webkit-autofill:focus,
-.registration-modal .form select:-webkit-autofill:hover,
-.registration-modal .form textarea:-webkit-autofill:focus,
-.registration-modal .form textarea:-webkit-autofill:hover,
-.verify-modal .form input:-webkit-autofill:focus,
-.verify-modal .form input:-webkit-autofill:hover,
-.verify-modal .form select:-webkit-autofill:focus,
-.verify-modal .form select:-webkit-autofill:hover,
-.verify-modal .form textarea:-webkit-autofill:focus,
-.verify-modal .form textarea:-webkit-autofill:hover {
-    -webkit-box-shadow: none;
-    -webkit-text-fill-color: #fff !important;
-    box-shadow: none
 }
 
 .login-modal .form input.form-control:focus,
@@ -19291,7 +18669,7 @@ input:-webkit-autofill,
 select:-webkit-autofill,
 textarea:-webkit-autofill {
     border: 1px solid #82868c;
-    -webkit-text-fill-color: #82868c;
+    -webkit-text-fill-color: #fff;
     -webkit-box-shadow: inset 0 0 0 1000px #82868c;
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s
@@ -20287,7 +19665,18 @@ body.playing-casino-game.modal-open .modal-content .modal-footer .container .row
     font-weight: 700;
     text-align: left
 }
-
+.tb--login_eye {
+    bottom: 0;
+    color: var(--modal-text-color-2);
+    cursor: pointer;
+    font-size: 20px;
+    height: 24px;
+    margin: auto;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    width: 24px;
+}
 .login-modal .form input.form-control {
     padding: 14px 24px;
     border-radius: 4px;
@@ -20940,20 +20329,6 @@ body.playing-casino-game.modal-open .modal-content .modal-footer .container .row
         font-size: 32px;
         line-height: 40px
     }
-}
-
-.btn.btn-cta,
-.btn.btn-primary,
-a.btn:not([href]):not([tabindex]).btn-cta,
-a.btn:not([href]):not([tabindex]).btn-primary,
-button.btn.btn-cta,
-button.btn.btn-primary {
-    border-radius: 4px;
-    background: linear-gradient(180deg, #1fe88a, #1ac173);
-    color: #07111b;
-    font-family: Poppins, sans-serif !important;
-    font-style: normal;
-    font-weight: 700
 }
 
 .modal-body .bonus-name {
@@ -25271,6 +24646,10 @@ input::-webkit-search-decoration {
     flex-grow: 1
 }
 
+.tb--body-panel, .tb--modal-body {
+    background-color: var(--modal-bg-color-2);
+}
+
 @media screen and (max-width:1023.9px) {
 
     #modal-root .tb--captcha-modal .tb--body-panel,
@@ -25904,7 +25283,7 @@ body #modal-root .tb--input:focus~i {
 .tb--input:disabled {
     background-color: initial;
     border-color: #ccc;
-    color: #1a1a1a
+    color: #e2e2e2
 }
 
 .tb--input {
@@ -30732,7 +30111,22 @@ html[data-theme=dark] body::-webkit-scrollbar-thumb {
     height: 36px;
     padding: 0 15px !important
 }
+.custom-select .react-select__value-container {
+    padding: 0 12px;
+}
 
+.custom-select .react-select__single-value {
+    color: var(--modal-text-color-1);
+}
+
+.custom-select .react-select__input-container {
+    margin: 0;
+    padding: 0;
+}
+
+.custom-select .react-select__input {
+    color: inherit !important;
+}
 .react-select__control--is-focused,
 .react-select__control--is-focused:hover {
     border-color: var(--brand-color-1) !important
@@ -34362,39 +33756,6 @@ textarea {
 
 .sprite-sport--lg-109:before {
     background-position-y: -2160px
-}
-
-.btn {
-    appearance: none;
-    -webkit-appearance: none;
-    background: var(--buttonSecondaryBg);
-    border-radius: 2px;
-    color: var(--buttonSecondaryTxt);
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    min-width: 84px;
-    padding: 0 12px;
-    text-align: center;
-    text-transform: uppercase
-}
-
-.btn[disabled] {
-    cursor: not-allowed;
-    opacity: .3
-}
-
-.btn.btn-primary {
-    background: var(--buttonG);
-    color: var(--buttonTxt)
-}
-
-.btn.btn-secondary {
-    border: 1px solid
-}
-
-.btn:disabled {
-    opacity: .7
 }
 
 .dropdown {
@@ -48637,4 +47998,5062 @@ button:focus {
     --collapseBg2: #474c85;
     --collapseBg2Hover: #515899;
     --collapseBg3: #666cad
+}
+
+
+/* Providers logo */
+.icon-ic_provider_betsoft_bw {
+    background-position: -0px -0px;
+}
+
+.icon-ic_provider_betsoft_col {
+    background-position: -100px -0px;
+}
+
+.icon-ic_provider_betsolutions_bw {
+    background-position: -0px -64px;
+}
+
+.icon-ic_provider_betsolutions_col {
+    background-position: -100px -64px;
+}
+
+.icon-ic_provider_digitainvirtualsport_bw {
+    background-position: -0px -128px;
+}
+
+.icon-ic_provider_digitainvirtualsport_col {
+    background-position: -100px -128px;
+}
+
+.icon-ic_provider_evoplay_bw {
+    background-position: -0px -192px;
+}
+
+.icon-ic_provider_evoplay_col {
+    background-position: -100px -192px;
+}
+
+.icon-ic_provider_ezugioriginal_bw {
+    background-position: -0px -256px;
+}
+
+.icon-ic_provider_ezugioriginal_col {
+    background-position: -100px -256px;
+}
+
+.icon-ic_provider_felixgaming_bw {
+    background-position: -0px -320px;
+}
+
+.icon-ic_provider_felixgaming_col {
+    background-position: -100px -320px;
+}
+
+.icon-ic_provider_fugaso_bw {
+    background-position: -0px -384px;
+}
+
+.icon-ic_provider_fugaso_col {
+    background-position: -100px -384px;
+}
+
+.icon-ic_provider_galaxsys_bw {
+    background-position: -0px -448px;
+}
+
+.icon-ic_provider_galaxsys_col {
+    background-position: -100px -448px;
+}
+
+.icon-ic_provider_genii_bw {
+    background-position: -0px -512px;
+}
+
+.icon-ic_provider_genii_col {
+    background-position: -100px -512px;
+}
+
+.icon-ic_provider_imaginelive_bw {
+    background-position: -0px -576px;
+}
+
+.icon-ic_provider_imaginelive_col {
+    background-position: -100px -576px;
+}
+
+.icon-ic_provider_inbet_bw {
+    background-position: -0px -640px;
+}
+
+.icon-ic_provider_inbet_col {
+    background-position: -100px -640px;
+}
+
+.icon-ic_provider_platipus_bw {
+    background-position: -0px -704px;
+}
+
+.icon-ic_provider_platipus_col {
+    background-position: -100px -704px;
+}
+
+.icon-ic_provider_pragmatic_bw {
+    background-position: -0px -768px;
+}
+
+.icon-ic_provider_pragmatic_col {
+    background-position: -100px -768px;
+}
+
+.icon-ic_provider_rubyplay_bw {
+    background-position: -0px -832px;
+}
+
+.icon-ic_provider_rubyplay_col {
+    background-position: -100px -832px;
+}
+
+.icon-ic_provider_tvbet_bw {
+    background-position: -0px -896px;
+}
+
+.icon-ic_provider_tvbet_col {
+    background-position: -100px -896px;
+}
+
+.icon-ic_provider_vivogaming_bw {
+    background-position: -0px -960px;
+}
+
+.icon-ic_provider_vivogaming_col {
+    background-position: -100px -960px;
+}
+
+.icon-ic_provider_wazdan_bw {
+    background-position: -0px -1024px;
+}
+
+.icon-ic_provider_wazdan_col {
+    background-position: -100px -1024px;
+}
+
+.icon-ic_provider_worldmatch_bw {
+    background-position: -0px -1088px;
+}
+
+.icon-ic_provider_worldmatch_col {
+    background-position: -100px -1088px;
+}
+
+
+.tb--my-profile .tb--profile-balance-info {
+    background-color: var(--modal-bg-color-1);
+    padding: 16px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--my-profile .tb--profile-balance-info {
+        background-color:var(--modal-bg-color-2);
+        border-radius: 12px 12px 0 0;
+        padding: 32px;
+        position: relative;
+        z-index: 0
+    }
+
+    .tb--my-profile .tb--profile-balance-info:after {
+        background-color: var(--modal-bg-color-1);
+        border-radius: 12px;
+        bottom: 16px;
+        content: "";
+        left: 16px;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        z-index: -1
+    }
+
+    .tb--my-profile .tb--profile-balance-info div:not(:last-child) {
+        margin-bottom: 8px
+    }
+}
+
+.tb--my-profile .tb--profile-balance-info.tb--transaction-amounts .tb--profile-balance-content {
+    margin-bottom: 12px;
+    padding-bottom: 12px
+}
+
+.tb--my-profile .tb--profile-balance-info.tb--transaction-amounts .tb--profile-balance-content i.open {
+    transform: rotate(180deg)
+}
+
+.tb--my-profile .tb--profile-balance-info.tb--transaction-amounts .tb--balance {
+    color: var(--modal-text-color-1)
+}
+
+.tb--my-profile .tb--profile-balance-info.tb--transaction-amounts i.digi_icon-arrow_down {
+    color: var(--modal-text-color-3)
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--my-profile .tb--profile-balance-info.tb--transaction-amounts {
+        border-radius:0 0 12px 12px;
+        padding-bottom: 26px;
+        padding-top: 10px
+    }
+
+    .tb--my-profile .tb--profile-balance-info.tb--transaction-amounts:after {
+        bottom: 16px;
+        top: 0
+    }
+}
+
+.tb--my-profile .tb--profile-balance-info .tb--tooltip {
+    background-color: var(--modal-bg-color-2);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0000001f;
+    color: rgba(from var(--modal-text-color-1) r g b/.7);
+    display: none;
+    left: 0;
+    max-height: 241px;
+    padding: 16px 8px 16px 16px;
+    position: absolute;
+    top: 30px;
+    width: 260px;
+    z-index: 2
+}
+
+@media screen and (min-width: 1024px)and (max-width:1366px) {
+    .tb--my-profile .tb--profile-balance-info .tb--tooltip {
+        width:212px
+    }
+}
+
+.tb--my-profile .tb--profile-balance-info .tb--tooltip:after {
+    border-color: #0000 #0000 var(--modal-bg-color-2) #0000;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    height: 0;
+    left: 40px;
+    position: absolute;
+    top: -17px;
+    width: 0
+}
+
+.tb--my-profile .tb--profile-balance-info .digi_icon-info {
+    color: var(--modal-text-color-3);
+    cursor: pointer
+}
+
+.tb--my-profile .tb--profile-balance-info .digi_icon-info:hover {
+    color: var(--modal-text-color-1)
+}
+
+.tb--my-profile .tb--profile-balance-info .tb--profile-balance_currency {
+    color: var(--modal-text-color-3)
+}
+
+.tb--rtl .wrapper .tb--profile-balance-info {
+    left: 0;
+    right: auto
+}
+
+.tb--rtl .wrapper .tb--profile-balance-info .tb--profile-balance_amount {
+    margin-left: 5px;
+    margin-right: 0
+}
+
+.tb--profile-balance-info {
+    border-radius: 12px;
+    font-size: 14px;
+    padding: 12px;
+    position: relative
+}
+
+.tb--profile-balance-info__rcr {
+    background-color: var(--modal-bg-color-1);
+    margin-bottom: 16px
+}
+
+.tb--profile-balance-info__rcr .digi_icon-eye-slash {
+    color: var(--brand-color-1)
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--profile-balance-info {
+        margin-bottom:16px
+    }
+}
+
+.tb--profile-balance-info .tb--profile-balance-item {
+    align-items: center;
+    display: flex;
+    position: relative
+}
+
+.tb--profile-balance-info .tb--profile-balance-item .tb--info {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: nowrap
+}
+
+@media only screen and (max-width: 768px) {
+    .tb--profile-balance-info .tb--profile-balance-item .tb--info .tb--tooltip {
+        bottom:12px;
+        top: auto
+    }
+}
+
+.tb--profile-balance-info .tb--profile-balance-item.tb--bonus-balance {
+    align-items: stretch;
+    flex-direction: column
+}
+
+.tb--profile-balance-info .tb--profile-balance-item.tb--bonus-balance>div {
+    display: flex
+}
+
+@media only screen and (min-width: 1024px) {
+    .tb--profile-balance-info .tb--profile-balance-item.tb--bonus-balance>div .tb--info .tb--tooltip {
+        top:40px
+    }
+}
+
+.tb--profile-balance-info .tb--profile-balance-item.tb--bonus-balance .tb--profile-bonus-line {
+    margin-bottom: 6px
+}
+
+.tb--profile-balance-info .tb--profile-balance-item.tb--bonus-balance .tb--profile-bonus-line.top {
+    margin-bottom: 12px
+}
+
+.tb--profile-balance-info .tb--tooltip {
+    border-radius: 12px;
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    height: auto;
+    line-height: normal;
+    opacity: 0;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    z-index: 999
+}
+
+.tb--profile-balance-info .digi_icon-info {
+    cursor: pointer;
+    transition: color .2s
+}
+
+.tb--profile-balance-info .digi_icon-info:before {
+    height: 14px;
+    line-height: 14px;
+    width: 14px
+}
+
+.tb--profile-balance-info .digi_icon-info:hover+.tb--tooltip {
+    display: block;
+    max-width: 80%;
+    opacity: 1
+}
+
+.tb--profile-balance-info .tb--profile-balance_txt {
+    font-size: 12px;
+    padding: 0
+}
+
+.tb--profile-balance-info .tb--profile-balance_amount {
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 5px
+}
+
+.tb--profile-balance-info .tb--profile-balance_currency {
+    font-weight: 400
+}
+
+.tb--profile-balance-info.tb--transaction-amounts .tb--profile-balance-content {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    position: relative
+}
+
+.tb--profile-balance-info.tb--transaction-amounts .tb--profile-balance-content i.open {
+    transform: rotate(180deg)
+}
+
+.tb--profile-balance-info.tb--transaction-amounts .tb--profile-balance-content:after {
+    background-color: var(--modal-bg-color-3);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--profile-balance-info.tb--transaction-amounts {
+        border-radius:0 0 12px 12px;
+        padding-bottom: 26px;
+        padding-top: 10px
+    }
+
+    .tb--profile-balance-info.tb--transaction-amounts:after {
+        bottom: 16px;
+        top: 0
+    }
+}
+
+.tb--profile-balance-info .tb--profile-balance-content {
+    padding-bottom: 16px
+}
+
+.tb--profile-balance-info div.tb--total-net-balance .tb--profile-balance_currency {
+    margin-left: 3px
+}
+
+.tb--profile-balance-info .tb--divider {
+    padding: 12px 0;
+    position: relative
+}
+
+.tb--profile-balance-info .tb--divider:before {
+    background-color: var(--modal-bg-color-3);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.tb--profile-balance-info .tb--divider.tb--profile-balance-item {
+    margin-bottom: 0!important
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--profile-balance-info .tb--divider:last-child {
+        padding:12px 0 0
+    }
+}
+
+.tb--profile-balance-info .tb--profile-balance-item:not(:last-child) {
+    margin-bottom: 12px
+}
+
+.tb--profile-bonus-line {
+    background-color: var(--modal-bg-color-3);
+    display: block;
+    height: 1px;
+    margin-bottom: 18px;
+    margin-top: 6px;
+    width: 100%
+}
+
+@media only screen and (max-width: 1023.9px) {
+    .tb--profile-bonus-line {
+        margin-bottom:8px;
+        margin-top: 0
+    }
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info,.wrapper .tb--profile-balance-info {
+    color: var(text-color-1);
+    padding: 12px 12px 0
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--profile-balance_txt,.wrapper .tb--profile-balance-info .tb--profile-balance_txt {
+    color: var(--text-color-1);
+    display: block;
+    opacity: .5;
+    padding: 0
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--balance,.wrapper .tb--profile-balance-info .tb--balance {
+    display: block;
+    font-size: 20px;
+    margin-top: 2px
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--balance .tb--balance_currency,.wrapper .tb--profile-balance-info .tb--balance .tb--balance_currency {
+    font-size: 12px;
+    margin: 0 2px;
+    opacity: .5
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--hide-balance,.wrapper .tb--profile-balance-info .tb--hide-balance {
+    display: block;
+    height: 24px;
+    margin-top: 2px
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .show-balance-icon,.wrapper .tb--profile-balance-info .show-balance-icon {
+    background-color: var(--background-color-1);
+    color: var(--text-color-1)
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--info .tb--profile-balance_amount,.wrapper .tb--profile-balance-info .tb--info .tb--profile-balance_amount {
+    color: var(--text-color-1);
+    font-weight: 700;
+    margin-right: 0
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--info .tb--profile-balance_amount .tb--profile-balance_currency,.wrapper .tb--profile-balance-info .tb--info .tb--profile-balance_amount .tb--profile-balance_currency {
+    font-weight: 400;
+    opacity: .4
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--profile-balance_txt.tb--underline,.wrapper .tb--profile-balance-info .tb--profile-balance_txt.tb--underline {
+    color: var(--brand-color-2);
+    opacity: 1
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--profile-balance-content,.wrapper .tb--profile-balance-info .tb--profile-balance-content {
+    color: var(--text-color-1);
+    padding-bottom: 12px
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--profile-balance-content,.wrapper .tb--profile-balance-info .tb--profile-balance-content {
+        color:var(--modal-text-color-1)
+    }
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--profile-balance-content:after,.wrapper .tb--profile-balance-info .tb--profile-balance-content:after {
+    display: none
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--divider:before,.wrapper .tb--profile-balance-info .tb--divider:before {
+    background-color: var(--text-color-1);
+    opacity: .2
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--divider:before,.wrapper .tb--profile-balance-info .tb--divider:before {
+        background-color:var(--modal-text-color-1)
+    }
+
+    .tb--account-balance_bottom-sheet .tb--profile-balance-info,.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--profile-balance_txt,.wrapper .tb--profile-balance-info,.wrapper .tb--profile-balance-info .tb--profile-balance_txt {
+        color: var(--modal-text-color-1)
+    }
+
+    .tb--account-balance_bottom-sheet .tb--profile-balance-info .show-balance-icon,.wrapper .tb--profile-balance-info .show-balance-icon {
+        background-color: var(--modal-bg-color-1);
+        color: var(--modal-text-color-1)
+    }
+
+    .tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--info .tb--profile-balance_amount,.wrapper .tb--profile-balance-info .tb--info .tb--profile-balance_amount {
+        color: var(--modal-text-color-1)
+    }
+}
+
+.tb--account-balance_bottom-sheet .tb--profile-balance-info .tb--info .tb--balance_info-tooltip {
+    display: none
+}
+
+.wrapper .tb--profile-balance-info {
+    background-color: var(--background-color-2);
+    box-shadow: 0 2px 12px rgba(0,0,0,.173);
+    position: absolute;
+    right: 0;
+    top: 46px;
+    width: 256px;
+    z-index: 9999
+}
+
+.wrapper .tb--profile-balance-info .tb--profile-balance-content .tb--balance_info-tooltip .digi_icon-info-full {
+    display: none
+}
+
+.tb--account-balance_bottom-sheet.tb--bottom-sheet.tb--bottom-sheet__popup [data-rsbs-overlay] {
+    background-color: var(--modal-bg-color-2)
+}
+
+.tb--account-balance_bottom-sheet.tb--bottom-sheet.tb--bottom-sheet__popup [data-rsbs-header] {
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+.tb--account-balance_bottom-sheet.tb--bottom-sheet.tb--bottom-sheet__popup .tb--profile-balance-info .tb--balance_currency,.tb--account-balance_bottom-sheet.tb--bottom-sheet.tb--bottom-sheet__popup .tb--profile-balance-info .tb--profile-balance_amount,.tb--account-balance_bottom-sheet.tb--bottom-sheet.tb--bottom-sheet__popup .tb--profile-balance-info .tb--profile-balance_txt {
+    font-size: 14px
+}
+
+.f32-flag {
+    background: url(../../static/media/flags.268d2cfee6694d2774cb.png) no-repeat 0 0;
+    background-size: 24px;
+    height: 24px;
+    width: 24px
+}
+
+.f32-ad {
+    background-position: 0 0
+}
+
+.f32-ae {
+    background-position: 0 -32px
+}
+
+.f32-af {
+    background-position: 0 -64px
+}
+
+.f32-ag {
+    background-position: 0 -96px
+}
+
+.f32-ai {
+    background-position: 0 -128px
+}
+
+.f32-al {
+    background-position: 0 -160px
+}
+
+.f32-am {
+    background-position: 0 -192px
+}
+
+.f32-ao {
+    background-position: 0 -224px
+}
+
+.f32-ar {
+    background-position: 0 -256px
+}
+
+.f32-as {
+    background-position: 0 -288px
+}
+
+.f32-at {
+    background-position: 0 -320px
+}
+
+.f32-au {
+    background-position: 0 -352px
+}
+
+.f32-aw {
+    background-position: 0 -384px
+}
+
+.f32-ax {
+    background-position: 0 -416px
+}
+
+.f32-az {
+    background-position: 0 -448px
+}
+
+.f32-ba {
+    background-position: 0 -480px
+}
+
+.f32-bb {
+    background-position: 0 -512px
+}
+
+.f32-bd {
+    background-position: 0 -544px
+}
+
+.f32-be {
+    background-position: 0 -576px
+}
+
+.f32-bf {
+    background-position: 0 -608px
+}
+
+.f32-bg {
+    background-position: 0 -640px
+}
+
+.f32-bh {
+    background-position: 0 -672px
+}
+
+.f32-bi {
+    background-position: 0 -704px
+}
+
+.f32-bj {
+    background-position: 0 -736px
+}
+
+.f32-bl {
+    background-position: 0 -768px
+}
+
+.f32-bm {
+    background-position: 0 -800px
+}
+
+.f32-bn {
+    background-position: 0 -832px
+}
+
+.f32-bo {
+    background-position: 0 -864px
+}
+
+.f32-bq-bo {
+    background-position: 0 -896px
+}
+
+.f32-bq-sa {
+    background-position: 0 -928px
+}
+
+.f32-bq-se {
+    background-position: 0 -960px
+}
+
+.f32-br {
+    background-position: 0 -992px
+}
+
+.f32-bs {
+    background-position: 0 -1024px
+}
+
+.f32-bt {
+    background-position: 0 -1056px
+}
+
+.f32-bw {
+    background-position: 0 -1088px
+}
+
+.f32-by {
+    background-position: 0 -1120px
+}
+
+.f32-bz {
+    background-position: 0 -1152px
+}
+
+.f32-ca-bc {
+    background-position: 0 -1184px
+}
+
+.f32-ca {
+    background-position: 0 -1216px
+}
+
+.f32-cc {
+    background-position: 0 -1248px
+}
+
+.f32-cd {
+    background-position: 0 -1280px
+}
+
+.f32-cf {
+    background-position: 0 -1312px
+}
+
+.f32-cg {
+    background-position: 0 -1344px
+}
+
+.f32-ch {
+    background-position: 0 -1376px
+}
+
+.f32-ci {
+    background-position: 0 -1408px
+}
+
+.f32-ck {
+    background-position: 0 -1440px
+}
+
+.f32-cl {
+    background-position: 0 -1472px
+}
+
+.f32-cm {
+    background-position: 0 -1504px
+}
+
+.f32-cn {
+    background-position: 0 -1536px
+}
+
+.f32-co {
+    background-position: 0 -1568px
+}
+
+.f32-cr {
+    background-position: 0 -1600px
+}
+
+.f32-cu {
+    background-position: 0 -1632px
+}
+
+.f32-cv {
+    background-position: 0 -1664px
+}
+
+.f32-cw {
+    background-position: 0 -1696px
+}
+
+.f32-cx {
+    background-position: 0 -1728px
+}
+
+.f32-cy {
+    background-position: 0 -1760px
+}
+
+.f32-cz {
+    background-position: 0 -1792px
+}
+
+.f32-de {
+    background-position: 0 -1824px
+}
+
+.f32-dj {
+    background-position: 0 -1856px
+}
+
+.f32-dk {
+    background-position: 0 -1888px
+}
+
+.f32-dm {
+    background-position: 0 -1920px
+}
+
+.f32-do {
+    background-position: 0 -1952px
+}
+
+.f32-dz {
+    background-position: 0 -1984px
+}
+
+.f32-easter_island {
+    background-position: 0 -2016px
+}
+
+.f32-ec-w {
+    background-position: 0 -2048px
+}
+
+.f32-ec {
+    background-position: 0 -2080px
+}
+
+.f32-ee {
+    background-position: 0 -2112px
+}
+
+.f32-eg {
+    background-position: 0 -2144px
+}
+
+.f32-eh {
+    background-position: 0 -2176px
+}
+
+.f32-er {
+    background-position: 0 -2208px
+}
+
+.f32-es-ce {
+    background-position: 0 -2240px
+}
+
+.f32-es-cn {
+    background-position: 0 -2272px
+}
+
+.f32-es-ga {
+    background-position: 0 -2304px
+}
+
+.f32-es-ib {
+    background-position: 0 -2336px
+}
+
+.f32-es-ml {
+    background-position: 0 -2368px
+}
+
+.f32-es-pv {
+    background-position: 0 -2400px
+}
+
+.f32-es {
+    background-position: 0 -2432px
+}
+
+.f32-esperanto {
+    background-position: 0 -2464px
+}
+
+.f32-et {
+    background-position: 0 -2496px
+}
+
+.f32-european_union {
+    background-position: 0 -2528px
+}
+
+.f32-fi {
+    background-position: 0 -2560px
+}
+
+.f32-fj {
+    background-position: 0 -2592px
+}
+
+.f32-fk {
+    background-position: 0 -2624px
+}
+
+.f32-fm {
+    background-position: 0 -2656px
+}
+
+.f32-fo {
+    background-position: 0 -2688px
+}
+
+.f32-fr-h {
+    background-position: 0 -2720px
+}
+
+.f32-fr {
+    background-position: 0 -2752px
+}
+
+.f32-ga {
+    background-position: 0 -2784px
+}
+
+.f32-gb-eng {
+    background-position: 0 -2816px
+}
+
+.f32-gb-ork {
+    background-position: 0 -2848px
+}
+
+.f32-gb-sct {
+    background-position: 0 -2880px
+}
+
+.f32-gb-wls {
+    background-position: 0 -2912px
+}
+
+.f32-gb {
+    background-position: 0 -2944px
+}
+
+.f32-gd {
+    background-position: 0 -2976px
+}
+
+.f32-ge-ab {
+    background-position: 0 -3008px
+}
+
+.f32-ge {
+    background-position: 0 -3040px
+}
+
+.f32-gg {
+    background-position: 0 -3072px
+}
+
+.f32-gh {
+    background-position: 0 -3104px
+}
+
+.f32-gi {
+    background-position: 0 -3136px
+}
+
+.f32-gl {
+    background-position: 0 -3168px
+}
+
+.f32-gm {
+    background-position: 0 -3200px
+}
+
+.f32-gn {
+    background-position: 0 -3232px
+}
+
+.f32-gq {
+    background-position: 0 -3264px
+}
+
+.f32-gp {
+    background-position: 0 -3296px
+}
+
+.f32-gr {
+    background-position: 0 -3328px
+}
+
+.f32-gt {
+    background-position: 0 -3360px
+}
+
+.f32-gu {
+    background-position: 0 -3392px
+}
+
+.f32-gw {
+    background-position: 0 -3424px
+}
+
+.f32-gy {
+    background-position: 0 -3456px
+}
+
+.f32-hausa {
+    background-position: 0 -3488px
+}
+
+.f32-hk {
+    background-position: 0 -3520px
+}
+
+.f32-hmong {
+    background-position: 0 -3552px
+}
+
+.f32-hn {
+    background-position: 0 -3584px
+}
+
+.f32-hr {
+    background-position: 0 -3616px
+}
+
+.f32-ht {
+    background-position: 0 -3648px
+}
+
+.f32-hu {
+    background-position: 0 -3680px
+}
+
+.f32-id {
+    background-position: 0 -3712px
+}
+
+.f32-ie {
+    background-position: 0 -3744px
+}
+
+.f32-il {
+    background-position: 0 -3776px
+}
+
+.f32-im {
+    background-position: 0 -3808px
+}
+
+.f32-in {
+    background-position: 0 -3840px
+}
+
+.f32-io {
+    background-position: 0 -3872px
+}
+
+.f32-iq {
+    background-position: 0 -3904px
+}
+
+.f32-ir {
+    background-position: 0 -3936px
+}
+
+.f32-is {
+    background-position: 0 -3968px
+}
+
+.f32-it-82 {
+    background-position: 0 -4000px
+}
+
+.f32-it-88 {
+    background-position: 0 -4032px
+}
+
+.f32-it {
+    background-position: 0 -4064px
+}
+
+.f32-je {
+    background-position: 0 -4096px
+}
+
+.f32-jm {
+    background-position: 0 -4128px
+}
+
+.f32-jo {
+    background-position: 0 -4160px
+}
+
+.f32-jp {
+    background-position: 0 -4192px
+}
+
+.f32-kannada {
+    background-position: 0 -4224px
+}
+
+.f32-ke {
+    background-position: 0 -4256px
+}
+
+.f32-kg {
+    background-position: 0 -4288px
+}
+
+.f32-kh {
+    background-position: 0 -4320px
+}
+
+.f32-ki {
+    background-position: 0 -4352px
+}
+
+.f32-km {
+    background-position: 0 -4384px
+}
+
+.f32-kn {
+    background-position: 0 -4416px
+}
+
+.f32-kp {
+    background-position: 0 -4448px
+}
+
+.f32-kr {
+    background-position: 0 -4480px
+}
+
+.f32-kurdistan {
+    background-position: 0 -4512px
+}
+
+.f32-kw {
+    background-position: 0 -4544px
+}
+
+.f32-ky {
+    background-position: 0 -4576px
+}
+
+.f32-kz {
+    background-position: 0 -4608px
+}
+
+.f32-la {
+    background-position: 0 -4640px
+}
+
+.f32-lb {
+    background-position: 0 -4672px
+}
+
+.f32-lc {
+    background-position: 0 -4704px
+}
+
+.f32-li {
+    background-position: 0 -4736px
+}
+
+.f32-lk {
+    background-position: 0 -4768px
+}
+
+.f32-lr {
+    background-position: 0 -4800px
+}
+
+.f32-ls {
+    background-position: 0 -4832px
+}
+
+.f32-lt {
+    background-position: 0 -4864px
+}
+
+.f32-lu {
+    background-position: 0 -4896px
+}
+
+.f32-lv {
+    background-position: 0 -4928px
+}
+
+.f32-ly {
+    background-position: 0 -4960px
+}
+
+.f32-ma {
+    background-position: 0 -4992px
+}
+
+.f32-malayali {
+    background-position: 0 -5024px
+}
+
+.f32-maori {
+    background-position: 0 -5056px
+}
+
+.f32-mc {
+    background-position: 0 -5088px
+}
+
+.f32-md {
+    background-position: 0 -5120px
+}
+
+.f32-me {
+    background-position: 0 -5152px
+}
+
+.f32-mf {
+    background-position: 0 -5184px
+}
+
+.f32-mg {
+    background-position: 0 -5216px
+}
+
+.f32-mh {
+    background-position: 0 -5248px
+}
+
+.f32-mk {
+    background-position: 0 -5280px
+}
+
+.f32-ml {
+    background-position: 0 -5312px
+}
+
+.f32-mm {
+    background-position: 0 -5344px
+}
+
+.f32-mn {
+    background-position: 0 -5376px
+}
+
+.f32-mo {
+    background-position: 0 -5408px
+}
+
+.f32-mp {
+    background-position: 0 -5440px
+}
+
+.f32-mq {
+    background-position: 0 -5472px
+}
+
+.f32-mr {
+    background-position: 0 -5504px
+}
+
+.f32-ms {
+    background-position: 0 -5536px
+}
+
+.f32-mt {
+    background-position: 0 -5568px
+}
+
+.f32-mu {
+    background-position: 0 -5600px
+}
+
+.f32-mv {
+    background-position: 0 -5632px
+}
+
+.f32-mw {
+    background-position: 0 -5664px
+}
+
+.f32-mx {
+    background-position: 0 -5696px
+}
+
+.f32-my {
+    background-position: 0 -5728px
+}
+
+.f32-mz {
+    background-position: 0 -5760px
+}
+
+.f32-na {
+    background-position: 0 -5792px
+}
+
+.f32-nato {
+    background-position: 0 -5824px
+}
+
+.f32-nc {
+    background-position: 0 -5856px
+}
+
+.f32-ne {
+    background-position: 0 -5888px
+}
+
+.f32-nf {
+    background-position: 0 -5920px
+}
+
+.f32-ng {
+    background-position: 0 -5952px
+}
+
+.f32-ni {
+    background-position: 0 -5984px
+}
+
+.f32-nl {
+    background-position: 0 -6016px
+}
+
+.f32-no {
+    background-position: 0 -6048px
+}
+
+.f32-northern_cyprus {
+    background-position: 0 -6080px
+}
+
+.f32-np {
+    background-position: 0 -6112px
+}
+
+.f32-nr {
+    background-position: 0 -6144px
+}
+
+.f32-nu {
+    background-position: 0 -6176px
+}
+
+.f32-nz {
+    background-position: 0 -6208px
+}
+
+.f32-om {
+    background-position: 0 -6240px
+}
+
+.f32-pa {
+    background-position: 0 -6272px
+}
+
+.f32-pe {
+    background-position: 0 -6304px
+}
+
+.f32-pf {
+    background-position: 0 -6336px
+}
+
+.f32-pg {
+    background-position: 0 -6368px
+}
+
+.f32-ph {
+    background-position: 0 -6400px
+}
+
+.f32-pk {
+    background-position: 0 -6432px
+}
+
+.f32-pl {
+    background-position: 0 -6464px
+}
+
+.f32-pn {
+    background-position: 0 -6496px
+}
+
+.f32-pr {
+    background-position: 0 -6528px
+}
+
+.f32-ps {
+    background-position: 0 -6560px
+}
+
+.f32-pt-20 {
+    background-position: 0 -6592px
+}
+
+.f32-pt-30 {
+    background-position: 0 -6624px
+}
+
+.f32-pt {
+    background-position: 0 -6656px
+}
+
+.f32-pw {
+    background-position: 0 -6688px
+}
+
+.f32-py {
+    background-position: 0 -6720px
+}
+
+.f32-qa {
+    background-position: 0 -6752px
+}
+
+.f32-ro {
+    background-position: 0 -6784px
+}
+
+.f32-rs {
+    background-position: 0 -6816px
+}
+
+.f32-ru {
+    background-position: 0 -6848px
+}
+
+.f32-rw {
+    background-position: 0 -6880px
+}
+
+.f32-sa {
+    background-position: 0 -6912px
+}
+
+.f32-sb {
+    background-position: 0 -6944px
+}
+
+.f32-sc {
+    background-position: 0 -6976px
+}
+
+.f32-sd {
+    background-position: 0 -7008px
+}
+
+.f32-se {
+    background-position: 0 -7040px
+}
+
+.f32-sg {
+    background-position: 0 -7072px
+}
+
+.f32-sh {
+    background-position: 0 -7104px
+}
+
+.f32-si {
+    background-position: 0 -7136px
+}
+
+.f32-sindh {
+    background-position: 0 -7168px
+}
+
+.f32-sj {
+    background-position: 0 -7200px
+}
+
+.f32-sk {
+    background-position: 0 -7232px
+}
+
+.f32-sl {
+    background-position: 0 -7264px
+}
+
+.f32-sm {
+    background-position: 0 -7296px
+}
+
+.f32-sn {
+    background-position: 0 -7328px
+}
+
+.f32-so {
+    background-position: 0 -7360px
+}
+
+.f32-somaliland {
+    background-position: 0 -7392px
+}
+
+.f32-south_ossetia {
+    background-position: 0 -7424px
+}
+
+.f32-sr {
+    background-position: 0 -7456px
+}
+
+.f32-ss {
+    background-position: 0 -7488px
+}
+
+.f32-st {
+    background-position: 0 -7520px
+}
+
+.f32-sv {
+    background-position: 0 -7552px
+}
+
+.f32-sx {
+    background-position: 0 -7584px
+}
+
+.f32-sy {
+    background-position: 0 -7616px
+}
+
+.f32-sz {
+    background-position: 0 -7648px
+}
+
+.f32-tc {
+    background-position: 0 -7680px
+}
+
+.f32-td {
+    background-position: 0 -7712px
+}
+
+.f32-tg {
+    background-position: 0 -7744px
+}
+
+.f32-th {
+    background-position: 0 -7776px
+}
+
+.f32-tibet {
+    background-position: 0 -7808px
+}
+
+.f32-tj {
+    background-position: 0 -7840px
+}
+
+.f32-tk {
+    background-position: 0 -7872px
+}
+
+.f32-tl {
+    background-position: 0 -7904px
+}
+
+.f32-tm {
+    background-position: 0 -7936px
+}
+
+.f32-tn {
+    background-position: 0 -7968px
+}
+
+.f32-to {
+    background-position: 0 -8000px
+}
+
+.f32-tr {
+    background-position: 0 -8032px
+}
+
+.f32-transnistria {
+    background-position: 0 -8064px
+}
+
+.f32-tt {
+    background-position: 0 -8096px
+}
+
+.f32-tv {
+    background-position: 0 -8128px
+}
+
+.f32-tw {
+    background-position: 0 -8160px
+}
+
+.f32-tz {
+    background-position: 0 -8192px
+}
+
+.f32-ua {
+    background-position: 0 -8224px
+}
+
+.f32-ug {
+    background-position: 0 -8256px
+}
+
+.f32-united_nations {
+    background-position: 0 -8288px
+}
+
+.f32-us-hi {
+    background-position: 0 -8320px
+}
+
+.f32-us {
+    background-position: 0 -8352px
+}
+
+.f32-uy {
+    background-position: 0 -8384px
+}
+
+.f32-uz {
+    background-position: 0 -8416px
+}
+
+.f32-va {
+    background-position: 0 -8448px
+}
+
+.f32-vc {
+    background-position: 0 -8480px
+}
+
+.f32-ve {
+    background-position: 0 -8512px
+}
+
+.f32-vg {
+    background-position: 0 -8544px
+}
+
+.f32-vi {
+    background-position: 0 -8576px
+}
+
+.f32-vn {
+    background-position: 0 -8608px
+}
+
+.f32-vu {
+    background-position: 0 -8640px
+}
+
+.f32-ws {
+    background-position: 0 -8672px
+}
+
+.f32-xk {
+    background-position: 0 -8704px
+}
+
+.f32-xx {
+    background-position: 0 -8736px
+}
+
+.f32-ye {
+    background-position: 0 -8768px
+}
+
+.f32-yiddish {
+    background-position: 0 -8800px
+}
+
+.f32-za {
+    background-position: 0 -8832px
+}
+
+.f32-zm {
+    background-position: 0 -8864px
+}
+
+.f32-zw {
+    background-position: 0 -8896px
+}
+
+:root {
+    --color-mode-trans-dur: 250ms
+}
+
+html body::-webkit-scrollbar,html body::-webkit-scrollbar-thumb {
+    -webkit-transition: none!important;
+    transition: none!important
+}
+
+html body.theme-switching::-webkit-scrollbar {
+    background-color: #e6e6e680!important
+}
+
+html body.theme-switching::-webkit-scrollbar-thumb {
+    background-color: #cccccc80!important
+}
+
+html body.theme-switching {
+    transition-duration: 125ms;
+    transition-duration: calc(var(--color-mode-trans-dur)*.5)
+}
+
+html body.theme-switching img {
+    background-color: #0000
+}
+
+html body.theme-switching .search-block,html body.theme-switching canvas,html body.theme-switching embed,html body.theme-switching iframe,html body.theme-switching img,html body.theme-switching input,html body.theme-switching object,html body.theme-switching picture,html body.theme-switching svg,html body.theme-switching textarea,html body.theme-switching video {
+    transition: none!important
+}
+
+html body.theme-switching ::part(*) {
+    transition: none!important
+}
+
+.color-mode label {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background-color: var(--background-color-2);
+    border-radius: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    min-height: 28px;
+    min-width: 60px;
+    outline: #0000;
+    perspective: 1000px;
+    position: relative;
+    transition: background-color;
+    width: 60px
+}
+
+.color-mode label,.color-mode label:after {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0)
+}
+
+.color-mode label:after {
+    background-color: var(--background-color-1);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px #0000001f,inset 0 -1px 4px #0000001f;
+    content: "";
+    height: 23px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    transition: transform .25s ease-in-out,box-shadow .15s;
+    transition: transform var(--color-mode-trans-dur) ease-in-out,box-shadow calc(var(--color-mode-trans-dur)*.6);
+    width: 23px
+}
+
+.color-mode label .digi_icon-light {
+    color: var(--brand-color-2);
+    font-size: 20px;
+    opacity: 1;
+    right: 4px
+}
+
+.color-mode label .digi_icon-dark,.color-mode label .digi_icon-light {
+    pointer-events: none;
+    position: absolute;
+    top: 2px;
+    transition: opacity .25s linear;
+    transition: opacity calc(var(--color-mode-trans-dur)) linear;
+    will-change: opacity
+}
+
+.color-mode label .digi_icon-dark {
+    color: var(--background-color-1);
+    font-size: 22px;
+    left: 4px;
+    opacity: .6
+}
+
+.color-mode input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0
+}
+
+.color-mode input:checked+label {
+    background-color: var(--brand-color-2)
+}
+
+.color-mode input:checked+label:after {
+    background-color: var(--text-color-1);
+    box-shadow: 0 2px 4px #0000001f;
+    transform: translateX(32px) translateZ(0)
+}
+
+.color-mode input:checked+label .digi_icon-light {
+    opacity: .6
+}
+
+.color-mode input:checked+label .digi_icon-dark {
+    opacity: 1
+}
+
+
+.game-history-filter {
+    align-items: end;
+    background: #211f42;
+    border-radius: 16px 16px 0 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr) minmax(220px, 1fr) minmax(160px, .5fr);
+    padding: 22px 26px 18px;
+    position: relative;
+    z-index: 5;
+}
+
+.game-history-filter__field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+
+.game-history-filter__label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0 0 6px;
+}
+
+.game-history-filter__select,
+.game-history-filter__date,
+.game-history-filter__submit {
+    border: 0;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font: inherit;
+    height: 52px;
+}
+
+.game-history-filter__select,
+.game-history-filter__date {
+    align-items: center;
+    background: #111126;
+    color: #fff;
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+    justify-content: space-between;
+    padding: 0 18px;
+    text-align: left;
+    width: 100%;
+}
+
+.game-history-filter__select {
+    cursor: pointer;
+    outline: 1px solid transparent;
+}
+
+.game-history-filter__select:focus-visible,
+.game-history-filter__select.is-open {
+    outline-color: #595caa;
+}
+
+.game-history-filter__select i {
+    color: #696dc0;
+    flex: 0 0 auto;
+    font-size: 18px;
+    margin-left: 12px;
+    transition: transform .2s ease;
+}
+
+.game-history-filter__select.is-open i {
+    transform: rotate(180deg);
+}
+
+.game-history-filter__menu {
+    background: #111126;
+    border-radius: 0 0 7px 7px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .22);
+    left: 0;
+    list-style: none;
+    margin: 4px 0 0;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 76px;
+    z-index: 20;
+}
+
+.game-history-filter__menu li {
+    color: rgba(255, 255, 255, .58);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 11px 16px;
+}
+
+.game-history-filter__menu li:hover,
+.game-history-filter__menu li:focus,
+.game-history-filter__menu li.is-selected {
+    background: #222043;
+    color: #fff;
+}
+
+.game-history-filter__date {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.game-history-filter__date i {
+    color: rgba(255, 255, 255, .58);
+    font-size: 21px;
+}
+
+.game-history-filter__date input {
+    cursor: pointer;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.game-history-filter__date input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.game-history-filter__submit {
+    background: #6065b1;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0 24px;
+    transition: background-color .2s ease;
+    width: 100%;
+}
+
+.game-history-filter__submit:hover {
+    background: #7076c5;
+}
+
+.game-history-filter__submit:focus-visible {
+    outline: 2px solid #aeb1ff;
+    outline-offset: 2px;
+}
+
+@media (max-width: 1023px) {
+    .game-history-filter {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .game-history-filter {
+        border-radius: 12px;
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .game-history-filter__select,
+    .game-history-filter__date,
+    .game-history-filter__submit {
+        height: 48px;
+    }
+
+    .game-history-filter__menu {
+        top: 72px;
+    }
+}
+
+
+.tb--modal-logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 18px;
+    padding-top: 18px
+}
+
+.tb--modal-logo img {
+    max-height: 40px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-logo {
+        padding-bottom:16px;
+        padding-top: 16px
+    }
+}
+
+.tb--modal-sm {
+    box-shadow: 0 0 1px #f2f2f2;
+    margin: 0 auto;
+    width: 360px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-sm {
+        border-radius:7px
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-sm {
+        height:100%;
+        width: 100%
+    }
+
+    .tb--modal-big {
+        position: absolute
+    }
+}
+
+.tb--body-panel {
+    padding: 32px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--body-panel {
+        border-radius:16px
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--body-panel {
+        margin:0 16px 16px;
+        padding: 16px
+    }
+}
+
+.tb--body-panel.tb--pt-0 {
+    padding-top: 0
+}
+
+.tb--modal-reg {
+    margin: 0 auto;
+    width: 360px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-reg {
+        border-radius:12px
+    }
+}
+.tb--modal-header {
+    padding-left: 20px;
+    position: relative;
+}
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-reg {
+        min-height:100%;
+        width: 100%
+    }
+
+    .tb--modal-header {
+        padding-left: 16px;
+        padding-right: 16px;
+        position: fixed!important
+    }
+}
+@media screen and (min-width: 1024px) {
+    .tb--modal-header {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        min-height: 56px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .tb--modal-popup.no-banner .tb--modal-header:before,.tb--oneclick-success-popup_reg.no-banner .tb--modal-header:before,.tb--registration-modal.no-banner .tb--modal-header:before {
+        display:none
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.no-banner .tb--body-panel,.tb--modal-popup.no-banner .tb--modal-body,.tb--oneclick-success-popup_reg.no-banner .tb--body-panel,.tb--oneclick-success-popup_reg.no-banner .tb--modal-body,.tb--registration-modal.no-banner .tb--body-panel,.tb--registration-modal.no-banner .tb--modal-body {
+        margin:16px
+    }
+
+    .tb--modal-popup.no-banner .tb--body-panel .tb--modal-body,.tb--oneclick-success-popup_reg.no-banner .tb--body-panel .tb--modal-body,.tb--registration-modal.no-banner .tb--body-panel .tb--modal-body {
+        margin: 0
+    }
+}
+
+.tb--modal-popup .tb--body-panel .tb--status-block.tb--status-block_error .tb--status--title,.tb--oneclick-success-popup_reg .tb--body-panel .tb--status-block.tb--status-block_error .tb--status--title,.tb--registration-modal .tb--body-panel .tb--status-block.tb--status-block_error .tb--status--title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px
+}
+
+.tb--modal-frame {
+    margin: 0 auto;
+    width: 360px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-frame {
+        min-height:100%;
+        width: 100vw
+    }
+}
+
+.tb--modal-popup {
+    margin: 0 auto;
+    width: 360px
+}
+
+@media screen and (min-width: 1023.9px) {
+    .tb--modal-popup.tb--limit-modal,.tb--modal-popup.tb--request-popup,.tb--modal-popup.tb--two-factor-auth,.tb--modal-popup.tb--two-factor-login-auth,.tb--modal-popup.tb-password-modal {
+        min-height:460px
+    }
+}
+
+.tb--modal-popup.tb--login-form .tb--body-panel .tb--status-block .tb--status--title {
+    color: var(--modal-text-color-2);
+    font-weight: 400;
+    line-height: 16px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-popup {
+        border-radius:12px
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup {
+        min-height:100%;
+        width: 100%
+    }
+
+    .tb--modal-popup.tb--two-factor-auth .tb--body-panel {
+        border-radius: 16px;
+        margin: 16px
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .tb--modal-popup {
+        overflow:auto
+    }
+}
+
+.tb--modal-popup.tb--add-game-popup .tb--body-panel .tb--modal-body .tb--live-casino_navbar_wrapper .tb--filter-desktop .tb--live-casino_navbar {
+    padding: 6px 8px 6px 16px
+}
+
+.tb--modal-popup.tb--add-game-popup .tb--body-panel .tb--modal-body .tb--live-casino_navbar_wrapper .tb--filter-desktop .tb--live-casino_navbar .tb--navbar_left.open li {
+    margin-bottom: 16px
+}
+
+.tb--modal-popup.tb--add-game-popup .tb--body-panel .tb--modal-body .casino--container .tb--providers-block {
+    padding: 14px 48px 14px 16px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-popup.tb--request-popup .tb--modal-header:before {
+        display:none
+    }
+}
+
+.tb--modal-popup.tb--request-popup .request__attention {
+    align-items: center;
+    background-color: var(--modal-bg-color-1);
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 16px 12px
+}
+
+.tb--modal-popup.tb--request-popup .request__attention .tb--info-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left
+}
+
+.tb--modal-popup.tb--request-popup .request__attention .tb--info-text span {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 4px
+}
+
+.tb--modal-popup.tb--request-popup .request__attention .tb--info-text p {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+
+.tb--modal-popup.tb--bonus-request-popup {
+    height: 681px;
+    width: 460px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--bonus-request-popup {
+        height:auto;
+        max-height: calc(100vh - 100px)
+    }
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel {
+    border-radius: 12px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel {
+        display:flex;
+        flex-direction: column;
+        max-height: calc(100vh - 100px)
+    }
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head h2 {
+    color: var(--modal-text-color-1);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-transform: capitalize
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head p {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head .tb--icon-shape {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 50%;
+    height: 56px;
+    margin-bottom: 8px;
+    width: 56px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head .tb--icon-shape i {
+    align-items: center;
+    color: var(--brand-color-1);
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head .tb--icon-shape i:before {
+    font-size: 24px
+}
+
+@media screen and (max-width: 600px) {
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head .tb--icon-shape {
+        height:56px;
+        width: 56px
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-head .tb--icon-shape i:before {
+        font-size: 24px
+    }
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body {
+    position: relative
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body {
+        display:flex;
+        flex-direction: column;
+        max-height: calc(100vh - 100px);
+        min-height: 200px;
+        overflow: auto
+    }
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-list {
+    height: 400px;
+    overflow: auto;
+    padding-right: 4px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-list {
+        height:auto;
+        overflow: visible;
+        overflow: initial
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body {
+        height: auto
+    }
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bottom-shadow,.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--top-shadow {
+    height: 64px;
+    left: 0;
+    max-height: 1px;
+    opacity: 0;
+    position: absolute;
+    transition: all .1s ease-in-out;
+    width: 100%;
+    z-index: 2
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--top-shadow {
+    background: linear-gradient(180deg,var(--modal-bg-color-2) 0,var(--modal-bg-color-2) .01%,#1c1b1a00 100%);
+    top: 0
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--top-shadow.active-shadow {
+    max-height: 64px;
+    opacity: 1;
+    pointer-events: none
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bottom-shadow {
+    background: linear-gradient(0deg,var(--modal-bg-color-2) 0,var(--modal-bg-color-2) .01%,#1c1b1a00 100%);
+    bottom: 0
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bottom-shadow.active-shadow {
+    max-height: 64px;
+    opacity: 1;
+    pointer-events: none
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    margin-bottom: 12px;
+    padding: 12px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item:last-child {
+    margin-bottom: 0
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img {
+    display: flex;
+    margin-bottom: 12px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src {
+    height: 90px;
+    margin-right: 12px;
+    object-fit: cover;
+    position: relative;
+    width: 178px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src img {
+    border-radius: 12px;
+    height: 100%;
+    width: 100%
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src .type-shape {
+    align-items: center;
+    background-color: rgb(from var(--modal-bg-color-1) r g b/.6);
+    border-radius: 18px;
+    color: var(--modal-text-color-1);
+    display: flex;
+    left: 6px;
+    padding: 4px 8px;
+    position: absolute;
+    top: 8px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src .type-shape i {
+    margin-right: 4px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src .type-shape i:before {
+    font-size: 16px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src .type-shape span {
+    font-size: 12px;
+    font-weight: 400
+}
+
+@media screen and (max-width: 600px) {
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src .type-shape {
+        left:12px;
+        top: 12px
+    }
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title {
+    padding-top: 5px;
+    width: calc(100% - 190px)
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title .data-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title .data-type span {
+    color: var(--modal-text-color-2);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: uppercase
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title .data-type span:nth-child(2) {
+    color: var(--modal-text-color-1);
+    font-weight: 700
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title h3 {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: var(--modal-text-color-1);
+    display: -webkit-box;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-data {
+    color: var(--modal-text-color-2);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 12px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-data span p {
+    display: inline
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-data .read-more-less {
+    color: var(--brand-color-1);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-left: 4px
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .bottom-shadow {
+    background: linear-gradient(0deg,var(--background-color-2) 0,var(--background-color-2) .01%,#1c1b1a00 100%);
+    bottom: 0;
+    height: 64px;
+    left: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    z-index: 2
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-footer label {
+    margin: 16px 0
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-footer label .tb--chb-text {
+    color: #ccc
+}
+
+.tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-footer .bonus-item-btn {
+    width: 100%
+}
+
+@media screen and (max-width: 600px) {
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item {
+        padding:0
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img {
+        flex-direction: column;
+        margin-bottom: 0
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src {
+        height: 148px;
+        width: 100%
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .tb--bonus-src img {
+        border-radius: 12px 12px 0 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title {
+        background-color: var(--modal-bg-color-1);
+        border-radius: 12px 12px 0 0;
+        padding: 16px 18px 0;
+        position: relative;
+        top: -12px;
+        width: 100%
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title .data-type {
+        justify-content: flex-start
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-img .data-title .data-type span:first-child {
+        margin-right: 4px
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .tb--bonus-data {
+        padding: 0 18px
+    }
+
+    .tb--modal-popup.tb--bonus-request-popup .tb--body-panel .tb--modal-body .tb--bonus-item .bonus-item-btn {
+        padding: 0 18px 18px
+    }
+}
+
+.tb--modal-popup.tb--limit-modal {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 22px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-header {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    min-height: 56px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-popup.tb--limit-modal .tb--modal-header:before {
+        display:none
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--limit-modal .tb--modal-header {
+        border-radius:0
+    }
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body {
+    border-radius: 16px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--limit-modal .tb--modal-body {
+        margin:16px
+    }
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--modal-image,.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--modal-image svg {
+    height: 56px;
+    width: 56px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--modal__second-text {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+    text-align: center
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-modal__list {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    padding: 16px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-modal__list .tb-modal__lm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-modal__list .tb-modal__lm div:first-child {
+    color: var(--modal-text-color-3);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: capitalize
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-modal__list .tb-modal__lm div:last-child {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-modal__list .tb-modal__lm:last-child {
+    margin-bottom: 0
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-form-control .tb--input {
+    height: 42px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-form-control .tb--custom-data-title,.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-form-control label {
+    padding-left: 12px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-form-control .custom-select .react-select__control,.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-form-control .custom-select .tb--input {
+    background-color: var(--modal-bg-color-2)!important;
+    border-radius: 90px!important
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb-form-control .tb-limit-type {
+    background-color: var(--modal-bg-color-3);
+    border: none;
+    border-radius: 24px;
+    bottom: 7px;
+    color: var(--modal-text-color-1);
+    font-size: 10px;
+    font-weight: 400;
+    height: 27px;
+    line-height: normal;
+    opacity: .6;
+    position: absolute;
+    right: 7px;
+    width: 42px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .has-select-options .tb-limit-type {
+    right: 32px!important
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) {
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .tb--custom-data-title {
+    color: var(--modal-text-color-2);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 12px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__control {
+    background-color: var(--modal-bg-color-1)!important;
+    border: 1px solid var(--modal-border-color-1);
+    border-radius: var(--btn-radius-top-left) var(--btn-radius-top-right) var(--btn-radius-bottom-right) var(--btn-radius-bottom-left)!important;
+    height: 42px;
+    min-height: 42px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__control .react-select__value-container {
+    padding: 0 12px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__control .react-select__value-container .react-select__single-value {
+    color: var(--modal-text-color-2);
+    font-size: 14px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__control .react-select__value-container .react-select__input-container {
+    color: var(--modal-text-color-2);
+    font-size: 14px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__control .react-select__value-container .react-select__placeholder {
+    color: var(--modal-text-color-2);
+    font-size: 12px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__control .react-select__indicators .react-select__dropdown-indicator {
+    color: var(--modal-text-color-2)
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__menu {
+    background-color: var(--modal-bg-color-2);
+    border-radius: 12px
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__menu .react-select__option {
+    background-color: var(--modal-bg-color-2);
+    color: var(--modal-text-color-2)
+}
+
+.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__menu .react-select__option.react-select__option--is-selected,.tb--modal-popup.tb--limit-modal .tb--modal-body .tb--pay-inner-input:has(.tb--limit-modal-select) .custom-select .react-select__menu .react-select__option:hover {
+    background-color: var(--modal-bg-color-1)
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--limit-modal .tb--body-panel {
+        border-radius:inherit;
+        margin: 0
+    }
+}
+
+.tb--modal-popup.tb--modal-verification {
+    background-color: var(--modal-bg-color-1)
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel {
+    border-radius: 16px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.email-checked>div {
+    display: flex;
+    gap: 25px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.email-checked>div .tb--modal-image {
+    background-color: initial;
+    border: 1px solid var(--modal-text-color-2);
+    height: 40px;
+    margin: 0;
+    width: 40px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.email-checked>div .tb--modal-image i {
+    color: var(--modal-text-color-2);
+    font-size: 20px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.email-checked>div .tb--modal-image.tb--email-image {
+    position: relative
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.email-checked>div .tb--modal-image.tb--email-image:before {
+    align-items: center;
+    background-color: var(--brand-color-1);
+    border-radius: 50%;
+    color: var(--brand-color-text);
+    content: "\ea23";
+    display: flex;
+    font-family: BuilderFont!important;
+    font-size: 20px;
+    height: calc(100% + 2px);
+    justify-content: center;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: calc(100% + 2px)
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.email-checked>div .tb--modal-image.tb--email-image:after {
+    background-color: var(--brand-color-1);
+    content: "";
+    height: 1px;
+    left: 39px;
+    position: absolute;
+    top: 50%;
+    width: 25px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.two-flow>div {
+    display: flex;
+    gap: 25px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.two-flow>div .tb--modal-image {
+    background-color: initial;
+    border: 1px solid var(--modal-text-color-2);
+    height: 40px;
+    margin: 0;
+    width: 40px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.two-flow>div .tb--modal-image i {
+    color: var(--modal-text-color-2);
+    font-size: 20px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.two-flow>div .tb--modal-image.tb--email-image {
+    position: relative
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.two-flow>div .tb--modal-image.tb--email-image:after {
+    background-color: var(--modal-text-color-2);
+    content: "";
+    height: 1px;
+    left: 39px;
+    position: absolute;
+    top: 50%;
+    width: 25px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.one-flow>div {
+    display: flex
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.one-flow>div .tb--modal-image {
+    background-color: var(--modal-bg-color-1);
+    height: 56px;
+    margin: 0;
+    width: 56px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-icons.one-flow>div .tb--modal-image i {
+    color: var(--brand-color-1);
+    font-size: 28px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-text h6 {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-text p {
+    color: var(--modal-text-color-3);
+    font-size: 14px;
+    text-align: center
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .verification-text p a {
+    color: var(--modal-text-color-1)
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .tb--form-verification .tb--input-group .tb--input {
+    background-color: var(--modal-bg-color-1);
+    border-color: #0000;
+    color: var(--modal-text-color-2)
+}
+
+.tb--modal-popup.tb--modal-verification .tb--body-panel .tb--modal-body .tb--form-verification .tb-form-control .btn {
+    margin-top: 0
+}
+
+.tb--modal-popup .tb--modal-image {
+    height: 54px;
+    width: 54px
+}
+
+.tb--modal-popup .tb--icon-bg {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    margin: 0 auto 24px;
+    opacity: .7;
+    width: 64px
+}
+
+.tb--modal-popup .tb--icon-bg i {
+    color: #878787;
+    font-size: 34px;
+    margin-left: -5px
+}
+
+.tb--modal-popup .tb--icon-bg svg {
+    height: 34px;
+    transform: translateX(2px);
+    width: 34px
+}
+
+.tb--modal-popup .tb--icon-bg svg path {
+    opacity: .7
+}
+
+.tb--modal-popup .tb--icon-bg svg * {
+    height: 100%;
+    width: 100%
+}
+
+.tb--modal-popup.tb--two-factor-login-auth {
+    background-color: var(--modal-bg-color-1)
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--google-auth_cont-auth {
+    border-radius: 12px;
+    padding: 16px
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--google-auth_cont-auth .tb--image-shape {
+    align-items: center;
+    background-color: var(--modal-bg-color-2);
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    min-width: 40px
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--google-auth_cont-auth .tb--google-auth_title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--google-auth_cont-auth .tb--google-auth_desc {
+    font-size: 12px
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--google-auth_cont-auth .tb--google-auth_icon {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    flex: 0 0 40px;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--google-auth_cont-auth .tb--google-auth_icon i {
+    font-size: 24px
+}
+
+.tb--modal-popup.tb--two-factor-login-auth .tb--body-panel {
+    border-radius: 12px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-popup.tb--two-factor-login-auth .tb--body-panel {
+        border-radius:18px
+    }
+}
+
+.tb--modal-login_footer {
+    flex-wrap: wrap
+}
+
+.tb--modal-login_footer .tb--btn-forgot-password,.tb--modal-login_footer .tb--btn-forgot-username {
+    color: var(--brand-color-1);
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 24px;
+    max-width: 50%!important;
+    opacity: .8;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-decoration: underline
+}
+
+.tb--modal-login_footer .tb--btn-forgot-password:hover,.tb--modal-login_footer .tb--btn-forgot-username:hover {
+    opacity: 1
+}
+
+.tb--modal-login_footer .tb--btn-forgot-password:before,.tb--modal-login_footer .tb--btn-forgot-username:before {
+    background-color: var(--modal-text-color-2);
+    height: 19px
+}
+
+.tb--modal-login_footer .tb--btn-forgot-username {
+    padding-left: 12px;
+    position: relative
+}
+
+.tb--modal-login_footer .tb--btn-forgot-username:before {
+    bottom: 0;
+    content: "";
+    height: 10px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 1px
+}
+
+.tb--modal-login_footer .tb--btn-forgot-password {
+    padding-right: 12px;
+    text-align: center
+}
+
+.tb--modal-login_footer .tb--btn-forgot-username {
+    text-align: left
+}
+
+.tb--modal-login_footer .tb--btn-forgot-password.tb-max-w_100 {
+    max-width: 100%!important
+}
+
+.tb--modal-login_footer .tb--action-buton_text {
+    margin: 20px 0 0
+}
+
+.tb--modal-login_footer:has(.tb--btn-forgot-username) .tb--btn-forgot-password {
+    text-align: right
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-with_captcha {
+        height:auto!important
+    }
+}
+
+.passkey-btn svg path {
+    fill: var(--brand-color-1)
+}
+
+.tb--submenu__content .tb--subhead__wrapper .tb--subhead {
+    margin: 0
+}
+
+.tb--modal-account {
+    border-radius: 24px;
+    height: 90vh;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 90vw
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account {
+        border-radius:0;
+        height: 100%;
+        overflow: visible;
+        overflow: initial;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tb--modal-account {
+        width:100vw
+    }
+}
+
+.tb--modal-account .tb--prizes-history {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column
+}
+
+@media screen and (min-width: 1024.9px) {
+    .tb--modal-account .tb--game-history .tb--banner {
+        margin-bottom:21px
+    }
+
+    .tb--modal-account .tb--game-history .tb--banner.tb--empty-profile_banner {
+        margin-bottom: 0
+    }
+
+    .tb--modal-account .tb--security-subhead {
+        margin-bottom: 24px!important;
+        padding: 0;
+        width: 100%
+    }
+}
+
+.tb--modal-account .account-menu {
+    display: flex;
+    flex-direction: column
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-account .account-menu {
+        height:calc(100% - 48px)
+    }
+
+    .tb--modal-account .account-menu.account-menu-security {
+        display: flex;
+        flex-direction: column;
+        height: 100%
+    }
+
+    .tb--modal-account .account-menu .account-menu-security--small {
+        height: calc(100% - 114px)
+    }
+
+    .tb--modal-account .account-menu .account-menu-security--full {
+        height: 100%
+    }
+
+    .tb--modal-account .account-menu .main-tab-menu {
+        margin: 0 auto;
+        padding: 0;
+        width: calc(100% - 36px)
+    }
+
+    .tb--modal-account .account-menu .tab--menu,.tb--modal-account .account-menu .tb--responsible-gaming .tb--subhead {
+        padding: 0
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .account-menu {
+        height:100%
+    }
+
+    .tb--modal-account .account-menu .account-menu-security--small {
+        flex-grow: 1
+    }
+
+    .tb--modal-account .account-menu .account-menu-security--small .tb--security .tb--security-column.tb--security-content {
+        height: 100%
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--modal-account .account-menu .account-mb-tab {
+        display:block
+    }
+
+    .tb--modal-account .account-menu .account-mb-tab .tb--mob-menu-item {
+        display: inline-block;
+        line-height: 44px;
+        width: 50%
+    }
+}
+
+.tb--modal-account .account-menu .tb--acount-body-preferences .tb--preloader-container {
+    flex: 1 1;
+    height: auto;
+    min-height: 0;
+    min-height: auto
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .account-menu .tb--acount-body-preferences {
+        margin:16px
+    }
+
+    .tb--modal-account .account-menu .tb--acount-body-preferences .tb--banner {
+        margin: 0 0 16px
+    }
+
+    .tb--modal-account .account-menu .tb--acount-body-preferences .tb--pref-container {
+        height: 100%;
+        margin: 0
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-account .tb--subhead+.tb--account-body {
+        padding:24px 18px
+    }
+}
+
+.tb--modal-account .tb--account-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.tb--modal-account .tb--account-body .tb-flex-wrapper {
+    flex: 1 1
+}
+
+.tb--modal-account .tb--account-body .tb-flex-wrapper .cashier-form-wrapper,.tb--modal-account .tb--account-body .tb-flex-wrapper .prizes-form-wrapper {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body .tb-flex-wrapper .cashier-form-wrapper,.tb--modal-account .tb--account-body .tb-flex-wrapper .prizes-form-wrapper {
+        margin:16px
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--modal-account .tb--account-body .tb--history-banner {
+        background-color:var(--modal-bg-color-1)
+    }
+}
+
+.tb--modal-account .tb--account-body {
+    position: relative
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-account .tb--account-body {
+        height:calc(100% - 24px);
+        padding: 24px 18px
+    }
+
+    .tb--modal-account .tb--account-body.tb--subtab-section {
+        padding: 24px 18px
+    }
+
+    .tb--modal-account .tb--account-body.tb--acount-body-security {
+        padding: 24px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tb--modal-account .tb--account-body.tb--cashier-load {
+        height:auto;
+        min-height: 100%
+    }
+
+    .tb--modal-account .tb--account-body .banners--long-list .slick-dots {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 190px
+    }
+
+    .tb--modal-account .tb--account-body .banners--long-list .slick-dots li {
+        max-width: 20px
+    }
+
+    .tb--modal-account .tb--account-body .banners--long-list .slick-dots li:first-child {
+        margin-bottom: 6px
+    }
+}
+
+.tb--modal-account .tb--account-body .tb--subhead {
+    margin: 0
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming {
+    height: calc(100% - 28px);
+    padding: 0 18px 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--responsible-gaming:not(.tb--account-body),.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--responsible-gaming:not(.tb--account-body) .tb--account-body.tb--responsible-gaming>div:not(.tb--submenu__list) {
+    flex: 1 1
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming {
+        padding:16px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content {
+    margin-top: 0
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--reality-check-content {
+        margin:16px 0
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content .lm {
+    gap: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content .lm .lm--amount {
+    max-width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content .lm .lm--amount span {
+    color: var(--modal-text-color-1)!important;
+    font-weight: 700!important
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content.tb--reality-check-content--read-only .tb--time-out-grid {
+    margin: 0 auto;
+    max-width: 722px;
+    width: 722px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content.tb--reality-check-content--read-only .tb--time-out-grid .tb--rc-options-block .tb--rc-reminder {
+    width: 100%
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content.tb--reality-check-content--read-only .tb--time-out-grid {
+        max-width:100%;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content.tb--reality-check-content--read-only .tb--time-out-grid .tb--rc-reminder__time .counter-block .count-down span.count-down-dots {
+        margin:0 6px
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content.tb--responsible-content {
+        margin:0;
+        min-height: calc(100% - 24px);
+        overflow: hidden;
+        padding: 16px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .tb--item-image svg rect {
+    fill: var(--modal-bg-color-3)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .tb--item-image svg path {
+    fill: var(--brand-color-1)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit {
+    margin: 0 auto
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit {
+        max-width:1140px;
+        width: 100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit h3 {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit p {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__attention {
+    align-items: center;
+    background-color: var(--modal-bg-color-1);
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__attention .tb--info-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__attention .tb--info-text span {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__attention .tb--info-text span:first-child {
+    color: var(--modal-text-color-1);
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__attention .tb--info-text span:nth-child(2) {
+    color: var(--modal-text-color-2);
+    font-weight: 400
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit__block {
+    display: flex;
+    gap: 0 12px
+}
+
+@media screen and (max-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit__block {
+        flex-wrap:wrap
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%
+}
+
+@media screen and (min-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item {
+        flex-basis:calc(25% - 9px);
+        max-width: calc(25% - 9px)
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-image {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    justify-content: flex-start;
+    padding: 0 24px;
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-image svg {
+    width: 40px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-image .a {
+    fill: var(--modal-bg-color-3)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-image .b {
+    fill: var(--brand-color-1)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-image span {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-left: 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info {
+    background-color: var(--modal-bg-color-3);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .lm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .lm .new--limit__line {
+    display: flex;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .lm span:first-child {
+    color: var(--modal-text-color-3);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .lm span:nth-child(2) {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .lm span.lm--amount span {
+    color: var(--modal-text-color-1);
+    font-weight: 700
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .lm--amount__pending {
+    color: var(--modal-text-color-3)!important
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .limit-button {
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .limit-button span {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px 0 #0003;
+    color: #212121;
+    display: none;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    min-width: 150px;
+    padding: 8px 12px;
+    text-align: center
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .limit-button.disabled:hover span {
+    display: block;
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -35px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item .tb--item-info .limit-button.disabled button {
+    opacity: .6;
+    pointer-events: none
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item:last-child {
+    margin-right: 0
+}
+
+@media screen and (max-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item {
+        max-width:calc(50% - 6px)
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item:nth-child(2n) {
+        margin-right: 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item:nth-child(-n+2) {
+        margin-bottom: 12px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item {
+        margin-bottom:12px;
+        margin-right: 0;
+        max-width: 100%
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .limit__item:last-child {
+        margin-bottom: 0
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .deposit-limit .tb--no-debosit {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit {
+    margin: 0 auto;
+    max-width: 1140px
+}
+
+@media screen and (min-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit {
+        width:1140px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit h3 {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit p {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__attention {
+    align-items: center;
+    background-color: var(--modal-bg-color-1);
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__attention .tb--info-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__attention .tb--info-text span {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__attention .tb--info-text span:first-child {
+    color: var(--modal-text-color-1);
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__attention .tb--info-text span:nth-child(2) {
+    color: var(--modal-text-color-2);
+    font-weight: 400
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 12px 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single__pending {
+    color: var(--modal-text-color-3)!important
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-current {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-current__wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-current .limit-text {
+    color: var(--modal-text-color-3);
+    font-size: 12px;
+    font-weight: 400
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-current {
+        -webkit-padding-end:16px;
+        justify-content: flex-end;
+        padding-inline-end:16px}
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-current .valid-info .digi_icon-exclamation-mark:hover+p {
+        left: auto;
+        right: 16px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-pending {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-pending .valid-info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-pending .valid-info .tb--valid-from {
+    align-items: flex-start;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-align: center
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-pending .valid-info .tb--valid-from span {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: normal
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-pending .valid-info .tb--valid-from .limit-text {
+    color: var(--modal-text-color-3);
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .tb--info-pending .valid-info .tb--valid-from .limit-date {
+    color: var(--modal-text-color-1);
+    font-size: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single span {
+    align-items: center;
+    color: var(--modal-text-color-1);
+    display: flex
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single span:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: flex-start;
+    line-height: 14px;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button button {
+    width: 240px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button span {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px 0 #0003;
+    color: var(--modal-bg-color-2);
+    display: none;
+    font-size: 10px;
+    font-weight: 400;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    padding: 8px 12px;
+    text-align: center;
+    width: 240px
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button span {
+        width:calc(100% - 32px)
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button.disabled:hover span {
+    display: block;
+    position: absolute;
+    top: -35px
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button.disabled:hover span {
+        left:16px;
+        top: -20px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button.disabled button {
+    opacity: .6;
+    pointer-events: none
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single {
+        grid-template-columns:repeat(2,1fr);
+        padding: 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single span {
+        align-items: center;
+        display: flex;
+        height: 46px
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single span:first-child {
+        -webkit-padding-start: 16px;
+        padding-inline-start:16px}
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single span:nth-child(2) {
+        -webkit-padding-end: 16px;
+        justify-content: flex-end;
+        padding-inline-end:16px}
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button {
+        background-color: var(--modal-bg-color-3);
+        border-radius: 16px;
+        grid-column: 1/9;
+        padding: 16px;
+        width: 100%
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .limit-button button {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item {
+        border-radius:16px;
+        width: 100%
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--title {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info {
+        background-color: var(--modal-bg-color-3);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        padding: 16px
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .current,.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .new {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .current span,.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .new span {
+        height: -webkit-fit-content;
+        height: fit-content;
+        padding: 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .current span:first-child,.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .new span:first-child {
+        color: var(--modal-text-color-3);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13px;
+        text-transform: capitalize
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .new {
+        position: relative
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .new .new-amount {
+        color: var(--modal-text-color-3)!important
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__single .single-bet-limit__item .single-bet-limit__item--info .limit-button {
+        padding: 0
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__block {
+    display: flex;
+    gap: 0 12px
+}
+
+@media screen and (max-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit__block {
+        flex-wrap:wrap
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%
+}
+
+@media screen and (min-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item {
+        flex-basis:calc(25% - 9px);
+        max-width: calc(25% - 9px)
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-image {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    justify-content: flex-start;
+    padding: 0 24px;
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-image svg {
+    width: 40px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-image .a {
+    fill: var(--modal-bg-color-3)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-image .b {
+    fill: var(--brand-color-1)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-image span {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-left: 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info {
+    background-color: var(--modal-bg-color-3);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .lm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .lm .new--limit__line {
+    display: flex;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .lm span:first-child {
+    color: var(--modal-text-color-3);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .lm span:nth-child(2) {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .lm--amount__pending {
+    color: var(--modal-text-color-3)!important
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .limit-button {
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .limit-button.buttons-block .btn {
+    min-width: calc(50% - 6px);
+    width: calc(50% - 6px)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .limit-button span {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px 0 #0003;
+    color: #212121;
+    display: none;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    min-width: 150px;
+    padding: 8px 12px;
+    text-align: center
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .limit-button.disabled:hover span {
+    display: block;
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -35px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item .tb--item-info .limit-button.disabled button {
+    opacity: .6;
+    pointer-events: none
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item:last-child {
+    margin-right: 0
+}
+
+@media screen and (max-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item {
+        max-width:calc(50% - 6px)
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item:nth-child(2n) {
+        margin-right: 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item:nth-child(-n+2) {
+        margin-bottom: 12px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item {
+        margin-bottom:12px;
+        margin-right: 0;
+        max-width: 100%
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .limit__item:last-child {
+        margin-bottom: 0
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .bet-limit .tb--no-debosit {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .time-limit+.tb--modal-lvl1 .tl--hour {
+    align-items: center;
+    border-radius: 24px;
+    bottom: 24px;
+    color: rgba(from var(--modal-text-color-1) r g b/.6);
+    display: flex;
+    font-size: 10px;
+    height: 28px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 43px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .time-limit+.tb--modal-lvl1 .has-select-options .tl--hour {
+    right: 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .time-limit+.tb--modal-lvl1 .digi_icon-mp-game-history {
+    align-items: center;
+    border-radius: 24px;
+    color: rgba(from var(--modal-text-color-1) r g b/.6);
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    left: 11px;
+    position: absolute;
+    top: 32px;
+    z-index: 1
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .time-limit+.tb--modal-lvl1 .digi_icon-mp-game-history:before {
+    width: -webkit-fit-content;
+    width: fit-content
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .time-limit+.tb--modal-lvl1 .digi_icon-mp-game-history+.tb--input-group .tb--input,.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .time-limit+.tb--modal-lvl1 .digi_icon-mp-game-history+.tb--pay-inner-input .custom-select .react-select__control .react-select__value-container {
+    padding: 0 45px 0 30px!important
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit {
+        display:flex;
+        flex-direction: column
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit h3 {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit p {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit .limit__attention {
+    align-items: center;
+    background-color: var(--modal-bg-color-1);
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit .limit__attention .tb--info-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit .limit__attention .tb--info-text span {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit .limit__attention .tb--info-text span:first-child {
+    color: var(--modal-text-color-1);
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit .limit__attention .tb--info-text span:nth-child(2) {
+    color: var(--modal-text-color-2);
+    font-weight: 400
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    height: calc(100% - 158px)
+}
+
+@media screen and (max-width: 1200px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block {
+        height:calc(100% - 175px)
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block {
+        display:flex;
+        flex-direction: column;
+        height: 100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__title {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__title p {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px 0 #0003;
+    color: #212121;
+    display: none;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    min-width: 150px;
+    padding: 8px 12px;
+    position: absolute;
+    text-align: center
+}
+
+@media screen and (max-width: 500px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__title {
+        align-items:flex-start;
+        flex-direction: column;
+        height: 126px
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__title .btn {
+        margin-top: 16px;
+        width: 100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit--img {
+    align-items: center;
+    display: flex
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit--img svg {
+    height: 36px;
+    width: 36px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit--img svg .a {
+    fill: var(--modal-bg-color-2)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit--img svg .b {
+    fill: var(--brand-color-1)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit--img h3 {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18.2px;
+    margin: 0 0 0 12px;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__action {
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__action .btn {
+    width: 156px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__action .btn:disabled:hover~p {
+    display: block;
+    right: 50%;
+    top: -35px;
+    transform: translate(50%,-35%)
+}
+
+@media screen and (max-width: 500px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__action,.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__action .btn {
+        width:100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__content {
+    height: calc(100% - 72px)
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__content {
+        height:100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__empty {
+    align-items: center;
+    background-color: var(--modal-bg-color-3);
+    border-radius: 16px;
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__empty div {
+    align-items: center;
+    color: var(--modal-text-color-2);
+    display: flex;
+    flex-direction: column
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__empty div i {
+    font-size: 44px;
+    margin-bottom: 24px;
+    opacity: .5
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__empty div i:before {
+    height: 35px;
+    width: 50px
+}
+
+@media screen and (max-width: 600px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__empty {
+        padding:24px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list {
+    background-color: var(--modal-bg-color-3);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+    padding: 16px
+}
+
+@media screen and (max-width: 1200px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list {
+        max-height:299px
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list {
+        max-height:100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__block {
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__block:nth-child(2) {
+    margin-top: 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__header h4 {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__header p {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__header p span {
+    color: var(--modal-text-color-2)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__header .valid-info {
+    margin-left: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__header .valid-info p {
+    border-radius: 12px;
+    color: var(--modal-text-color-3);
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-align: center
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__title {
+    display: flex;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__items {
+    grid-gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr)
+}
+
+@media screen and (max-width: 1200px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__items {
+        grid-template-columns:repeat(5,1fr)
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__items {
+        grid-template-columns:repeat(4,1fr)
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__items {
+        grid-template-columns:repeat(3,1fr)
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__items {
+        grid-template-columns:repeat(2,1fr)
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list .r-list__items {
+        grid-template-columns:repeat(1,1fr)
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__block .r-limit__list {
+        height:100%
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    justify-content: space-between
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-title {
+    align-items: center;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-title h2 {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    padding: 0 12px;
+    white-space: nowrap
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-title h3 {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    margin-bottom: 0;
+    white-space: nowrap
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-info {
+    background-color: var(--modal-bg-color-2);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 68px;
+    justify-content: space-between;
+    padding: 16px 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-info .status-block {
+    align-items: center;
+    background-color: var(--modal-bg-color-1);
+    border-radius: 32px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    padding: 0 8px;
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-info .status-block .lm-status {
+    min-width: 10px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-info .status-block .status-text {
+    color: var(--modal-text-color-1);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 6px;
+    opacity: .6;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item .tb--item-info button.btn {
+    height: 40px;
+    line-height: 38px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit__item:last-child {
+    margin-right: 0
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .access-limit .tb--no-debosit {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit {
+    margin: 0 auto;
+    max-width: 1140px
+}
+
+@media screen and (min-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit {
+        width:1140px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit h3 {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit p {
+    color: var(--modal-text-color-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__attention {
+    align-items: center;
+    background-color: var(--modal-bg-color-1);
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__attention .tb--info-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__attention .tb--info-text span {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__attention .tb--info-text span:first-child {
+    color: var(--modal-text-color-1);
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__attention .tb--info-text span:nth-child(2) {
+    color: var(--modal-text-color-2);
+    font-weight: 400
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit__block {
+    display: flex;
+    gap: 0 12px
+}
+
+@media screen and (max-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit__block {
+        flex-wrap:wrap
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item {
+    background-color: var(--modal-bg-color-1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%
+}
+
+@media screen and (min-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item {
+        flex-basis:calc(25% - 9px);
+        max-width: calc(25% - 9px)
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-image {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    justify-content: flex-start;
+    padding: 0 24px;
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-image svg {
+    width: 40px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-image .a {
+    fill: var(--modal-bg-color-3)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-image .b {
+    fill: var(--brand-color-1)
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-image span {
+    color: var(--modal-text-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-left: 24px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info {
+    background-color: var(--modal-bg-color-3);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .lm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .lm .new--limit__line {
+    display: flex;
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .lm span:first-child {
+    color: var(--modal-text-color-3);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: capitalize
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .lm span:nth-child(2) {
+    color: var(--modal-text-color-1);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .lm--amount__pending {
+    color: var(--modal-text-color-3)!important
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .limit-button {
+    position: relative
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .limit-button span {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px 0 #0003;
+    color: #212121;
+    display: none;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    min-width: 150px;
+    padding: 8px 12px;
+    text-align: center
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .limit-button.disabled:hover span {
+    display: block;
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -35px
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item .tb--item-info .limit-button.disabled button {
+    opacity: .6;
+    pointer-events: none
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item:last-child {
+    margin-right: 0
+}
+
+@media screen and (max-width: 1280px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item {
+        max-width:calc(50% - 6px)
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item:nth-child(2n) {
+        margin-right: 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item:nth-child(-n+2) {
+        margin-bottom: 12px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item {
+        margin-bottom:12px;
+        margin-right: 0;
+        max-width: 100%
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .limit__item:last-child {
+        margin-bottom: 0
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content .loss-limit .tb--no-debosit {
+    color: var(--modal-text-color-1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming {
+        height:100%
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--account-body {
+        padding: 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--gambling-content {
+        margin: 24px 16px
+    }
+}
+
+.tb--modal-account .tb--account-body.tb--account-body-gaming .tb--account-body {
+    height: calc(100% - 48px)
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--account-body {
+        height:100%
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--account-body.tb--responsible-gaming {
+        height:100%;
+        padding: 24px 3px 0
+    }
+
+    .tb--modal-account .tb--account-body.tb--account-body-gaming .tb--account-body.tb--responsible-gaming .tb--preloader-container {
+        height: 100%
+    }
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit__info {
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+    width: 100%
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit_highlighted {
+    background-color: rgb(from rgba(255,168,0,.1019607843) r g b/.1);
+    border: 1px solid #ffa800;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 12px
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit_highlighted .valid-info .tb--valid-from {
+    color: #ffa800;
+    font-size: 10px
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit_highlighted .new--limit__line {
+    max-width: -webkit-max-content;
+    max-width: max-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit_highlighted .tb--valid-from {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit_highlighted .tb--valid-from i {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    margin-right: 4px;
+    width: 16px
+}
+
+.tb--modal-account .tb--account-body .tb--responsible-gaming .limit__item .lm-new--limit_highlighted .tb--valid-from i:before {
+    font-size: 16px
+}
+
+.tb--modal-account .tb--submenu__content {
+    background-color: var(--modal-bg-color-2);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--modal-account .tb--submenu__content {
+        padding:0
+    }
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list {
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-slide {
+    padding: 0 6px
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-list {
+    margin: 0 -6px
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-list:after,.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-list:before {
+    bottom: 0;
+    content: "";
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 97px;
+    z-index: 1
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-list:before {
+    background: linear-gradient(90deg,rgb(from var(--modal-bg-color-2) r g b/1) 0,rgb(from var(--modal-bg-color-2) r g b/.7) 65%,rgb(from var(--modal-bg-color-2) r g b/0) 100%);
+    left: 0
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-list:after {
+    background: linear-gradient(90deg,rgb(from var(--modal-bg-color-2) r g b/0) 0,rgb(from var(--modal-bg-color-2) r g b/.7) 65%,rgb(from var(--modal-bg-color-2) r g b/1) 100%);
+    right: 0
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider.next-shadow .slick-list:after,.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider.prev-shadow .slick-list:before {
+    display: block
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-arrow {
+    background-color: rgb(from var(--modal-bg-color-2) r g b/.6);
+    border: 1px solid rgb(from var(--modal-text-color-1) r g b/.1);
+    border-radius: 50%;
+    bottom: 0;
+    color: var(--modal-text-color-1);
+    height: 32px;
+    margin: auto;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: opacity 1s;
+    width: 32px
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-arrow:before {
+    color: inherit
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-arrow.slick-next {
+    right: -16px
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu .slick-slider .slick-arrow.slick-prev {
+    left: -16px
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu__item {
+    background-color: var(--modal-bg-color-3);
+    border-radius: 8px;
+    color: rgb(from var(--modal-text-color-2) r g b/.8);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 24px;
+    transition: all .3s ease-in-out;
+    white-space: nowrap
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu__item:not(.active):hover {
+    color: var(--modal-text-color-2)
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__list .tb--submenu__item.active {
+    background-color: var(--modal-bg-color-1);
+    color: var(--brand-color-1)
+}
+
+.tb--modal-account .tb--submenu__content .tb--new-offers {
+    margin-bottom: 16px
+}
+
+.tb--modal-account .tb--submenu__content .tb--new-offers .tb--submenu__list {
+    margin-bottom: 0
+}
+
+.tb--modal-account .tb--submenu__content .tb--new-offers.show-casion {
+    display: flex;
+    justify-content: space-between
+}
+
+.tb--modal-account .tb--submenu__content .tb--new-offers.show-casion .tb--submenu__list {
+    width: calc(100% - 400px)
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--modal-account .tb--submenu__content .tb--new-offers {
+        margin-bottom:0
+    }
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__content {
+    padding: 0
+}
+
+.tb--modal-account .tb--submenu__content .tb--submenu__content .tb--submenu__list {
+    margin-bottom: 0
+}
+
+.tb--modal-account .tb--submenu__content.tb--new-offers-container {
+    flex: 1 1;
+    height: auto
+}
+
+.tb--modal-account .tb--submenu__content.tb--new-offers-container .bonuses-container {
+    margin: 0;
+    overflow: visible;
+    padding: 0
+}
+
+.tb--modal-account .tb--submenu__content.tb--new-offers-container .active-bonus-container,.tb--modal-account .tb--submenu__content.tb--new-offers-container .available-bonuses-container {
+    padding: 0
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--submenu__content.tb--new-offers-container {
+        background-color:initial
+    }
+
+    .tb--modal-account .tb--submenu__content.tb--new-offers-container .active-bonus-container,.tb--modal-account .tb--submenu__content.tb--new-offers-container .available-bonuses-container {
+        padding: 16px
+    }
+}
+
+.tb--modal-account .tb-cashier-wrapper .tb--submenu__content .tb--submenu__list {
+    margin-bottom: 16px
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--modal-account .tb-cashier-wrapper .tb--submenu__content {
+        background-color:initial
+    }
+}
+
+.tb--modal-account .tb--banner .slick-track>div {
+    border-radius: 12px
+}
+
+.tb--modal-account .tb--banner .slick-slide img {
+    border-radius: 12px;
+    height: 90px
+}
+
+@media screen and (max-width: 1024px) {
+    .tb--modal-account .tb--banner .slick-slide img {
+        border-radius:4px
+    }
+
+    .tb--modal-account .tb--banner {
+        height: 90px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 16px
+    }
+
+    .tb--modal-account .tb--banner:empty {
+        height: auto;
+        margin-top: 0
+    }
+
+    .tb--modal-account .tb--banner .slick-track {
+        display: flex
+    }
+
+    .tb--modal-account .tb--banner .slick-slider {
+        height: 100%
+    }
+
+    .tb--modal-account .tb--transaction-banner {
+        margin: 0 0 16px
+    }
+}
+
+.tb--modal-account .slick-slider {
+    box-shadow: none
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--modal-account .tb--popup-wrapper {
+        height:100%
+    }
+
+    .tb--modal-account .tb--modal-header {
+        justify-content: space-between
+    }
+
+    .tb--modal-account .tb--modal-header .back-btn i {
+        color: var(--modal-text-color-2);
+        font-size: 24px
+    }
+
+    .tb--modal-account .tb--modal-header .tb--modal-header-txt {
+        display: flex;
+        justify-content: center
+    }
+}
+
+#modal-root .tb--submenu__content .cashier-form-wrapper,#modal-root .tb--submenu__content .payment-table-container,#modal-root .tb--submenu__content .prizes-form-wrapper {
+    padding: 0
+}
+
+.tb--limit-modal .tb--modal-sm_fix {
+    margin: 0 auto;
+    width: 360px
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--limit-modal .tb--modal-sm_fix {
+        height:588px
+    }
+}
+
+@media screen and (max-width: 1023.9px) {
+    .tb--limit-modal .tb--modal-sm_fix {
+        height:100%;
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tb--modal-sm_fix.tb--modal-reg .tb--body-panel {
+        height:calc(100% - 56px)
+    }
 }

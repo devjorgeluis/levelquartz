@@ -161,15 +161,12 @@ const LiveCasino = () => {
         imageDataSrc: game.image_local != null ? contextData.cdnUrl + game.image_local : game.image_url,
       }));
 
-      const categoryGames = {
-        category: category,
-        games: gamesWithImages,
-      };
+      setGames((prev) => {
+        return [...prev, ...gamesWithImages];
+      });
 
       setFirstFiveCategoriesGames((prev) => {
-        const updated = [...prev];
-        updated[categoryIndex] = categoryGames;
-        return updated;
+        return [...prev, ...gamesWithImages];
       });
 
       pendingCategoryFetchesRef.current = Math.max(0, pendingCategoryFetchesRef.current - 1);
@@ -439,13 +436,49 @@ const LiveCasino = () => {
   };
 
   const handleProviderSelect = (provider, index = 0) => {
-    setIsProviderDropdownOpen(false);
-    setTxtSearch("");
-    if (categories.length > 0 && provider) {
-      if (provider.code === "home") {
+    if (!provider || selectedProvider?.id == provider.id) {
+      setSelectedProvider(null);
+      setGames(firstFiveCategoriesGames);
+    } else {
+      setIsProviderDropdownOpen(false);
+      setTxtSearch("");
+      if (categories.length > 0 && provider) {
+        if (provider.code === "home") {
+          setSelectedProvider(null);
+          setIsSingleCategoryView(false);
+          setActiveCategory(provider);
+          setSelectedCategoryIndex(0);
+          setGames([]);
+          setFirstFiveCategoriesGames([]);
+          const firstFiveCategories = categories.slice(1, 6);
+          if (firstFiveCategories.length > 0) {
+            pendingCategoryFetchesRef.current = firstFiveCategories.length;
+            setIsLoadingGames(true);
+            firstFiveCategories.forEach((item, idx) => {
+              fetchContentForCategory(item, item.id, item.table_name, idx, true, pageData.page_group_code);
+            });
+          } else {
+            setIsLoadingGames(false);
+          }
+          navigate("/live-casino#home");
+          lastLoadedCategoryRef.current = null;
+        } else {
+          setSelectedProvider(provider);
+          setIsSingleCategoryView(true);
+          const providerIndex = categories.findIndex(cat => cat.id === provider.id);
+          setActiveCategory(provider);
+          setSelectedCategoryIndex(providerIndex !== -1 ? providerIndex : index);
+          fetchContent(provider, provider.id, provider.table_name, providerIndex !== -1 ? providerIndex : index, true);
+          lastLoadedCategoryRef.current = provider.code;
+          if (isMobile) {
+            setMobileShowMore(true);
+          }
+        }
+      } else if (!provider && categories.length > 0) {
+        const firstCategory = categories[0];
         setSelectedProvider(null);
         setIsSingleCategoryView(false);
-        setActiveCategory(provider);
+        setActiveCategory(firstCategory);
         setSelectedCategoryIndex(0);
         setGames([]);
         setFirstFiveCategoriesGames([]);
@@ -461,38 +494,7 @@ const LiveCasino = () => {
         }
         navigate("/live-casino#home");
         lastLoadedCategoryRef.current = null;
-      } else {
-        setSelectedProvider(provider);
-        setIsSingleCategoryView(true);
-        const providerIndex = categories.findIndex(cat => cat.id === provider.id);
-        setActiveCategory(provider);
-        setSelectedCategoryIndex(providerIndex !== -1 ? providerIndex : index);
-        fetchContent(provider, provider.id, provider.table_name, providerIndex !== -1 ? providerIndex : index, true);
-        lastLoadedCategoryRef.current = provider.code;
-        if (isMobile) {
-          setMobileShowMore(true);
-        }
       }
-    } else if (!provider && categories.length > 0) {
-      const firstCategory = categories[0];
-      setSelectedProvider(null);
-      setIsSingleCategoryView(false);
-      setActiveCategory(firstCategory);
-      setSelectedCategoryIndex(0);
-      setGames([]);
-      setFirstFiveCategoriesGames([]);
-      const firstFiveCategories = categories.slice(1, 6);
-      if (firstFiveCategories.length > 0) {
-        pendingCategoryFetchesRef.current = firstFiveCategories.length;
-        setIsLoadingGames(true);
-        firstFiveCategories.forEach((item, idx) => {
-          fetchContentForCategory(item, item.id, item.table_name, idx, true, pageData.page_group_code);
-        });
-      } else {
-        setIsLoadingGames(false);
-      }
-      navigate("/live-casino#home");
-      lastLoadedCategoryRef.current = null;
     }
   };
 
@@ -671,24 +673,8 @@ const LiveCasino = () => {
                     <div className="l5--main">
                       {/* Banner superior */}
                       <div className="main--slider-top main--slider-right casino-slider-container livecasino-slider-container fade-appear-done fade-enter-done">
-                        <div className="container slider_casino tb--rel top-banner-section">
-                          <div className="main--slider-top main--slider-right banner-items-count-1">
-                            <div className="">
-                              <div className="slick-slider slick-initialized">
-                                <div className="slick-list">
-                                  <div className="slick-track" style={{ width: '100%', left: 0, opacity: 1 }}>
-                                    <div className="slick-slide slick-active slick-current" style={{ outline: 'none', width: '100%' }}>
-                                      <div>
-                                        <div style={{ width: '100%', display: 'inline-block' }}>
-                                          <Slideshow />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        <div className="slider_casino tb--rel top-banner-section">
+                          <Slideshow />
                         </div>
                       </div>
 
@@ -762,14 +748,24 @@ const LiveCasino = () => {
                                   </ul>
                                   <div className="tb--navbar_right tb--flex">
                                     <div className="tb--live-casino_search tb--lobby-search">
-                                      <SearchInput
+                                      <input
+                                        id="search"
+                                        ref={searchRef}
+                                        placeholder="Buscar"
+                                        className="search-box "
+                                        value={txtSearch}
+                                        onChange={search}
+                                      // onKeyUp={search}
+                                      ></input>
+                                      <i className="digi_icon-search"></i>
+                                      {/* <SearchInput
                                         txtSearch={txtSearch}
                                         setTxtSearch={setTxtSearch}
                                         searchRef={searchRef}
                                         search={search}
                                         clearSearch={clearSearch}
                                         isMobile={isMobile}
-                                      />
+                                      /> */}
                                     </div>
                                     <div className="tb--sorting-wrapper tb--flex tb--justify-between tb--gap-12"></div>
                                   </div>
@@ -787,9 +783,14 @@ const LiveCasino = () => {
                                   </div>
                                 </div>
                                 <ul className="tb--providers_list tb--flex tb--text_upercase">
-                                  <li className={`active tb--category-all ${!selectedProvider ? 'active' : ''}`}>
+                                  <li className={`active tb--category-all ${!selectedProvider ? 'active' : ''}`}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      handleProviderSelect(null);
+                                    }}
+                                  >
                                     <span className="tb--categories-item_text">TODAS</span>
-                                    <span className="tb--categories-item_count">({categories.length > 0 ? categories.reduce((acc, cat) => acc + (cat.count || 0), 0) : 0})</span>
+                                    <span className="tb--categories-item_count">({categories.length > 0 ? categories.reduce((acc, cat) => acc + (cat.element_count || 0), 0) : 0})</span>
                                     <div className="tb--chb-ico tb--cp tb--tac">
                                       <i className={`digi_icon-${!selectedProvider ? 'checkbox_selected' : 'checkbox'}`}></i>
                                     </div>
@@ -805,7 +806,7 @@ const LiveCasino = () => {
                                         }}
                                       >
                                         <span className="tb--categories-item_text">{provider.name}</span>
-                                        <span className="tb--categories-item_count">({provider.count || 0})</span>
+                                        <span className="tb--categories-item_count">({provider.element_count || 0})</span>
                                         <div className="tb--chb-ico tb--cp tb--tac">
                                           <i className={`digi_icon-${selectedProvider?.id === provider.id ? 'checkbox_selected' : 'checkbox'}`}></i>
                                         </div>
@@ -820,43 +821,13 @@ const LiveCasino = () => {
                             <div className="casino--container casino--container--wrapper">
                               <div className="tb--w_100 tb--flex">
                                 <div className="games--grid-layout tb--w_100 games--grid-layout_standard">
-                                  {(txtSearch !== "" || selectedProvider || isSingleCategoryView) ? (
-                                    <>
-                                      {games.map((game) => renderGameCard(game, activeCategory?.name || 'Casino en Vivo'))}
-                                      {isLoadingGames && <LoadGames />}
-                                      {hasMoreGames && (
-                                        <div className="text-center">
-                                          <button className="btn btn-secondary btn-wb-size-l btn-mb-size-l tb--more-btn" onClick={loadMoreGames}>
-                                            Más
-                                          </button>
-                                        </div>
-                                      )}
-                                    </>
-                                  ) : (
-                                    firstFiveCategoriesGames.map((entry, catIndex) => {
-                                      if (!entry || !entry.games) return null;
-                                      const categoryKey = entry.category?.id || `cat-${catIndex}`;
-
-                                      return (
-                                        <div className="category-block" key={categoryKey}>
-                                          <div className="row games-list popular">
-                                            <h2>
-                                              {entry?.category?.name || ''}
-                                              <a className="show-all" onClick={() => loadMoreContent(entry.category, catIndex + 1)}>Mostrar todo</a>
-                                            </h2>
-                                          </div>
-                                          <div className={`row games-list popular ${mobileShowMore ? '' : 'limited-games-list'}`}>
-                                            {entry.games.slice(0, 5).map((game) => renderGameCard(game, entry.category?.name || 'Casino en Vivo'))}
-                                          </div>
-                                        </div>
-                                      );
-                                    })
-                                  )}
+                                  {games.map((game) => renderGameCard(game, activeCategory?.name || 'Casino en Vivo'))}
+                                  {isLoadingGames && <LoadGames />}
                                 </div>
                               </div>
 
                               {/* Botón "Más" global */}
-                              {!isSingleCategoryView && !txtSearch && !selectedProvider && (
+                              {hasMoreGames && (
                                 <div className="text-center">
                                   <button className="btn btn-secondary btn-wb-size-l btn-mb-size-l tb--more-btn" onClick={() => {
                                     // Cargar más categorías o similar

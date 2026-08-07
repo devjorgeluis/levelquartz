@@ -240,7 +240,7 @@ const Home = () => {
           <Slideshow />
           <LinkCards />
           <Promotions />
-          <JackpotCards />
+          {/* <JackpotCards /> */}
           <SuperPromotionsWidget />
           <BestCasinos />
           <TopLiveCasinos />

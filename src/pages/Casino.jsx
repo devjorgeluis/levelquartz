@@ -257,10 +257,12 @@ const Casino = () => {
         games: gamesWithImages,
       };
 
+      setGames((prev) => {
+        return [...prev, ...gamesWithImages]
+      })
+
       setFirstFiveCategoriesGames((prev) => {
-        const updated = [...prev];
-        updated[categoryIndex] = categoryGames;
-        return updated;
+        return [...prev, ...gamesWithImages]
       });
     }
 
@@ -392,18 +394,23 @@ const Casino = () => {
   };
 
   const handleProviderSelect = (provider, index = 0) => {
-    setSelectedProvider(provider);
-    setIsProviderDropdownOpen(false);
-    setTxtSearch("");
-    setIsExplicitSingleCategoryView(true);
-    if (categories.length > 0 && provider) {
-      setActiveCategory(provider);
-      fetchContent(provider, provider.id, provider.table_name, index, true);
-      if (isMobile) setMobileShowMore(true);
-    } else if (!provider && categories.length > 0) {
-      const firstCategory = categories[0];
-      setActiveCategory(firstCategory);
-      fetchContent(firstCategory, firstCategory.id, firstCategory.table_name, 0, true);
+    if (!provider || selectedProvider?.id == provider.id) {
+      setSelectedProvider(null);
+      setGames(firstFiveCategoriesGames)
+    } else {
+      setSelectedProvider(provider);
+      setIsProviderDropdownOpen(false);
+      setTxtSearch("");
+      setIsExplicitSingleCategoryView(true);
+      if (categories.length > 0 && provider) {
+        setActiveCategory(provider);
+        fetchContent(provider, provider.id, provider.table_name, index, true);
+        if (isMobile) setMobileShowMore(true);
+      } else if (!provider && categories.length > 0) {
+        const firstCategory = categories[0];
+        setActiveCategory(firstCategory);
+        fetchContent(firstCategory, firstCategory.id, firstCategory.table_name, 0, true);
+      }
     }
   };
 
@@ -476,6 +483,11 @@ const Casino = () => {
       if (isMobile) setMobileShowMore(false);
     }
   };
+
+  const totalGamesCount = () => {
+    let count = categories?.reduce((acc, cat) => acc + (cat.element_count || 0), 0)
+    return count
+  }
 
   // Renderizado de tarjeta de juego con las clases del target
   const renderGameCard = (game, providerName) => (
@@ -623,7 +635,7 @@ const Casino = () => {
                         <div className="most--liked-slider casino--container">
                           <span className="tb--most-liked_header tb--text_upercase">Más votados</span>
                           <Slider {...mostLikedSettings}>
-                            {firstFiveCategoriesGames.length > 0 && firstFiveCategoriesGames[0]?.games?.slice(0, 8).map((game) => (
+                            {firstFiveCategoriesGames.length > 0 && firstFiveCategoriesGames?.slice(0, 8).map((game) => (
                               <div key={game.id}>
                                 {renderGameCard(game, activeCategory?.name || 'Casino')}
                               </div>
@@ -671,14 +683,25 @@ const Casino = () => {
                                   </ul>
                                   <div className="tb--navbar_right tb--flex">
                                     <div className="tb--live-casino_search tb--lobby-search">
-                                      <SearchInput
+                                      <input
+                                        id="search"
+                                        ref={searchRef}
+                                        placeholder="Buscar"
+                                        className="search-box "
+                                        value={txtSearch}
+                                        onChange={search}
+                                      // onKeyUp={search}
+                                      >
+                                      </input>
+                                      <i className="digi_icon-search"></i>
+                                      {/* <SearchInput
                                         txtSearch={txtSearch}
                                         setTxtSearch={setTxtSearch}
                                         searchRef={searchRef}
                                         search={search}
                                         clearSearch={clearSearch}
                                         isMobile={isMobile}
-                                      />
+                                      /> */}
                                     </div>
                                     <button
                                       type="button"
@@ -747,11 +770,15 @@ const Casino = () => {
                                   </div>
                                 </div>
                                 <ul className="tb--providers_list tb--flex tb--text_upercase">
-                                  <li className="active tb--category-all">
+                                  <li className="active tb--category-all"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      handleProviderSelect(null);
+                                    }}>
                                     <span className="tb--categories-item_text">TODAS</span>
-                                    <span className="tb--categories-item_count">(7543)</span>
+                                    <span className="tb--categories-item_count">{totalGamesCount()}</span>
                                     <div className="tb--chb-ico tb--cp tb--tac">
-                                      <i className="digi_icon-checkbox_selected"></i>
+                                      <i className={`digi_icon-${!selectedProvider ? 'checkbox_selected' : 'checkbox'}`}></i>
                                     </div>
                                   </li>
                                   {categories.map((provider) => (
@@ -770,7 +797,7 @@ const Casino = () => {
                                           </span>
                                         )}
                                         <span className="tb--categories-item_text">{provider.name}</span>
-                                        <span className="tb--categories-item_count">({provider.count || 0})</span>
+                                        <span className="tb--categories-item_count">({provider.element_count || 0})</span>
                                         <div className="tb--chb-ico tb--cp tb--tac">
                                           <i className={`digi_icon-${selectedProvider?.id === provider.id ? 'checkbox_selected' : 'checkbox'}`}></i>
                                         </div>
@@ -789,13 +816,6 @@ const Casino = () => {
                                     <>
                                       {games.map((game) => renderGameCard(game, activeCategory?.name || 'Casino'))}
                                       {isLoadingGames && <LoadGames />}
-                                      {hasMoreGames && (
-                                        <div className="text-center">
-                                          <button className="btn btn-secondary btn-wb-size-l btn-mb-size-l tb--more-btn" onClick={loadMoreGames}>
-                                            Más
-                                          </button>
-                                        </div>
-                                      )}
                                     </>
                                   ) : (
                                     <>
@@ -803,38 +823,19 @@ const Casino = () => {
                                         <>
                                           {games.map((game) => renderGameCard(game, activeCategory?.name || 'Casino'))}
                                           {isLoadingGames && <LoadGames />}
-                                          {hasMoreGames && (
-                                            <div className="text-center">
-                                              <button className="btn btn-secondary btn-wb-size-l btn-mb-size-l tb--more-btn" onClick={loadMoreGames}>
-                                                Más
-                                              </button>
-                                            </div>
-                                          )}
                                         </>
                                       ) : (
-                                        firstFiveCategoriesGames.map((entry, catIndex) => {
-                                          if (!entry || !entry.games) return null;
-                                          return (
-                                            <div className="category-block" key={entry.category?.id || catIndex}>
-                                              <div className="row games-list popular">
-                                                <h2>
-                                                  {entry.category?.name || ''}
-                                                  <a className="show-all" onClick={() => loadMoreContent(entry.category, catIndex)}>Mostrar todo</a>
-                                                </h2>
-                                              </div>
-                                              <div className={`row games-list popular ${mobileShowMore ? '' : 'limited-games-list'}`}>
-                                                {entry.games.slice(0, 5).map((game) => renderGameCard(game, entry.category?.name || 'Casino'))}
-                                              </div>
-                                            </div>
-                                          );
-                                        })
+                                        <>
+                                          {games.map((game) => renderGameCard(game, activeCategory?.name || 'Casino'))}
+                                          {isLoadingGames && <LoadGames />}
+                                        </>
                                       )}
                                     </>
                                   )}
                                 </div>
                               </div>
                               {/* Botón "Más" global (solo si no hay filtros activos y no estamos en vista de categoría única) */}
-                              {!isSingleCategoryView && !txtSearch && !selectedProvider && !isExplicitSingleCategoryView && (
+                              {hasMoreGames && (
                                 <div className="text-center">
                                   <button className="btn btn-secondary btn-wb-size-l btn-mb-size-l tb--more-btn" onClick={() => { /* Acción para cargar más categorías o similar */ }}>
                                     Más

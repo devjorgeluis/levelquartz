@@ -8,7 +8,7 @@ import ProfileGameHistory from "../../pages/Profile/ProfileGameHistory";
 
 const popupViews = {
     myprofile: { label: "Cuenta", icon: "account_circle", component: Profile },
-    balance: { label: "Cajero", icon: "digi_icon-cashier_new", component: ProfileBalance },
+    // balance: { label: "Cajero", icon: "digi_icon-cashier_new", component: ProfileBalance },
     bonuses: { label: "Ofertas", icon: "digi_icon-offer", component: ProfileBonuses },
     history: { label: "Historia", icon: "digi_icon-history", component: ProfileGameHistory },
 };

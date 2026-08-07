@@ -11,10 +11,10 @@ const linkItems = [
   { id: 1, name: 'Casino', href: '/casino', image: img1 },
   { id: 2, name: 'Casino en vivo', href: '/live-casino', image: img2 },
   { id: 3, name: 'Deporte', href: '/sports', image: img3 },
-  { id: 4, name: 'Deporte en vivo', href: '/sports/overview', image: img4 },
-  { id: 5, name: 'Esport', href: '/esport', image: img5 },
-  { id: 6, name: 'Fast Games', href: '/fast-games-lobby', image: img6 },
-  { id: 7, name: 'Cash Back', href: '/cashback', image: img7 },
+  { id: 4, name: 'Deporte en vivo', href: '/live-sports', image: img4 },
+  // { id: 5, name: 'Esport', href: '/esport', image: img5 },
+  // { id: 6, name: 'Fast Games', href: '/fast-games-lobby', image: img6 },
+  // { id: 7, name: 'Cash Back', href: '/cashback', image: img7 },
 ];
 
 

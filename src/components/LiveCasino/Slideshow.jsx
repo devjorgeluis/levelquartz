@@ -1,96 +1,42 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
-
-import ImgBanner1 from "/src/assets/images/live-casino-banner.webp";
+import React from 'react';
+import ImgBanner1 from "../../assets/images/live-casino-banner.webp";
 
 const Slideshow = () => {
+    // En caso de que haya más banners en el futuro, se pueden agregar aquí.
     const slides = [
         {
             id: 1,
             desktopImage: ImgBanner1,
-            mobileImage: ImgBanner1
-        },
+            alt: "casino page main section"
+        }
     ];
 
     return (
-        <div className="container banner-carousel-container multiple-slides banner-grid-1" style={{ animation: '1s ease 0s 1 normal none running fadeIn' }}>
-            <div className="carousel slide">
-                <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    navigation={{
-                        nextEl: '.carousel-control-next',
-                        prevEl: '.carousel-control-prev',
-                    }}
-                    pagination={{
-                        el: '.carousel-indicators',
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return '<li class="' + className + '"></li>';
-                        },
-                    }}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                    loop={true}
-                    onSwiper={(swiper) => {
-                        setTimeout(() => {
-                            const prevButton = document.querySelector('.carousel-control-prev');
-                            const nextButton = document.querySelector('.carousel-control-next');
-                            
-                            if (prevButton) {
-                                prevButton.addEventListener('click', (e) => {
-                                    e.preventDefault();
-                                    swiper.slidePrev();
-                                });
-                            }
-                            if (nextButton) {
-                                nextButton.addEventListener('click', (e) => {
-                                    e.preventDefault();
-                                    swiper.slideNext();
-                                });
-                            }
-                        }, 100);
-                    }}
-                >
-                    {slides.map((slide) => (
-                        <SwiperSlide key={slide.id}>
-                            <div className="row">
-                                <a className="centered-banner col-12 no-button" href="#">
-                                    <div 
-                                        className="main-background" 
-                                        style={{ backgroundImage: `url('${slide.desktopImage}')` }}
-                                    ></div>
-                                    <div 
-                                        className="main-background mobile" 
-                                        style={{ backgroundImage: `url('${slide.mobileImage}')` }}
-                                    ></div>
-                                    <div className="action-content"></div>
-                                </a>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                
-                <ol className="carousel-indicators"></ol>
-                <a className="carousel-control-prev" role="button" href="#">
-                    <span aria-hidden="true" className="carousel-control-prev-icon"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" role="button" href="#">
-                    <span aria-hidden="true" className="carousel-control-next-icon"></span>
-                    <span className="sr-only">Next</span>
-                </a>
+        <div className="main--slider-top main--slider-right banner-items-count-1">
+            <div className="">
+                <div className="slick-slider slick-initialized">
+                    <div className="slick-list">
+                        <div className="slick-track" style={{ width: '100%', left: 0, opacity: 1 }}>
+                            {slides.map((slide) => (
+                                <div key={slide.id} className="slick-slide slick-active slick-current" style={{ outline: 'none', width: '100%' }}>
+                                    <div>
+                                        <div style={{ width: '100%', display: 'inline-block' }}>
+                                            <img 
+                                                loading="eager" 
+                                                fetchpriority="high" 
+                                                src={slide.desktopImage} 
+                                                alt={slide.alt} 
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
-}
+};
 
 export default Slideshow;

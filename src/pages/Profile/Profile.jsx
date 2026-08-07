@@ -26,8 +26,8 @@ const Profile = () => {
             <nav className="tb--subhead tb--subhead-trans main-tab-menu tb--flex tb--align-center tb--mobile-hide target-profile__subnav" aria-label="Configuración del perfil">
                 <div className="tb--submenu tb--submenu-trans tb--flex tb--f-14">
                 <button className={`tb--submenu-item tb--submenu-item-tans tb--ph-16 ${section === "details" ? "active" : ""}`} onClick={() => setSection("details")}>Detalles personales</button>
-                <button className={`tb--submenu-item tb--submenu-item-tans tb--ph-16 ${section === "documents" ? "active" : ""}`} onClick={() => setSection("documents")}>Documentos</button>
-                <button className={`tb--submenu-item tb--submenu-item-tans tb--ph-16 ${section === "security" ? "active" : ""}`} onClick={() => setSection("security")}>Seguridad</button>
+                {/* <button className={`tb--submenu-item tb--submenu-item-tans tb--ph-16 ${section === "documents" ? "active" : ""}`} disabled onClick={() => setSection("documents")}>Documentos</button>
+                <button className={`tb--submenu-item tb--submenu-item-tans tb--ph-16 ${section === "security" ? "active" : ""}`} disabled onClick={() => setSection("security")}>Seguridad</button> */}
                 </div>
             </nav>
 

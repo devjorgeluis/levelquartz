@@ -8,7 +8,7 @@ const CasinoBanner = () => {
       id="custom-casino-full-banner"
       className="l5--wrapper l5--wrapper-mobile l5--wrapper-space custom-casino-full-banner"
     >
-      <Link to={"/casino-lobby"}>
+      <Link to={"/casino"}>
         <picture>
           <source
             media="(max-width: 767px)"
