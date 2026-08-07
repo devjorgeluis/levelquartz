@@ -8,6 +8,7 @@ import NoAuthGamePage from "./pages/NoAuthGamePage";
 import NoPage from "./pages/NoPage";
 import Layout from "./components/Layout/Layout";
 import AccountPopup, { getPopupRoute } from "./components/Modal/AccountPopup";
+import GamePlayer from "./pages/GamePlayer";
 
 export default function AppRoutes() {
     const location = useLocation();
@@ -19,6 +20,8 @@ export default function AppRoutes() {
     return (
         <>
             <Routes location={backgroundLocation}>
+                <Route path="/play/casino" element={<GamePlayer lobbyType="casino" />} />
+                <Route path="/play/live-casino" element={<GamePlayer lobbyType="live-casino" />} />
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />

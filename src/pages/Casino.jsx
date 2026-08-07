@@ -2,11 +2,10 @@ import { useContext, useState, useEffect, useRef } from "react";
 import { useLocation, useOutletContext, useNavigate } from "react-router-dom";
 import { AppContext } from "../AppContext";
 import { LayoutContext } from "../components/Layout/LayoutContext";
-import { NavigationContext } from "../components/Layout/NavigationContext";
 import { callApi } from "../utils/Utils";
+import { openGamePlayer } from "../utils/gamePlayerNavigation";
 import GameCard from "/src/components/GameCard";
 import Slideshow from "../components/Casino/Slideshow";
-import GameModal from "../components/Modal/GameModal";
 import About from "../components/Home/About";
 import Footer from "../components/Layout/Footer";
 import LoadGames from "../components/Loading/LoadGames";
@@ -14,11 +13,6 @@ import SearchInput from "../components/SearchInput";
 import LoginModal from "../components/Modal/LoginModal";
 import Slider from "react-slick";
 
-let selectedGameId = null;
-let selectedGameType = null;
-let selectedGameLauncher = null;
-let selectedGameName = null;
-let selectedGameImg = null;
 let pageCurrent = 0;
 
 const casinoThemes = [
@@ -50,7 +44,6 @@ const casinoThemes = [
 const Casino = () => {
   const { contextData } = useContext(AppContext);
   const { isLogin } = useContext(LayoutContext);
-  const { setShowFullDivLoading } = useContext(NavigationContext);
   const navigate = useNavigate();
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
   const [tags, setTags] = useState([]);
@@ -62,13 +55,10 @@ const Casino = () => {
   const [selectedProvider, setSelectedProvider] = useState(null);
   const [isProviderDropdownOpen, setIsProviderDropdownOpen] = useState(false);
   const [pageData, setPageData] = useState({});
-  const [gameUrl, setGameUrl] = useState("");
   const [isLoadingGames, setIsLoadingGames] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [txtSearch, setTxtSearch] = useState("");
   const [searchDelayTimer, setSearchDelayTimer] = useState();
-  const [shouldShowGameModal, setShouldShowGameModal] = useState(false);
-  const [isGameLoadingError, setIsGameLoadingError] = useState(false);
   const [mobileShowMore, setMobileShowMore] = useState(false);
   const [isSingleCategoryView, setIsSingleCategoryView] = useState(false);
   const [isExplicitSingleCategoryView, setIsExplicitSingleCategoryView] = useState(false);
@@ -76,7 +66,6 @@ const Casino = () => {
   const [winnersPeriod, setWinnersPeriod] = useState("daily");
   const [isThemeFilterOpen, setIsThemeFilterOpen] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState("TODAS");
-  const refGameModal = useRef();
   const location = useLocation();
   const searchRef = useRef(null);
   const { isSlotsOnly, isMobile } = useOutletContext();
@@ -138,13 +127,6 @@ const Casino = () => {
   }, [location.hash, tags]);
 
   useEffect(() => {
-    selectedGameId = null;
-    selectedGameType = null;
-    selectedGameLauncher = null;
-    selectedGameName = null;
-    selectedGameImg = null;
-    setGameUrl("");
-    setShouldShowGameModal(false);
     setActiveCategory({});
     setIsSingleCategoryView(false);
     setIsExplicitSingleCategoryView(false);
@@ -344,39 +326,8 @@ const Casino = () => {
     });
   };
 
-  const launchGame = (game, type, launcher) => {
-    setShouldShowGameModal(true);
-    setShowFullDivLoading(true);
-    selectedGameId = game.id != null ? game.id : selectedGameId;
-    selectedGameType = type != null ? type : selectedGameType;
-    selectedGameLauncher = launcher != null ? launcher : selectedGameLauncher;
-    selectedGameName = game?.name;
-    selectedGameImg = game?.image_local != null ? contextData.cdnUrl + game?.image_local : game.image_url;
-    callApi(contextData, "GET", "/get-game-url?game_id=" + selectedGameId, callbackLaunchGame, null);
-  };
-
-  const callbackLaunchGame = (result) => {
-    setShowFullDivLoading(false);
-    if (result.status == "0") {
-      switch (selectedGameLauncher) {
-        case "modal":
-        case "tab":
-          setGameUrl(result.url);
-          break;
-      }
-    } else {
-      setIsGameLoadingError(true);
-    }
-  };
-
-  const closeGameModal = () => {
-    selectedGameId = null;
-    selectedGameType = null;
-    selectedGameLauncher = null;
-    selectedGameName = null;
-    selectedGameImg = null;
-    setGameUrl("");
-    setShouldShowGameModal(false);
+  const launchGame = (game) => {
+    openGamePlayer(navigate, game, "casino", contextData.cdnUrl);
   };
 
   const handleLoginClick = () => {
@@ -514,7 +465,7 @@ const Casino = () => {
         </div>
         <div>
           <div className="games--grid-hover-btn">
-            <div className="games--grid-btn btn btn-primary btn-wb-size-s" onClick={() => (isLogin ? launchGame(game, "slot", "tab") : handleLoginClick())}>
+            <div className="games--grid-btn btn btn-primary btn-wb-size-s" onClick={() => (isLogin ? launchGame(game) : handleLoginClick())}>
               Juega ahora
             </div>
             <div className="games--grid-btn btn btn-secondary btn-wb-size-s tb--mt-12">Demo</div>
@@ -548,20 +499,7 @@ const Casino = () => {
           onConfirm={handleLoginConfirm}
         />
       )}
-      {shouldShowGameModal && selectedGameId !== null ? (
-        <GameModal
-          gameUrl={gameUrl}
-          gameName={selectedGameName}
-          gameImg={selectedGameImg}
-          reload={launchGame}
-          launchInNewTab={() => launchGame(null, null, "tab")}
-          ref={refGameModal}
-          onClose={closeGameModal}
-          isMobile={isMobile}
-        />
-      ) : (
-        <>
-          <div className={`root-container ${isMobile ? 'mobile' : ''}`} id="pageContainer">
+      <div className={`root-container ${isMobile ? 'mobile' : ''}`} id="pageContainer">
             <div className="root-wrapper">
               <div className="page">
                 {/* ===== MAIN BLOCK ===== */}
@@ -852,22 +790,7 @@ const Casino = () => {
               </div>
             </div>
             <Footer isSlotsOnly={isSlotsOnly} />
-          </div>
-        </>
-      )}
-
-      {isGameLoadingError && (
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 error-loading-game">
-              <div className="alert alert-warning">Error al cargar el juego. Inténtalo de nuevo o ponte en contacto con el equipo de soporte.</div>
-              <a className="btn btn-primary" onClick={() => window.location.reload()}>
-                Volver a la página principal
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
+      </div>
     </>
   );
 };

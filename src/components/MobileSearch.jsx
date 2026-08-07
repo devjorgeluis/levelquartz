@@ -1,34 +1,25 @@
 import { useContext, useState, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LayoutContext } from "./Layout/LayoutContext";
 import { AppContext } from "../AppContext";
-import { NavigationContext } from "./Layout/NavigationContext";
 import { callApi } from "../utils/Utils";
+import { openGamePlayer } from "../utils/gamePlayerNavigation";
 import LoadApi from "./Loading/LoadApi";
 import LoginModal from "./Modal/LoginModal";
-import GameModal from "./Modal/GameModal";
-
-let selectedGameId = null;
-let selectedGameType = null;
-let selectedGameLauncher = null;
-let selectedGameName = null;
-let selectedGameImg = null;
 
 const MobileSearch = ({
     isLogin, isMobile, onClose
 }) => {
     const { contextData } = useContext(AppContext);
     const { setShowMobileSearch } = useContext(LayoutContext);
-    const { setShowFullDivLoading } = useContext(NavigationContext);
+    const navigate = useNavigate();
+    const location = useLocation();
     const [games, setGames] = useState([]);
-    const [gameUrl, setGameUrl] = useState("");
-    const refGameModal = useRef();
     const [txtSearch, setTxtSearch] = useState("");
     const [isSearch, setIsSearch] = useState(false);
     const searchRef = useRef(null);
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [searchDelayTimer, setSearchDelayTimer] = useState();
-    const [shouldShowGameModal, setShouldShowGameModal] = useState(false);
-    const [isGameLoadingError, setIsGameLoadingError] = useState(false);
 
     const handleClearClick = () => {
         if (onClose) {
@@ -48,38 +39,10 @@ const MobileSearch = ({
         setShowLoginModal(false);
     };
 
-    const launchGame = (game, type, launcher) => {
-        setShouldShowGameModal(true);
-        selectedGameId = game.id != null ? game.id : selectedGameId;
-        selectedGameType = type != null ? type : selectedGameType;
-        selectedGameLauncher = launcher != null ? launcher : selectedGameLauncher;
-        selectedGameName = game?.name;
-        selectedGameImg = game?.image_local != null ? contextData.cdnUrl + game?.image_local : null;
-        callApi(contextData, "GET", "/get-game-url?game_id=" + game.id, callbackLaunchGame, null);
-    };
-
-    const callbackLaunchGame = (result) => {
-        setShowFullDivLoading(false);
-        if (result.status == "0") {
-            switch (selectedGameLauncher) {
-                case "modal":
-                case "tab":
-                    setGameUrl(result.url);
-                    break;
-            }
-        } else {
-            setIsGameLoadingError(true);
-        }
-    };
-
-    const closeGameModal = () => {
-        selectedGameId = null;
-        selectedGameType = null;
-        selectedGameLauncher = null;
-        selectedGameName = null;
-        selectedGameImg = null;
-        setGameUrl("");
-        setShouldShowGameModal(false);
+    const launchGame = (game) => {
+        const lobbyType = location.pathname.startsWith("/live-casino") ? "live-casino" : "casino";
+        handleClearClick();
+        openGamePlayer(navigate, game, lobbyType, contextData.cdnUrl);
     };
 
     const configureImageSrc = (result) => {
@@ -199,7 +162,7 @@ const MobileSearch = ({
                                     <div
                                         className="game-result-row"
                                         key={index}
-                                        onClick={() => launchGame(item, "slot", "tab")}
+                                        onClick={() => launchGame(item)}
                                     >
                                         <div className="game-image" style={{ backgroundImage: `url(${imageDataSrc})` }}></div>
                                         <div className="game-title">
@@ -214,29 +177,6 @@ const MobileSearch = ({
                 </div>
             </div>
 
-            {shouldShowGameModal && selectedGameId !== null && (
-                <GameModal
-                    gameUrl={gameUrl}
-                    gameName={selectedGameName}
-                    gameImg={selectedGameImg}
-                    reload={launchGame}
-                    launchInNewTab={() => launchGame(null, null, "tab")}
-                    ref={refGameModal}
-                    onClose={closeGameModal}
-                    isMobile={isMobile}
-                />
-            )}
-
-            {
-                isGameLoadingError && <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 error-loading-game">
-                            <div className="alert alert-warning">Error al cargar el juego. Inténtalo de nuevo o ponte en contacto con el equipo de soporte.</div>
-                            <a className="btn btn-primary" onClick={() => window.location.reload()}>Volver a la página principal</a>
-                        </div>
-                    </div>
-                </div>
-            }
         </>
     );
 };
