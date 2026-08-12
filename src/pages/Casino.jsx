@@ -12,6 +12,8 @@ import LoadGames from "../components/Loading/LoadGames";
 import SearchInput from "../components/SearchInput";
 import LoginModal from "../components/Modal/LoginModal";
 import Slider from "react-slick";
+import { MobileLobbyTabs, MobileMyGames } from "../components/Casino/MobileLobby";
+import MobileCasinoFilterSheet from "../components/Casino/MobileCasinoFilterSheet";
 
 let pageCurrent = 0;
 
@@ -66,6 +68,7 @@ const Casino = () => {
   const [winnersPeriod, setWinnersPeriod] = useState("daily");
   const [isThemeFilterOpen, setIsThemeFilterOpen] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState("TODAS");
+  const [mobileLobbyTab, setMobileLobbyTab] = useState("all");
   const location = useLocation();
   const searchRef = useRef(null);
   const { isSlotsOnly, isMobile } = useOutletContext();
@@ -109,8 +112,8 @@ const Casino = () => {
     slidesToScroll: 1,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      { breakpoint: 480, settings: { slidesToShow: 3 } },
     ],
   };
 
@@ -400,7 +403,7 @@ const Casino = () => {
       callApi(
         contextData,
         "GET",
-        "/search-content?keyword=" + txtSearch + "&page_group_code=" + pageData.page_group_code + "&length=" + pageSize,
+        "/search-content?keyword=" + keyword + "&page_group_code=" + pageData.page_group_code + "&length=" + pageSize,
         callbackSearch,
         null
       );
@@ -439,6 +442,34 @@ const Casino = () => {
     let count = categories?.reduce((acc, cat) => acc + (cat.element_count || 0), 0)
     return count
   }
+
+  const applyMobileFilters = ({ searchValue, categoryIndex, providerId, theme }) => {
+    const nextSearch = searchValue.trim();
+    const nextCategory = tags[categoryIndex];
+    const categoryChanged = categoryIndex !== selectedCategoryIndex;
+
+    setSelectedTheme(theme);
+    setTxtSearch(nextSearch);
+    setIsThemeFilterOpen(false);
+
+    if (categoryChanged && nextCategory) {
+      setSelectedCategoryIndex(categoryIndex);
+      setSelectedProvider(null);
+      setIsSingleCategoryView(false);
+      setIsExplicitSingleCategoryView(false);
+      getPage(nextCategory.code);
+      return;
+    }
+
+    if (nextSearch) {
+      setIsExplicitSingleCategoryView(true);
+      do_search(nextSearch);
+      return;
+    }
+
+    const nextProvider = categories.find((provider) => String(provider.id) === String(providerId)) || null;
+    handleProviderSelect(nextProvider);
+  };
 
   // Renderizado de tarjeta de juego con las clases del target
   const renderGameCard = (game, providerName) => (
@@ -490,6 +521,47 @@ const Casino = () => {
     </div>
   );
 
+  const renderTopWinners = () => (
+    <div className="top--winners-slider top--winners-slider--absolute">
+      <div className="top--winners-section tb--flex tb--align-center top--widget-name_scroll">
+        <div className="top--winners-page tb--cp">
+          <div className={`top--widget-name tb--text_upercase ${winnersPeriod === "daily" ? "top--widget-name_active" : ""}`} data-for="dailyTopWinners" onClick={() => setWinnersPeriod("daily")}>
+            <span className="top--widget-name_text tb--ellipsis">Principales ganadores del día</span>
+          </div>
+        </div>
+        <div className="top--winners-page tb--cp">
+          <div className={`top--widget-name tb--text_upercase ${winnersPeriod === "monthly" ? "top--widget-name_active" : ""}`} data-for="monthlyTopWinners" onClick={() => setWinnersPeriod("monthly")}>
+            <span className="top--widget-name_text tb--ellipsis">Principales ganadores del mes</span>
+          </div>
+        </div>
+      </div>
+      <Slider {...winnersSettings}>
+        <div key={winnersPeriod}>
+          <div className="top--winners-game_wrapper">
+            <h4 className="top--winners-game_title">Top de Ganadores</h4>
+            <div className="top--winners-game_container">
+              {winners[winnersPeriod].map((winner, idx) => (
+                <div className="top--winners-game tb--flex tb--align-center" key={`${winner.user}-${winner.amount}-${idx}`}>
+                  <div className="tb--cp top--winners-img">
+                    <p className="top--winners-img_link"><img loading="lazy" src={winner.img} alt={winner.game} /></p>
+                  </div>
+                  <div className="top--winners-desc">
+                    <div className="top--winners-date tb--ellipsis">{winner.user}</div>
+                    <div className="top--winners-value tb--flex tb--ellipsis">
+                      <div className="top--winners-amount tb--ellipsis" title={winner.amount}>{winner.amount}</div>
+                      <div className="top--winners-crns">{winner.currency}</div>
+                    </div>
+                    <div className="top--winners-bet tb--ellipsis">{winner.date}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Slider>
+    </div>
+  );
+
   return (
     <>
       {showLoginModal && (
@@ -500,6 +572,9 @@ const Casino = () => {
         />
       )}
       <div className={`root-container ${isMobile ? 'mobile' : ''}`} id="pageContainer">
+            {isMobile && <MobileLobbyTabs activeTab={mobileLobbyTab} onChange={setMobileLobbyTab} />}
+            {!isMobile || mobileLobbyTab === "all" ? (
+              <>
             <div className="root-wrapper">
               <div className="page">
                 {/* ===== MAIN BLOCK ===== */}
@@ -513,47 +588,7 @@ const Casino = () => {
                         </div>
                       </div>
 
-                      {/* Top Winners Slider */}
-                      <div className="top--winners-slider top--winners-slider--absolute">
-                        <div className="top--winners-section tb--flex tb--align-center top--widget-name_scroll">
-                          <div className="top--winners-page tb--cp">
-                            <div className={`top--widget-name tb--text_upercase ${winnersPeriod === "daily" ? "top--widget-name_active" : ""}`} data-for="dailyTopWinners" onClick={() => setWinnersPeriod("daily")}>
-                              <span className="top--widget-name_text tb--ellipsis">Principales ganadores del día</span>
-                            </div>
-                          </div>
-                          <div className="top--winners-page tb--cp">
-                            <div className={`top--widget-name tb--text_upercase ${winnersPeriod === "monthly" ? "top--widget-name_active" : ""}`} data-for="monthlyTopWinners" onClick={() => setWinnersPeriod("monthly")}>
-                              <span className="top--widget-name_text tb--ellipsis">Principales ganadores del mes</span>
-                            </div>
-                          </div>
-                        </div>
-                        <Slider {...winnersSettings}>
-                          <div key={winnersPeriod}>
-                            <div className="top--winners-game_wrapper">
-                              <h4 className="top--winners-game_title">Top de Ganadores</h4>
-                              <div className="top--winners-game_container">
-                                {winners[winnersPeriod].map((winner, idx) => (
-                                  <div className="top--winners-game tb--flex tb--align-center" key={`${winner.user}-${winner.amount}-${idx}`}>
-                                    <div className="tb--cp top--winners-img">
-                                      <p className="top--winners-img_link">
-                                        <img loading="lazy" src={winner.img} alt={winner.game} />
-                                      </p>
-                                    </div>
-                                    <div className="top--winners-desc">
-                                      <div className="top--winners-date tb--ellipsis">{winner.user}</div>
-                                      <div className="top--winners-value tb--flex tb--ellipsis">
-                                        <div className="top--winners-amount tb--ellipsis" title={winner.amount}>{winner.amount}</div>
-                                        <div className="top--winners-crns">{winner.currency}</div>
-                                      </div>
-                                      <div className="top--winners-bet tb--ellipsis">{winner.date}</div>
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </Slider>
-                      </div>
+                      {!isMobile && renderTopWinners()}
 
                       {/* Espacio para contenido adicional (jackpot, stories) - lo omitimos o lo dejamos como está */}
                       <div className="livecasino--top-space">
@@ -580,6 +615,8 @@ const Casino = () => {
                             ))}
                           </Slider>
                         </div>
+
+                        {isMobile && renderTopWinners()}
 
                         {/* Games Wrapper */}
                         <div className="games-wrapper">
@@ -643,33 +680,19 @@ const Casino = () => {
                                     </div>
                                     <button
                                       type="button"
-                                      className={`tb--text_upercase tb--live-casino_filter tb--flex tb--align-center tb--justify-center tb--flex-wrap ${isThemeFilterOpen ? 'active' : ''}`}
+                                      className={`tb--text_upercase tb--live-casino_filter lq-mobile-filter-trigger tb--flex tb--align-center tb--justify-center tb--flex-wrap ${isThemeFilterOpen ? 'active' : ''}`}
                                       onClick={toggleThemeFilter}
                                       aria-expanded={isThemeFilterOpen}
-                                      aria-controls="casino-theme-filter"
-                                      aria-label="Filtrar por tema"
+                                      aria-controls={isMobile ? "mobile-casino-filter" : "casino-theme-filter"}
+                                      aria-label="Filtrar y buscar"
                                     >
                                       <span className="filter-icon"></span>
                                       <span className="filter-icon filter-icon-middle"></span>
                                       <span className="filter-icon"></span>
                                     </button>
-                                    <div className="tb--sorting-wrapper tb--flex tb--justify-between tb--gap-12">
-                                      <button
-                                        type="button"
-                                        className={`tb--filter-button_mobile tb--flex tb--justify-center ${isThemeFilterOpen ? 'active' : ''}`}
-                                        onClick={toggleThemeFilter}
-                                        aria-expanded={isThemeFilterOpen}
-                                        aria-controls="casino-theme-filter"
-                                        aria-label="Filtrar por tema"
-                                      >
-                                        <span className="filter-icon"></span>
-                                        <span className="filter-icon filter-icon-middle"></span>
-                                        <span className="filter-icon"></span>
-                                      </button>
-                                    </div>
                                   </div>
                                 </div>
-                                {isThemeFilterOpen && (
+                                {!isMobile && isThemeFilterOpen && (
                                   <div className="tb--filter-block_wrapper" id="casino-theme-filter">
                                     <div className="tb--filter-block tb--flex">
                                       <div className="tb--filter-item tb--filter-block_thems tb--filter-block_thems-large">
@@ -790,7 +813,27 @@ const Casino = () => {
               </div>
             </div>
             <Footer isSlotsOnly={isSlotsOnly} />
+              </>
+            ) : (
+              <MobileMyGames
+                games={firstFiveCategoriesGames.length ? firstFiveCategoriesGames : games}
+                onGameClick={(game) => (isLogin ? launchGame(game) : handleLoginClick())}
+              />
+            )}
       </div>
+      <MobileCasinoFilterSheet
+        isOpen={Boolean(isMobile && isThemeFilterOpen)}
+        onClose={() => setIsThemeFilterOpen(false)}
+        onApply={applyMobileFilters}
+        categories={tags}
+        selectedCategoryIndex={selectedCategoryIndex}
+        providers={categories}
+        selectedProviderId={selectedProvider?.id ?? null}
+        themes={casinoThemes}
+        selectedTheme={selectedTheme}
+        searchValue={txtSearch}
+        totalGames={totalGamesCount()}
+      />
     </>
   );
 };

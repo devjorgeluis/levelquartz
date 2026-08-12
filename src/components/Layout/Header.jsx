@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LayoutContext } from "./LayoutContext";
 import LoadApi from "../Loading/LoadApi";
@@ -118,6 +119,16 @@ const Header = ({
         };
     }, []);
 
+    useEffect(() => {
+        if (!isMobile || !showBalanceDropdown) return undefined;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [isMobile, showBalanceDropdown]);
+
     const userMenuItems = [
         { icon: "category_icon-transactions", label: "Historial de Transacciones", link: popupPath("history") },
         { icon: "category_icon-bonus", label: "Bonos", link: popupPath("bonuses") },
@@ -133,6 +144,114 @@ const Header = ({
     const moreMenuItems = [
         { icon: "category_icon-live_sport_1", label: "Partidos en Vivo", link: "/live-sport" },
     ];
+
+    if (isMobile) {
+        return (
+            <>
+                <header className="header-block header-block__fix has-euro-counter lq-mobile-header">
+                    <div className="header-block_holder tb--flex f-row tb--justify-between tb--align-center tb--logo-align-left">
+                        <button
+                            type="button"
+                            className={`burger-btn lq-mobile-header__burger ${isSidebarExpanded ? "is-open" : ""}`}
+                            onClick={toggleSidebar}
+                            aria-label={isSidebarExpanded ? "Cerrar menú" : "Abrir menú"}
+                            aria-expanded={isSidebarExpanded}
+                        >
+                            <span />
+                        </button>
+
+                        <button type="button" className="logoBlock lq-mobile-header__logo" onClick={() => navigate("/")} aria-label="Ir a inicio">
+                            <img className="logoBlock_img loaded ready" alt="LevelQuartz" src={ImgLogo} />
+                        </button>
+
+                        <div className="header-block_right-side lq-mobile-header__actions tb--flex tb--align-center">
+                            {isLogin ? (
+                                <>
+                                    <button type="button" className="lq-mobile-header__icon" aria-label="Mensajes">
+                                        <i className="category_icon-inbox" />
+                                    </button>
+                                    <button type="button" className="lq-mobile-header__deposit" onClick={() => navigate("/deposit")} aria-label="Billetera">
+                                        <i className="digi_icon-deposit_two" />
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className={`lq-mobile-header__balance ${showBalanceDropdown ? "is-open" : ""}`}
+                                        ref={balanceButtonRef}
+                                        onClick={toggleBalanceDropdown}
+                                        aria-expanded={showBalanceDropdown}
+                                        aria-controls="mobile-balance-sheet"
+                                    >
+                                        <span>{showBalance ? formattedBalance : "******"}</span>
+                                        <small>{showBalance && "ARS"}</small>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="lq-mobile-header__icon lq-mobile-header__profile"
+                                        onClick={() => navigate(popupPath("myprofile"))}
+                                        aria-label="Abrir perfil"
+                                    >
+                                        <i className="digi_icon-user" />
+                                    </button>
+                                </>
+                            ) : (
+                                <button type="button" onClick={handleLoginClick} className="btn btn-primary btn-mb-size-s lq-mobile-header__login">
+                                    Acceso
+                                </button>
+                            )}
+                        </div>
+                    </div>
+                </header>
+
+                {showBalanceDropdown && createPortal(
+                    <div className="lq-mobile-sheet" role="presentation" onMouseDown={(event) => {
+                        if (event.target === event.currentTarget) closeBalanceDropdown();
+                    }}>
+                        <section
+                            id="mobile-balance-sheet"
+                            className="tb--bottom-sheet tb--bottom-sheet__popup tb--account-balance_bottom-sheet lq-mobile-balance-sheet"
+                            ref={balanceDropdownRef}
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label="Información del saldo"
+                        >
+                            <div className="lq-mobile-balance-sheet__handle" aria-hidden="true" />
+                            <div className="tb--profile-balance-info tb--flex tb--justify-center tb--align-center tb--f-14 tb--flex-col">
+                                <div className="tb--profile-balance-content tb--w_100 tb--flex tb--justify-between tb--align-center tb--flex-wrap">
+                                    <div>
+                                        <div className="tb--info tb--flex tb--align-center tb--balance_info-box">
+                                            <span className="tb--profile-balance_txt tb--f-16">Saldo</span>
+                                        </div>
+                                        <span className="tb--f-medium tb--f-24 tb---rtl-currency tb--balance">
+                                            <span>{showBalance ? formattedBalance : "******"}</span>
+                                            <span className="tb--balance_currency">{showBalance && "ARS"}</span>
+                                        </span>
+                                    </div>
+                                    <button type="button" className="show-balance-icon" onClick={toggleBalance} aria-label={showBalance ? "Ocultar saldo" : "Mostrar saldo"}>
+                                        <i className={`digi_icon-eye${!showBalance ? "-slash" : ""}`} />
+                                    </button>
+                                </div>
+                                <div className="tb--w_100 tb--divider">
+                                    {["extraíble", "Usó", "No usado"].map((label, index) => (
+                                        <div className="tb--profile-balance-item tb--flex tb--justify-between tb--w_100" key={label}>
+                                            <span className="tb--profile-balance_txt tb--ellipsis">{label}</span>
+                                            <span className="tb--profile-balance_amount">{showBalance ? (index === 0 ? formattedBalance : "0.00") : "******"} <span className="tb--profile-balance_currency">{showBalance && "ARS"}</span></span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="tb--w_100 tb--divider">
+                                    <div className="tb--profile-balance-item tb--flex tb--justify-between tb--w_100">
+                                        <span className="tb--profile-balance_txt tb--ellipsis">Bono</span>
+                                        <span className="tb--profile-balance_amount">{showBalance ? "0.00" : "******"} <span className="tb--profile-balance_currency">{showBalance && "ARS"}</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>,
+                    document.body
+                )}
+            </>
+        );
+    }
 
     return (
         <header className="true header-block header-block__fix has-euro-counter">

@@ -34,10 +34,31 @@ const Footer = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 11,
+        slidesToShow:
+            typeof window === "undefined"
+                ? 11
+                : window.innerWidth < 480
+                    ? 2
+                    : window.innerWidth < 768
+                        ? 4
+                        : window.innerWidth < 1024
+                            ? 6
+                            : window.innerWidth < 1280
+                                ? 8
+                                : window.innerWidth < 1562
+                                    ? 10
+                                    : 11,
         slidesToScroll: 1,
         arrows: true,
         responsive: [
+            {
+                breakpoint: 1562,
+                settings: { slidesToShow: 10 },
+            },
+            {
+                breakpoint: 1280,
+                settings: { slidesToShow: 8 },
+            },
             {
                 breakpoint: 1024,
                 settings: { slidesToShow: 6 },

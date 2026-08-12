@@ -147,11 +147,64 @@ const Sidebar = ({ isSlotsOnly, isMobile }) => {
 
     const handleClickMenu = (menu) => {
         navigate(menu.href);
-        // Si es móvil, cerrar el sidebar después de la navegación (opcional)
         if (isMobile) {
-            toggleSidebar(false);
+            toggleSidebar();
         }
     };
+
+    const mobileBottomItems = [
+        { id: "casino", name: "Casino", icon: "category_icon-casino", href: "/casino" },
+        { id: "live-casino", name: "CasinoEnVivo", icon: "category_icon-live_casino", href: "/live-casino" },
+        { id: "home", name: "Home", icon: "category_icon-home", href: "/" },
+        { id: "sports", name: "Deportes", icon: "category_icon-sport", href: "/sports" },
+        { id: "promotions", name: "Promociones", icon: "category_icon-promotions", href: "/promotions" },
+    ];
+
+    const mobileMoreItems = [
+        { id: "rules", name: "Reglamentos", icon: "category_icon-regulation" },
+        { id: "live-score", name: "Live Score", icon: "category_icon-live_score" },
+        { id: "promotions", name: "Promociones", icon: "category_icon-promotions" },
+    ];
+
+    if (isMobile) {
+        return (
+            <>
+                <aside className={`lq-mobile-more-menu ${isSidebarExpanded ? "is-open" : ""}`} aria-hidden={!isSidebarExpanded}>
+                    <div className="lq-mobile-more-menu__grid">
+                        {mobileMoreItems.map((item) => (
+                            <div
+                                key={item.id}
+                                className="lq-mobile-more-menu__card"
+                                aria-disabled="true"
+                            >
+                                <i className={item.icon} />
+                                <span>{item.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </aside>
+
+                {!isSidebarExpanded && !isSportsPage && (
+                    <nav className="tb--mobile-nav lq-mobile-nav" aria-label="Navegación principal">
+                        <ul className="mobile-nav_list mobile-nav_list-5">
+                            {mobileBottomItems.map((item) => (
+                                <li className="mobile-nav_item" key={item.id}>
+                                    <button
+                                        type="button"
+                                        className={`mobile-nav_item-inner ${isActive(item) ? "active" : ""}`}
+                                        onClick={() => navigate(item.href)}
+                                    >
+                                        <span className="icon-wrapper"><i className={item.icon} /></span>
+                                        <span className="mobile-nav_item__text">{item.name}</span>
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                )}
+            </>
+        );
+    }
 
     return (
         <>
@@ -254,27 +307,6 @@ const Sidebar = ({ isSlotsOnly, isMobile }) => {
                 </div>
             </div>
 
-            {/* Menú móvil inferior (se mantiene igual) */}
-            {
-                !isSportsPage && <nav className="bottom-menu">
-                    <button className="mobile-menu-item" onClick={() => navigate("/casino")}>
-                        <div className="icon"><i className="custom-icon-bp-casino"></i></div>
-                        <div className="menu-text">Casino</div>
-                    </button>
-                    {
-                        !isSlotsOnlyMode && <>
-                            <button className="mobile-menu-item" onClick={() => navigate("/live-casino")}>
-                                <div className="icon"><i className="custom-icon-bp-live-casino"></i></div>
-                                <div className="menu-text">Casino en Vivo</div>
-                            </button>
-                            <button className="mobile-menu-item" onClick={() => navigate("/sports")}>
-                                <div className="icon"><i className="custom-icon-bp-sports"></i></div>
-                                <div className="menu-text">Deportes</div>
-                            </button>
-                        </>
-                    }
-                </nav>
-            }
         </>
     );
 };

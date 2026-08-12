@@ -10,6 +10,8 @@ import Footer from "../components/Layout/Footer";
 import LoadGames from "../components/Loading/LoadGames";
 import SearchInput from "../components/SearchInput";
 import LoginModal from "../components/Modal/LoginModal";
+import { MobileLobbyTabs, MobileMyGames } from "../components/Casino/MobileLobby";
+import MobileCasinoFilterSheet from "../components/Casino/MobileCasinoFilterSheet";
 
 let pageCurrent = 0;
 
@@ -40,6 +42,8 @@ const LiveCasino = () => {
   const pendingCategoryFetchesRef = useRef(0);
   const lastLoadedCategoryRef = useRef(null);
   const [hasMoreGames, setHasMoreGames] = useState(true);
+  const [mobileLobbyTab, setMobileLobbyTab] = useState("all");
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   // Categorías fijas según el target (Live Casino)
   const liveCasinoTags = [
@@ -485,7 +489,7 @@ const LiveCasino = () => {
       callApi(
         contextData,
         "GET",
-        "/search-content?keyword=" + txtSearch + "&page_group_code=" + pageData.page_group_code + "&length=" + pageSize,
+        "/search-content?keyword=" + keyword + "&page_group_code=" + pageData.page_group_code + "&length=" + pageSize,
         callbackSearch,
         null
       );
@@ -532,6 +536,45 @@ const LiveCasino = () => {
       }
     } else {
       getPage("livecasino");
+    }
+  };
+
+  const totalGamesCount = () => categories
+    .slice(1)
+    .reduce((total, category) => total + (category.element_count || 0), 0);
+
+  const activeFilterCategoryIndex = Math.max(
+    0,
+    liveCasinoTags.findIndex((tag) => tag.code === activeCategory?.code || tag.name === activeCategory?.name)
+  );
+
+  const applyMobileFilters = ({ searchValue, categoryIndex, providerId }) => {
+    const nextSearch = searchValue.trim();
+    const nextTag = liveCasinoTags[categoryIndex];
+    const nextProvider = categories
+      .slice(1)
+      .find((provider) => String(provider.id) === String(providerId));
+
+    setTxtSearch(nextSearch);
+    setIsMobileFilterOpen(false);
+
+    if (nextSearch) {
+      setIsSingleCategoryView(true);
+      do_search(nextSearch);
+      return;
+    }
+
+    if (nextProvider) {
+      handleProviderSelect(nextProvider);
+      return;
+    }
+
+    const nextCategory = categories.find(
+      (category) => category.code === nextTag?.code || category.name === nextTag?.name
+    ) || categories[0];
+
+    if (nextCategory) {
+      handleCategorySelect(nextCategory, categories.indexOf(nextCategory));
     }
   };
 
@@ -603,6 +646,9 @@ const LiveCasino = () => {
         />
       )}
       <div className={`root-container ${isMobile ? 'mobile' : ''}`} id="pageContainer">
+            {isMobile && <MobileLobbyTabs activeTab={mobileLobbyTab} onChange={setMobileLobbyTab} />}
+            {!isMobile || mobileLobbyTab === "all" ? (
+              <>
             <div className="root-wrapper">
               <div className="page">
                 {/* ===== MAIN BLOCK ===== */}
@@ -705,7 +751,20 @@ const LiveCasino = () => {
                                         isMobile={isMobile}
                                       /> */}
                                     </div>
-                                    <div className="tb--sorting-wrapper tb--flex tb--justify-between tb--gap-12"></div>
+                                    {isMobile && (
+                                      <button
+                                        type="button"
+                                        className={`tb--live-casino_filter lq-mobile-filter-trigger tb--flex tb--align-center tb--justify-center tb--flex-wrap ${isMobileFilterOpen ? 'active' : ''}`}
+                                        onClick={() => setIsMobileFilterOpen(true)}
+                                        aria-expanded={isMobileFilterOpen}
+                                        aria-controls="mobile-casino-filter"
+                                        aria-label="Filtrar y buscar"
+                                      >
+                                        <span className="filter-icon"></span>
+                                        <span className="filter-icon filter-icon-middle"></span>
+                                        <span className="filter-icon"></span>
+                                      </button>
+                                    )}
                                   </div>
                                 </div>
                               </div>
@@ -787,7 +846,27 @@ const LiveCasino = () => {
               </div>
             </div>
             <Footer isSlotsOnly={isSlotsOnly} />
+              </>
+            ) : (
+              <MobileMyGames
+                games={firstFiveCategoriesGames.length ? firstFiveCategoriesGames : games}
+                onGameClick={(game) => (isLogin ? launchGame(game) : handleLoginClick())}
+              />
+            )}
       </div>
+      <MobileCasinoFilterSheet
+        isOpen={Boolean(isMobile && isMobileFilterOpen)}
+        onClose={() => setIsMobileFilterOpen(false)}
+        onApply={applyMobileFilters}
+        categories={liveCasinoTags}
+        selectedCategoryIndex={activeFilterCategoryIndex}
+        providers={categories.slice(1)}
+        selectedProviderId={selectedProvider?.id ?? null}
+        themes={[]}
+        selectedTheme=""
+        searchValue={txtSearch}
+        totalGames={totalGamesCount()}
+      />
     </>
   );
 };

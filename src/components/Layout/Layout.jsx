@@ -10,7 +10,6 @@ import LoginModal from "../Modal/LoginModal";
 import SupportModal from "../Modal/SupportModal";
 import { NavigationContext } from "./NavigationContext";
 import FullDivLoading from "../Loading/FullDivLoading";
-import ChatButton from "../ChatButton";
 import MobileSearch from "../MobileSearch";
 
 const Layout = () => {
@@ -186,7 +185,6 @@ const Layout = () => {
             >
                 <>
                     <FullDivLoading show={showFullDivLoading} />
-                    {!isSportsPage && <ChatButton />}
                     {showLoginModal && (
                         <LoginModal
                             isMobile={isMobile}

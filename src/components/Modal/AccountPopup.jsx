@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import Profile from "../../pages/Profile/Profile";
 import ProfileBalance from "../../pages/Profile/ProfileBalance";
 import ProfileBonuses from "../../pages/Profile/ProfileBonuses";
 import ProfileGameHistory from "../../pages/Profile/ProfileGameHistory";
+import MobileAccountMenu from "./MobileAccountMenu";
 
 const popupViews = {
     myprofile: { label: "Cuenta", icon: "account_circle", component: Profile },
@@ -31,6 +32,7 @@ const AccountPopup = ({ basePath, popupName }) => {
     const location = useLocation();
     const dialogRef = useRef(null);
     const View = popupViews[popupName].component;
+    const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth <= 767);
 
     const closePopup = useCallback(
         () => navigate(`${basePath}${location.search}${location.hash}`),
@@ -53,12 +55,18 @@ const AccountPopup = ({ basePath, popupName }) => {
         };
     }, [closePopup]);
 
+    useEffect(() => {
+        const updateViewport = () => setIsMobile(window.innerWidth <= 767);
+        window.addEventListener("resize", updateViewport);
+        return () => window.removeEventListener("resize", updateViewport);
+    }, []);
+
     return (
         <div className="tb--modal-lvl1 account-popup-backdrop" onMouseDown={(event) => {
             if (event.target === event.currentTarget) closePopup();
         }}>
             <section
-                className="tb--modal-lvl2 account-popup"
+                className={`tb--modal-lvl2 account-popup ${isMobile ? "account-popup--mobile" : ""}`}
                 role="dialog"
                 aria-modal="true"
                 aria-label={popupViews[popupName].label}
@@ -66,7 +74,17 @@ const AccountPopup = ({ basePath, popupName }) => {
                 tabIndex={-1}
             >
                 <div className="tb--modal-lvl3 tb--rel"><div className="tb--h_100"><div className="tb--my-profile tb--modal-account tb--custom-scroll tb--rel">
-                <header className="tb--main-header tb--flex tb--align-center tb--justify-between tb--f-14 tb--mobile-hide account-popup__header">
+                {isMobile && popupName === "myprofile" ? (
+                    <MobileAccountMenu basePath={basePath} onClose={closePopup} />
+                ) : (
+                    <>
+                {isMobile ? (
+                    <header className="lq-mobile-popup-header">
+                        <span>{popupViews[popupName].label}</span>
+                        <button type="button" onClick={closePopup} aria-label="Cerrar"><i className="digi_icon-close" /></button>
+                    </header>
+                ) : (
+                <header className="tb--main-header tb--flex tb--align-center tb--justify-between tb--f-14 account-popup__header">
                     <nav className="tb--flex f-h-100 tb--header-items account-popup__tabs" aria-label="Navegación de la cuenta">
                         {Object.entries(popupViews).map(([name, item]) => (
                             <NavLink
@@ -83,9 +101,12 @@ const AccountPopup = ({ basePath, popupName }) => {
                         <i className="digi_icon-close" aria-hidden="true" />
                     </button>
                 </header>
+                )}
                 <div className="account-popup__body">
                     <View />
                 </div>
+                    </>
+                )}
                 </div></div></div>
             </section>
         </div>

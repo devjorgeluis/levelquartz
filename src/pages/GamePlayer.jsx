@@ -7,7 +7,6 @@ import {
     readGamePlayerPayload,
 } from "../utils/gamePlayerNavigation";
 import LoadCasino from "../components/Loading/LoadCasino";
-import ChatButton from "../components/ChatButton";
 import ImgLogo from "/src/assets/images/Logo.png";
 import "./game-player.css";
 
@@ -174,7 +173,6 @@ const GamePlayer = ({ lobbyType }) => {
     const [baseCatalog, setBaseCatalog] = useState({ pageGroupCode: "", categories: [] });
     const [drawerCategories, setDrawerCategories] = useState([{ name: "All", code: "all" }]);
     const [drawerCategoryIndex, setDrawerCategoryIndex] = useState(0);
-    const [totalGames, setTotalGames] = useState([]);
     const [drawerGames, setDrawerGames] = useState([]);
     const [drawerLoading, setDrawerLoading] = useState(true);
 
@@ -241,16 +239,15 @@ const GamePlayer = ({ lobbyType }) => {
             setModalCatalog(catalog);
             setDrawerCategories([{ name: "All", code: "all" }, ...catalog.categories]);
             setDrawerLoading(true);
+            fetchContent(catalog, null, (games) => {
+                setDrawerGames(games);
+                setDrawerLoading(false);
+            });
             setModalLoading(true);
-            catalog.categories?.map((category) => {
-                fetchContent(catalog, category, (games) => {
-                    setDrawerGames((prev) => [...prev, ...games]);
-                    setModalGames((prev) => [...prev, ...games]);
-                    setTotalGames((prev) => [...prev, ...games]);
-                    setDrawerLoading(false);
-                    setModalLoading(false);
-                });
-            })
+            fetchContent(catalog, null, (games) => {
+                setModalGames(games);
+                setModalLoading(false);
+            });
         }, null);
     }, [basePage, contextData, fetchContent]);
 
@@ -277,14 +274,10 @@ const GamePlayer = ({ lobbyType }) => {
         const category = drawerCategories[index];
         setDrawerCategoryIndex(index);
         setDrawerLoading(true);
-        if (index === 0) {
-            setDrawerGames(totalGames);
-        } else {
-            fetchContent(baseCatalog, category, (games) => {
-                setDrawerGames(games);
-                setDrawerLoading(false);
-            });
-        }
+        fetchContent(baseCatalog, index === 0 ? null : category, (games) => {
+            setDrawerGames(games);
+            setDrawerLoading(false);
+        });
     };
 
     const selectModalFilter = (filter) => {
@@ -314,15 +307,10 @@ const GamePlayer = ({ lobbyType }) => {
     const selectModalProvider = (provider) => {
         setModalProvider(provider);
         setModalLoading(true);
-        if (provider === null) {
-            setModalGames(totalGames);
+        fetchContent(modalCatalog, provider, (games) => {
+            setModalGames(games);
             setModalLoading(false);
-        } else {
-            fetchContent(modalCatalog, provider, (games) => {
-                setModalGames(games);
-                setModalLoading(false);
-            });
-        }
+        });
     };
 
     const changeLayout = (nextLayout) => {
@@ -460,8 +448,6 @@ const GamePlayer = ({ lobbyType }) => {
                     onGameSelect={addGame}
                 />
             )}
-
-            <ChatButton />
         </div>
     );
 };
