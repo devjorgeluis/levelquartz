@@ -142,7 +142,7 @@ const Header = ({
     ];
 
     const moreMenuItems = [
-        { icon: "category_icon-live_sport_1", label: "Partidos en Vivo", link: "/live-sport" },
+        { icon: "category_icon-live_sport_1", label: "Partidos en Vivo", link: "/live-sports" },
     ];
 
     if (isMobile) {

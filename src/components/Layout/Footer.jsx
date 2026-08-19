@@ -38,7 +38,7 @@ const Footer = () => {
             typeof window === "undefined"
                 ? 11
                 : window.innerWidth < 480
-                    ? 2
+                    ? 3
                     : window.innerWidth < 768
                         ? 4
                         : window.innerWidth < 1024
@@ -340,7 +340,7 @@ const Footer = () => {
                                             <Slider {...sliderSettings}>
                                                 {providers.map((provider) => (
                                                     <div key={provider} className="providers-block_item">
-                                                        <a className="tb--cd socials-block_icon" href="#" target="_blank">
+                                                        <a className="tb--cd socials-block_icon" href="#" onClick={(e) => {e.preventDefault()}}>
                                                             <span
                                                                 className="providers-list_item"
                                                                 style={{

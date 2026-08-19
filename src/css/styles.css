@@ -6086,7 +6086,7 @@ a.menu-button:not([href]).logout-button .sk-fading-circle .sk-circle:before {
     border-bottom: 1px solid var(--light-border);
     display: grid;
     gap: 0;
-    grid-template-columns: 21% 22% 15% 1fr;
+    grid-template-columns: 20% 20% 20% 15% 1fr;
     grid-template-areas: "type type type cancel cancel" "timestamp status reference transactionId amount"
 }
 
@@ -6095,7 +6095,8 @@ a.menu-button:not([href]).logout-button .sk-fading-circle .sk-circle:before {
     min-width: 0;
     box-sizing: border-box;
     display: flex;
-    align-items: end
+    align-items: center;
+    justify-content: start;
 }
 
 @media (max-width:576px) {
@@ -6150,8 +6151,8 @@ a.menu-button:not([href]).logout-button .sk-fading-circle .sk-circle:before {
 .transaction-table--generic-table .transaction-table__body-container .transaction-table__row {
     padding: 15px 0;
     display: grid;
-    grid-template-columns: 44% 33% 23%;
-    grid-template-areas: "type reference amount";
+    grid-template-columns: 20% 20% 20% 15% 1fr;
+    grid-template-areas: "id type reference amount amount";
     border-bottom: 1px solid var(--light-border)
 }
 
@@ -6161,8 +6162,7 @@ a.menu-button:not([href]).logout-button .sk-fading-circle .sk-circle:before {
 
 @media (max-width:576px) {
     .transaction-table--generic-table .transaction-table__body-container .transaction-table__row {
-        grid-template-columns: 44% 33% 23%;
-        grid-template-areas: "type type type" "reference reference amount"
+        grid-template-columns: 20% 20% 20% 15% 1fr;
     }
 }
 
@@ -13754,7 +13754,8 @@ body #modal-root .react-select__control--is-focused i {
 
 .tb--empty-history,
 .tb--game-history_tbl .tb--game-history {
-    height: 100%
+    height: 100%;
+    width: 100%;
 }
 
 .tb--empty-cont img {
